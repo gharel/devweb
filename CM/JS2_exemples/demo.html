@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <title>Document</title>
+    <script src="demo_1.js"></script>
+    <script defer src="demo_2.js"></script>
+    <!-- <script defer src="correction/correction.js"></script> -->
+  </head>
+  <body>
+    <h1>Un document d'exemple</h1>
+    <h2>Quelques liens</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JS sur MDN</a></li>
+      <li><a href="https://javascript.info/">javascript.info</a></li>
+    </ul>
+
+    <h2>Quelques boutons</h2>
+    <input type="number" id="input-int" value="8" />
+    <button id="eval-btn" onclick="alert('click!')">Calculer</button>
+    <button id="demo-btn">Démo</button>
+    <div><code id="output-code"></code></div>
+
+    <script>
+      console.log("le script inline s'exécute");
+    </script>
+  </body>
+</html>

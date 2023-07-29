@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Romuald THION">
+  <title>Développement Web</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/solarized.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Développement Web</h1>
+  <p class="subtitle">Introduction à JavaScript</p>
+  <p class="author">Romuald THION</p>
+  <p class="date">Semestre pair 2022 UNC</p>
+</section>
+
+<section class="slide level3">
+
+<!-- markdownlint-disable MD033 MD001 MD045 MD041 -->
+<!-- # Les bases de JavaScript -->
+<p><img data-src="img/meme-dev-humor-using-javascript-to-become-the-joker-248.jpg" /></p>
+</section>
+<section>
+<section id="introduction" class="title-slide slide level2">
+<h2>Introduction</h2>
+
+</section>
+<section id="références" class="slide level3">
+<h3>Références</h3>
+<p><a href="https://developer.mozilla.org/fr/docs/" class="uri">https://developer.mozilla.org/fr/docs/</a></p>
+<p><a href="https://javascript.info/" class="uri">https://javascript.info/</a></p>
+</section>
+<section id="lenvironnement-de-développement" class="slide level3">
+<h3>L’environnement de développement</h3>
+<ul>
+<li>JavaScript côté client : le navigateur
+<ul>
+<li>la console</li>
+</ul></li>
+<li>JavaScript côté serveur : Node.js
+<ul>
+<li>l’interpréteur (intéractif)</li>
+</ul></li>
+<li>l’éditeur VSCode
+<ul>
+<li>extensions ESLint, Prettier, Live Server</li>
+</ul></li>
+</ul>
+<p><em>Hors programme</em> : frameworks (React, Vue.js, Angular etc.), conception orientée-objet, générateurs, la livraison/production (transpilation, bundling, monitoring etc.).</p>
+</section></section>
+<section>
+<section id="javascript-versus-python" class="title-slide slide level2">
+<h2>JavaScript versus Python</h2>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 45%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>JavaScript</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Auteur</td>
+<td>Brendan Eich</td>
+<td>Guido Von Rossum</td>
+</tr>
+<tr class="even">
+<td>Année</td>
+<td>1995</td>
+<td>1991</td>
+</tr>
+<tr class="odd">
+<td>Evaluation</td>
+<td>Interprété</td>
+<td>Interprété (avec une étape de compilation intermédiaire)</td>
+</tr>
+<tr class="even">
+<td>Moteurs</td>
+<td>V8 (Node.js, Deno, Chrome), SpiderMonkey (Firefox), …</td>
+<td>CPython, Jython…</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level3">
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>JavaScript</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Paradigmes</td>
+<td>Multiples</td>
+<td>Multiples</td>
+</tr>
+<tr class="even">
+<td><em>Fonctionnel</em></td>
+<td>Oui</td>
+<td>Oui</td>
+</tr>
+<tr class="odd">
+<td>Objet</td>
+<td>Oui, à prototypes</td>
+<td>Oui, duck typing</td>
+</tr>
+<tr class="even">
+<td>Asynchrone/événementiel</td>
+<td>Natif !</td>
+<td>Lib. std. <code>asyncio</code></td>
+</tr>
+<tr class="odd">
+<td>Applications</td>
+<td>Assez énéraliste</td>
+<td>Généraliste</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>quasi-monopôle en Web client, web serveur</td>
+<td>très présent en Data Science/ML</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="slide level3">
+
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>JavaScript</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Blocks</td>
+<td><code>{ }</code></td>
+<td>indentation</td>
+</tr>
+<tr class="even">
+<td>Variables</td>
+<td><del><code>var x</code></del> <code>let x</code></td>
+<td><code>x = ...</code></td>
+</tr>
+<tr class="odd">
+<td>Constantes</td>
+<td><code>const x</code></td>
+<td><code>X = ...</code></td>
+</tr>
+<tr class="even">
+<td>Nommage</td>
+<td><code>lowerCamelCase</code></td>
+<td><code>snake_case</code></td>
+</tr>
+<tr class="odd">
+<td>Type unité</td>
+<td><code>null</code> ou <code>undefined</code></td>
+<td><code>None</code></td>
+</tr>
+<tr class="even">
+<td>Commentaires</td>
+<td><code>/// ligne</code> ou <code>/* block */</code></td>
+<td><code># ligne</code></td>
+</tr>
+</tbody>
+</table>
+</section></section>
+<section id="les-principales-structures-de-données" class="title-slide slide level2">
+<h2>Les principales structures de données</h2>
+<p>Voir <a href="JS1_exemples/demos.js">fichier de démonstration</a>.</p>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+      
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+        height: 960,
+        // Factor of the display size that should remain empty around the content
+        margin: 0.02,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.5,
+        maxScale: 1.0,
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

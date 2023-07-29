@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <title>TP CC1 en séance</title>
+
+    <script defer src="devweb-2022-cc1.js"></script>
+
+    <link rel="stylesheet" href="devweb-2022-cc1.css" />
+  </head>
+  <body>
+    <h1>TP noté en séance(CC1)</h1>
+
+    <p>
+      Vous devez rendre <strong>uniquement</strong> le fichier <code>devweb-2022-cc1.js</code> sur
+      <a href="https://foad.unc.nc/">moodle</a>. Les autres fichiers ne seront pas pris en compte dans la correction.
+      Les deux exercices sont indépendants.
+    </p>
+
+    <p>
+      Il vaut <em>mieux rendre un fonctionnel incomplet</em> (avec le code en cours de réalisation commenté) qu'une
+      version non fonctionnelle.
+    </p>
+
+    <p>
+      Une démonstration de la page avec toutes les fonctionnalités est
+      <a href="https://youtu.be/BviLjzP4wyU">disponible sur YouTube</a>.
+    </p>
+    <section>
+      <h2>Exercice : jeu de la recherche dichotomique</h2>
+
+      <p>
+        Le but de cet exercice est de réaliser un jeu de recherche de nombre similaire à
+        <a
+          href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html"
+          >l'exemple sur MDN</a
+        >. Quand on clique sur le bouton <em>Lancer le jeu</em>, un nombre est tiré au hasard. Ensuite on saisit un
+        nombre et en cliquant sur <em>Vérifier</em>, le site nous indique si on a trouvé le bon nombre, si on est trop
+        haut ou trop bas.
+      </p>
+
+      <ol>
+        <li>
+          Complétez la fonction <code>launchGame</code> pour qu'elle prenne en compte la valeur de l'élément
+          <code> &lt;input type=&quot;number&quot; id=&quot;max-usr&quot;&gt;</code>, qu'elle ajoute un message à
+          l'élément <code>&lt;code id=&quot;output&quot;&gt;</code> et qu'elle rende le bouton
+          <code> &lt;button id=&quot;guess-btn&quot;&gt;</code> actif.
+        </li>
+        <li>
+          Ajoutez un <i>handler</i> au bouton <code> &lt;button id=&quot;guess-btn&quot;&gt;</code> pour qu'il fasse la
+          vérification et ajoute le message approprié à l'élément <code>&lt;code id=&quot;output&quot;&gt;</code>. Le
+          bouton <code> &lt;button id=&quot;guess-btn&quot;&gt;</code> sera désactivé à l'issue de la partie.
+        </li>
+        <li>
+          Ajoutez un <i>handler</i> à l'élément
+          <code>&lt;input type=&quot;number&quot; id=&quot;num-usr&quot; /&gt;</code> pour que la vérification soit
+          lancée dès qu'on appuie sur la touche <kbd>Entrée</kbd>, sans avoir besin de cliquer sur le bouton.
+        </li>
+        <li>
+          Enfin, ajoutez un nombre limite de coups pour trouver le nombre secret. La limite sera égale à
+          <code>Math.floor(Math.random() * NB_MAX) + 1;</code> où <code>NB_MAX</code> est le nombre maximum possible
+          saisi par l'utilsiateur.
+        </li>
+      </ol>
+
+      <div class="form-example">
+        <div class="form-example">
+          <label for="max-usr">Nombre max à chercher :</label>
+          <input type="number" name="max-usr" id="max-usr" min="0" value="128" step="16" />
+          <button id="start-btn">Lancer le jeu</button>
+        </div>
+
+        <div class="form-example">
+          <label for="num-usr">Votre saisie : </label>
+          <input type="number" name="num-usr" id="num-usr" />
+          <button id="guess-btn" disabled>Vérifier</button>
+        </div>
+      </div>
+      <code id="output"> </code>
+    </section>
+
+    <section>
+      <h2>Exercice : la vache qui tache</h2>
+
+      <p>
+        On va ajouter une nouvelle fonctionnalité à la page : à chaque clic de la souris dans la page, il faut ajouter
+        <a href="https://upload.wikimedia.org/wikipedia/commons/3/30/Cowicon.svg">cette image</a> à la fin de la page.
+        On utilise pour cela l'événement
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mousedown_event"><code>mousedown</code></a
+        >. Le bouton ci-dessous permet d'activer/désactiver cette fonctionnalité, son <em>handler</em>
+        <code>addCow</code> est déjà prêt, complétez le.
+      </p>
+
+      <button id="cow-btn">Vacher/Dévacher</button>
+
+      <p>
+        Ensuite, faites en sorte que l'image soit ajoutée à <em>l'endroit où l'utilisateur a cliqué</em>. Pour cela,
+        vous utiliserez la class CSS <code>.cow</code> et positionnerez l'image en utilisant les propriétés CSS
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/left"><code>left</code></a> et
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/top"><code>top</code></a> qui prendront des valeurs
+        calculées à partir des attributs <code>x</code> et <code>y</code> de l'événement.
+      </p>
+
+      <p>
+        Enfin utilisez la propriété CSS
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform"><code>transform</code></a> pour faire
+        tourner aléatoirement l'image.
+      </p>
+    </section>
+  </body>
+</html>
+

@@ -1,0 +1,1637 @@
+[
+    {
+        "description": "FizzBuzz Enterprise Edition is a no-nonsense implementation of FizzBuzz made by serious businessmen for serious business purposes.",
+        "url": "https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition",
+        "stars": 14936
+    },
+    {
+        "description": "All the missing SQLite functions",
+        "url": "https://github.com/nalgeon/sqlean",
+        "stars": 920
+    },
+    {
+        "description": "a web application framework for python",
+        "url": "https://github.com/adamhajari/spyre",
+        "stars": 823
+    },
+    {
+        "description": "ESLint rules for Node Security",
+        "url": "https://github.com/nodesecurity/eslint-plugin-security",
+        "stars": 1600
+    },
+    {
+        "description": "A secure JavaScript and TypeScript runtime",
+        "url": "https://github.com/denoland/deno",
+        "stars": 77325
+    },
+    {
+        "description": "A light-weight module that brings the Fetch API to Node.js",
+        "url": "https://github.com/node-fetch/node-fetch",
+        "stars": 6706
+    },
+    {
+        "description": "A collective list of free APIs",
+        "url": "https://github.com/public-apis/public-apis",
+        "stars": 149877
+    },
+    {
+        "description": "Modern HTTP benchmarking tool",
+        "url": "https://github.com/wg/wrk",
+        "stars": 29924
+    },
+    {
+        "description": "A fast PostgreSQL Database Client Library for Python/asyncio.",
+        "url": "https://github.com/MagicStack/asyncpg",
+        "stars": 5024
+    },
+    {
+        "description": "The Pencil Project's unique mission is to build a free and opensource tool for making diagrams and GUI prototyping that everyone can use. ",
+        "url": "https://github.com/evolus/pencil",
+        "stars": 8126
+    },
+    {
+        "description": "HTTP Request & Response Service, written in Python + Flask.",
+        "url": "https://github.com/postmanlabs/httpbin",
+        "stars": 10094
+    },
+    {
+        "description": "Extract tables from PDF files",
+        "url": "https://github.com/tabulapdf/tabula-java",
+        "stars": 1243
+    },
+    {
+        "description": "A collection of modern/faster/saner alternatives to common unix commands.",
+        "url": "https://github.com/ibraheemdev/modern-unix",
+        "stars": 15684
+    },
+    {
+        "description": "free flexbox templates built with the bulma css framework",
+        "url": "https://github.com/BulmaTemplates/bulma-templates",
+        "stars": 2846
+    },
+    {
+        "description": "❗️WIP❗️An open access book on scientific visualization using python and matplotlib",
+        "url": "https://github.com/rougier/scientific-visualization-book",
+        "stars": 2423
+    },
+    {
+        "description": "#1 Free OneDrive Client for Linux",
+        "url": "https://github.com/abraunegg/onedrive",
+        "stars": 4445
+    },
+    {
+        "description": "An open-access book on numpy vectorization techniques, Nicolas P. Rougier, 2017",
+        "url": "https://github.com/rougier/from-python-to-numpy",
+        "stars": 1642
+    },
+    {
+        "description": "Repository contains pgRouting library. Development branch is \"develop\", stable branch is \"master\"",
+        "url": "https://github.com/pgRouting/pgrouting",
+        "stars": 847
+    },
+    {
+        "description": "Access to Biological Web Services from Python. ",
+        "url": "https://github.com/cokelaer/bioservices",
+        "stars": 180
+    },
+    {
+        "description": "A tool for writing better scripts",
+        "url": "https://github.com/google/zx",
+        "stars": 19629
+    },
+    {
+        "description": "The official sources for the RDKit library",
+        "url": "https://github.com/rdkit/rdkit",
+        "stars": 1315
+    },
+    {
+        "description": "Manuel collaboratif NSI termeinale",
+        "url": "https://github.com/dav74/nsi_terminale",
+        "stars": 13
+    },
+    {
+        "description": "Companion webpage to the book \"Mathematics For Machine Learning\"",
+        "url": "https://github.com/mml-book/mml-book.github.io",
+        "stars": 9084
+    },
+    {
+        "description": "Line-by-line profiling for Python",
+        "url": "https://github.com/pyutils/line_profiler",
+        "stars": 858
+    },
+    {
+        "description": "A terminal UI for tshark, inspired by Wireshark",
+        "url": "https://github.com/gcla/termshark",
+        "stars": 6600
+    },
+    {
+        "description": "OWL API main repository",
+        "url": "https://github.com/owlcs/owlapi",
+        "stars": 589
+    },
+    {
+        "description": "Papers from the computer science community to read and discuss.",
+        "url": "https://github.com/papers-we-love/papers-we-love",
+        "stars": 46946
+    },
+    {
+        "description": "DearPyGui API examples",
+        "url": "https://github.com/Amorano/dpg-examples",
+        "stars": 8
+    },
+    {
+        "description": "Dear PyGui: A fast and powerful Graphical User Interface Toolkit for Python with minimal dependencies",
+        "url": "https://github.com/hoffstadt/DearPyGui",
+        "stars": 5580
+    },
+    {
+        "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions",
+        "url": "https://github.com/nvm-sh/nvm",
+        "stars": 50752
+    },
+    {
+        "description": "Scripted Local Linux Enumeration & Privilege Escalation Checks",
+        "url": "https://github.com/rebootuser/LinEnum",
+        "stars": 4347
+    },
+    {
+        "description": "Linux enumeration tool for pentesting and CTFs with verbosity levels",
+        "url": "https://github.com/diego-treitos/linux-smart-enumeration",
+        "stars": 1726
+    },
+    {
+        "description": "Chromecast local files from Linux - supports MKV, subtitles, 5.1 sound and 4K!",
+        "url": "https://github.com/keredson/gnomecast",
+        "stars": 1331
+    },
+    {
+        "description": "Python code for \"Machine learning: a probabilistic perspective\" (2nd edition)",
+        "url": "https://github.com/probml/pyprobml",
+        "stars": 3885
+    },
+    {
+        "description": "Gnome-Shell Extension for intel-pstate driver",
+        "url": "https://github.com/martin31821/cpupower",
+        "stars": 296
+    },
+    {
+        "description": "Declarative statistical visualization library for Python",
+        "url": "https://github.com/altair-viz/altair",
+        "stars": 6858
+    },
+    {
+        "description": "Louvain Community Detection",
+        "url": "https://github.com/taynaud/python-louvain",
+        "stars": 638
+    },
+    {
+        "description": "Returns unicode slugs",
+        "url": "https://github.com/un33k/python-slugify",
+        "stars": 1083
+    },
+    {
+        "description": "Analytical Web Apps for Python, R, Julia, and Jupyter. No JavaScript Required.",
+        "url": "https://github.com/plotly/dash",
+        "stars": 14982
+    },
+    {
+        "description": "Open-source demos hosted on Dash Gallery",
+        "url": "https://github.com/plotly/dash-sample-apps",
+        "stars": 1873
+    },
+    {
+        "description": "Unison file synchronizer",
+        "url": "https://github.com/bcpierce00/unison",
+        "stars": 2065
+    },
+    {
+        "description": "Linux 'net top' tool",
+        "url": "https://github.com/raboof/nethogs",
+        "stars": 2010
+    },
+    {
+        "description": "Notebooks and code for the book \"Introduction to Machine Learning with Python\"",
+        "url": "https://github.com/amueller/introduction_to_ml_with_python",
+        "stars": 5616
+    },
+    {
+        "description": "Custom Jupyter Notebook Themes",
+        "url": "https://github.com/dunovank/jupyter-themes",
+        "stars": 8647
+    },
+    {
+        "description": "Python programs, usually short, of considerable difficulty, to perfect particular skills.",
+        "url": "https://github.com/norvig/pytudes",
+        "stars": 16713
+    },
+    {
+        "description": "awesome list of so called python philosophy resources",
+        "url": "https://github.com/filiplajszczak/awesome-zen-of-python",
+        "stars": 51
+    },
+    {
+        "description": "Zen of Python poster",
+        "url": "https://github.com/ewjoachim/zen-of-python",
+        "stars": 114
+    },
+    {
+        "description": "Static type checker for Python",
+        "url": "https://github.com/microsoft/pyright",
+        "stars": 7034
+    },
+    {
+        "description": "Command-line utility for limiting an adapter's bandwidth",
+        "url": "https://github.com/magnific0/wondershaper",
+        "stars": 927
+    },
+    {
+        "description": "Network Analysis in Python",
+        "url": "https://github.com/networkx/networkx",
+        "stars": 9502
+    },
+    {
+        "description": "A Python Package for Stochastic Block Model Inference",
+        "url": "https://github.com/funket/pysbm",
+        "stars": 21
+    },
+    {
+        "description": "A collection of full-stack resources for programmers.",
+        "url": "https://github.com/charlax/professional-programming",
+        "stars": 15765
+    },
+    {
+        "description": "Python script to generate a visualization of various sorting algorithms, image or video.",
+        "url": "https://github.com/mportesi/sorting_algo_visualizer",
+        "stars": 147
+    },
+    {
+        "description": "100+ open-source clones of popular sites like Airbnb, Amazon, Instagram, Netflix, Tiktok, Spotify, Whatsapp, Youtube etc. See source code, demo links, tech stack, github stars.",
+        "url": "https://github.com/GorvGoyl/Clone-Wars",
+        "stars": 11681
+    },
+    {
+        "description": "Gephi - The Open Graph Viz Platform",
+        "url": "https://github.com/gephi/gephi",
+        "stars": 4427
+    },
+    {
+        "description": "Dive into CPython internals, trying to illustrate every detail of CPython implementation",
+        "url": "https://github.com/zpoint/CPython-Internals",
+        "stars": 2698
+    },
+    {
+        "description": "🐍 Python Implementation and Extension of RDF2Vec",
+        "url": "https://github.com/IBCNServices/pyRDF2Vec",
+        "stars": 128
+    },
+    {
+        "description": "NetworKit is a growing open-source toolkit for large-scale network analysis.",
+        "url": "https://github.com/networkit/networkit",
+        "stars": 433
+    },
+    {
+        "description": null,
+        "url": "https://github.com/timlrx/graph-benchmarks",
+        "stars": 51
+    },
+    {
+        "description": "Stanford Network Analysis Platform (SNAP) is a general purpose network analysis and graph mining library.",
+        "url": "https://github.com/snap-stanford/snap",
+        "stars": 1832
+    },
+    {
+        "description": "Ghidra is a software reverse engineering (SRE) framework",
+        "url": "https://github.com/NationalSecurityAgency/ghidra",
+        "stars": 28398
+    },
+    {
+        "description": null,
+        "url": "https://github.com/nojhan/moderncv-math",
+        "stars": 3
+    },
+    {
+        "description": "List of the most common French passwords",
+        "url": "https://github.com/tarraschk/richelieu",
+        "stars": 212
+    },
+    {
+        "description": "A little bit about a linux kernel",
+        "url": "https://github.com/0xAX/linux-insides",
+        "stars": 23417
+    },
+    {
+        "description": "Comprehensive Python Cheatsheet",
+        "url": "https://github.com/gto76/python-cheatsheet",
+        "stars": 24904
+    },
+    {
+        "description": "RDFLib is a Python library for working with RDF, a simple yet powerful language for representing information.",
+        "url": "https://github.com/RDFLib/rdflib",
+        "stars": 1512
+    },
+    {
+        "description": "JetBrains Mono – the free and open-source typeface for developers",
+        "url": "https://github.com/JetBrains/JetBrainsMono",
+        "stars": 5741
+    },
+    {
+        "description": "A javascript library to run SQLite on the web.  ",
+        "url": "https://github.com/sql-js/sql.js",
+        "stars": 9189
+    },
+    {
+        "description": "PostgreSQL Exercises web site code",
+        "url": "https://github.com/AlisdairO/pgexercises",
+        "stars": 317
+    },
+    {
+        "description": "List of Computer Science courses with video lectures.",
+        "url": "https://github.com/Developer-Y/cs-video-courses",
+        "stars": 23928
+    },
+    {
+        "description": "OSSEC is an Open Source Host-based Intrusion Detection System that performs log analysis, file integrity checking, policy monitoring, rootkit detection, real-time alerting and active response.",
+        "url": "https://github.com/ossec/ossec-hids",
+        "stars": 3488
+    },
+    {
+        "description": "All Subjects of 42 School",
+        "url": "https://github.com/Binary-Hackers/42_Subjects",
+        "stars": 758
+    },
+    {
+        "description": "In line function hooking LKM rootkit",
+        "url": "https://github.com/RITRedteam/goofkit",
+        "stars": 35
+    },
+    {
+        "description": "LKM rootkit for Linux Kernels 2.6.x/3.x/4.x/5.x (x86/x86_64 and ARM64)",
+        "url": "https://github.com/m0nad/Diamorphine",
+        "stars": 825
+    },
+    {
+        "description": "Best Practice Auditd Configuration",
+        "url": "https://github.com/Neo23x0/auditd",
+        "stars": 632
+    },
+    {
+        "description": "GTFOBins is a curated list of Unix binaries that can be used to bypass local security restrictions in misconfigured systems",
+        "url": "https://github.com/GTFOBins/GTFOBins.github.io",
+        "stars": 5097
+    },
+    {
+        "description": "\"Probabilistic Machine Learning\" - a book series by Kevin Murphy",
+        "url": "https://github.com/probml/pml-book",
+        "stars": 1263
+    },
+    {
+        "description": "🚀✨ Help beginners to contribute to open source projects",
+        "url": "https://github.com/firstcontributions/first-contributions",
+        "stars": 20544
+    },
+    {
+        "description": "📜 33 JavaScript concepts every developer should know.",
+        "url": "https://github.com/leonardomso/33-js-concepts",
+        "stars": 43094
+    },
+    {
+        "description": "Blueprint/Boilerplate For Python Projects",
+        "url": "https://github.com/MartinHeinz/python-project-blueprint",
+        "stars": 734
+    },
+    {
+        "description": "RESTful web API Documentation Generator.",
+        "url": "https://github.com/apidoc/apidoc",
+        "stars": 9066
+    },
+    {
+        "description": "Basic Cheat Sheet for Python (PDF, Markdown and Jupyter Notebook)",
+        "url": "https://github.com/wilfredinni/python-cheatsheet",
+        "stars": 1552
+    },
+    {
+        "description": "A pandoc LaTeX template to convert markdown files to PDF or LaTeX.",
+        "url": "https://github.com/Wandmalfarbe/pandoc-latex-template",
+        "stars": 3441
+    },
+    {
+        "description": "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. By default it supports the Google Java Style Guide and Sun Code Conventions, but is highly configurable. It can be invoked with an ANT task and a command line program.",
+        "url": "https://github.com/checkstyle/checkstyle",
+        "stars": 6171
+    },
+    {
+        "description": "Ultimate Python study guide for newcomers and professionals alike. :snake: :snake: :snake:",
+        "url": "https://github.com/huangsam/ultimate-python",
+        "stars": 3079
+    },
+    {
+        "description": "Linus Torvalds' linked list argument for good taste, explained",
+        "url": "https://github.com/mkirchner/linked-list-good-taste",
+        "stars": 1281
+    },
+    {
+        "description": "An implementation of differential dataflow using timely dataflow on Rust.",
+        "url": "https://github.com/TimelyDataflow/differential-dataflow",
+        "stars": 1673
+    },
+    {
+        "description": "A modern load testing tool, using Go and JavaScript - https://k6.io",
+        "url": "https://github.com/grafana/k6",
+        "stars": 13472
+    },
+    {
+        "description": "npm package executor",
+        "url": "https://github.com/npm/npx",
+        "stars": 625
+    },
+    {
+        "description": "Install and Run Python Applications in Isolated Environments",
+        "url": "https://github.com/pypa/pipx",
+        "stars": 3977
+    },
+    {
+        "description": "Browser-based frontend to gdb (gnu debugger). Add breakpoints, view the stack, visualize data structures, and more in C, C++, Go, Rust, and Fortran. Run gdbgui from the terminal and a new tab will open in your browser.",
+        "url": "https://github.com/cs01/gdbgui",
+        "stars": 8118
+    },
+    {
+        "description": "Cytoscape: an open source platform for network analysis and visualization",
+        "url": "https://github.com/cytoscape/cytoscape",
+        "stars": 394
+    },
+    {
+        "description": "Some notes on things I find interesting and important.",
+        "url": "https://github.com/frankmcsherry/blog",
+        "stars": 1679
+    },
+    {
+        "description": "The official Exploit Database repository",
+        "url": "https://github.com/offensive-security/exploitdb",
+        "stars": 6353
+    },
+    {
+        "description": "Stack Smashing on Modern Linux Systems",
+        "url": "https://github.com/torcellite/Stack-Smashing",
+        "stars": 5
+    },
+    {
+        "description": "Generate files from docker container meta-data",
+        "url": "https://github.com/nginx-proxy/docker-gen",
+        "stars": 3866
+    },
+    {
+        "description": "Automated nginx proxy for Docker containers using docker-gen",
+        "url": "https://github.com/nginx-proxy/nginx-proxy",
+        "stars": 15098
+    },
+    {
+        "description": "Protege Desktop",
+        "url": "https://github.com/protegeproject/protege",
+        "stars": 670
+    },
+    {
+        "description": "Tesseract Open Source OCR Engine (main repository)",
+        "url": "https://github.com/tesseract-ocr/tesseract",
+        "stars": 41457
+    },
+    {
+        "description": "Peregrine: A Pattern-Aware Graph Mining System",
+        "url": "https://github.com/pdclab/peregrine",
+        "stars": 167
+    },
+    {
+        "description": "Boost LaTeX typesetting efficiency with preview, compile, autocomplete, colorize, and more.",
+        "url": "https://github.com/James-Yu/LaTeX-Workshop",
+        "stars": 7683
+    },
+    {
+        "description": "Parser Building Toolkit for JavaScript",
+        "url": "https://github.com/Chevrotain/chevrotain",
+        "stars": 1698
+    },
+    {
+        "description": "OpenCASCADE Community Edition (OCE): a community driven fork of the Open CASCADE library.",
+        "url": "https://github.com/tpaviot/oce",
+        "stars": 656
+    },
+    {
+        "description": "Industry Foundation Classes (IFC) code generator.",
+        "url": "https://github.com/hypar-io/IFC-gen",
+        "stars": 86
+    },
+    {
+        "description": "ClipIt clipboard manager for GTK+",
+        "url": "https://github.com/CristianHenzel/ClipIt",
+        "stars": 457
+    },
+    {
+        "description": "UI for debugging Jison grammars (UNMAINTAINED)",
+        "url": "https://github.com/nolanlawson/jison-debugger",
+        "stars": 111
+    },
+    {
+        "description": "Generation of diagram and flowchart from text in a similar manner as markdown",
+        "url": "https://github.com/mermaid-js/mermaid",
+        "stars": 37310
+    },
+    {
+        "description": "bison / YACC / LEX in JavaScript (LALR(1), SLR(1), etc. lexer/parser generator)",
+        "url": "https://github.com/GerHobbelt/jison",
+        "stars": 97
+    },
+    {
+        "description": "Bison in JavaScript.",
+        "url": "https://github.com/zaach/jison",
+        "stars": 3973
+    },
+    {
+        "description": "A repo for a Program and Data Representation university-level course",
+        "url": "https://github.com/uva-cs/pdr",
+        "stars": 66
+    },
+    {
+        "description": "The C based gRPC (C++, Python, Ruby, Objective-C, PHP, C#)",
+        "url": "https://github.com/grpc/grpc",
+        "stars": 31532
+    },
+    {
+        "description": "Tricks you wish the Coq manual told you",
+        "url": "https://github.com/tchajed/coq-tricks",
+        "stars": 322
+    },
+    {
+        "description": "update-golang is a script to easily fetch and install new Golang releases with minimum system intrusion",
+        "url": "https://github.com/udhos/update-golang",
+        "stars": 1126
+    },
+    {
+        "description": "unclutter your .profile",
+        "url": "https://github.com/direnv/direnv",
+        "stars": 7759
+    },
+    {
+        "description": "A simple client side router implementation",
+        "url": "https://github.com/vijitail/simple-javascript-router",
+        "stars": 15
+    },
+    {
+        "description": "Demo code for my tutorial at https://willtaylor.blog/client-side-routing-in-vanilla-js",
+        "url": "https://github.com/will093/client-side-routing-vanilla-js",
+        "stars": 24
+    },
+    {
+        "description": "Promise based HTTP client for the browser and node.js",
+        "url": "https://github.com/axios/axios",
+        "stars": 87046
+    },
+    {
+        "description": "TLS/SSL and crypto library",
+        "url": "https://github.com/openssl/openssl",
+        "stars": 16254
+    },
+    {
+        "description": "🐉 Material Component Framework for Vue",
+        "url": "https://github.com/vuetifyjs/vuetify",
+        "stars": 31796
+    },
+    {
+        "description": "Node.js Postgresql Crud example - Restful CRUD API with Express, Sequelize and PostgreSQL example ",
+        "url": "https://github.com/bezkoder/node-express-sequelize-postgresql",
+        "stars": 46
+    },
+    {
+        "description": "OpenBoard is a cross-platform interactive whiteboard application intended for use in a classroom setting.",
+        "url": "https://github.com/OpenBoard-org/OpenBoard",
+        "stars": 1123
+    },
+    {
+        "description": "A curated list of cryptography papers, articles, tutorials and howtos.",
+        "url": "https://github.com/pFarb/awesome-crypto-papers",
+        "stars": 1069
+    },
+    {
+        "description": "Xournal++ is a handwriting notetaking software with PDF annotation support. Written in C++ with GTK3, supporting Linux (e.g. Ubuntu, Debian, Arch, SUSE), macOS and Windows 10. Supports pen input from devices such as Wacom Tablets.",
+        "url": "https://github.com/xournalpp/xournalpp",
+        "stars": 4359
+    },
+    {
+        "description": "Générez votre attestation de déplacement sur votre mobile à partir du document officiel.",
+        "url": "https://github.com/AdrienPoupa/AttestationDeplacement",
+        "stars": 184
+    },
+    {
+        "description": "Powerline is a statusline plugin for vim, and provides statuslines and prompts for several other applications, including zsh, bash, tmux, IPython, Awesome and Qtile.",
+        "url": "https://github.com/powerline/powerline",
+        "stars": 12741
+    },
+    {
+        "description": "A modern, portable, easy to use crypto library.",
+        "url": "https://github.com/jedisct1/libsodium",
+        "stars": 9452
+    },
+    {
+        "description": "Hardening Ubuntu. Systemd edition.",
+        "url": "https://github.com/konstruktoid/hardening",
+        "stars": 779
+    },
+    {
+        "description": "Ansible role to apply a security baseline. Systemd edition.",
+        "url": "https://github.com/konstruktoid/ansible-role-hardening",
+        "stars": 215
+    },
+    {
+        "description": "Full-sized drag & drop event calendar",
+        "url": "https://github.com/fullcalendar/fullcalendar",
+        "stars": 14137
+    },
+    {
+        "description": "A modern replacement for ‘ls’.",
+        "url": "https://github.com/ogham/exa",
+        "stars": 14267
+    },
+    {
+        "description": "Improved Nano Syntax Highlighting Files",
+        "url": "https://github.com/scopatz/nanorc",
+        "stars": 2237
+    },
+    {
+        "description": "Gin is a HTTP web framework written in Go (Golang). It features a Martini-like API with much better performance -- up to 40 times faster. If you need smashing performance, get yourself some Gin.",
+        "url": "https://github.com/gin-gonic/gin",
+        "stars": 50626
+    },
+    {
+        "description": "A Node.js Version of Foreman",
+        "url": "https://github.com/strongloop/node-foreman",
+        "stars": 1203
+    },
+    {
+        "description": "A cat(1) clone with wings.",
+        "url": "https://github.com/sharkdp/bat",
+        "stars": 28905
+    },
+    {
+        "description": "PDF editing software in large quantities. Designed for teachers, this app keeps recorded previous annotations, and offers features like marking scale, PDF conversion, vectorial drawing...",
+        "url": "https://github.com/ClementGre/PDF4Teachers",
+        "stars": 67
+    },
+    {
+        "description": "📚 Collaborative cheatsheets for console commands",
+        "url": "https://github.com/tldr-pages/tldr",
+        "stars": 34010
+    },
+    {
+        "description": "Ansible tutorial",
+        "url": "https://github.com/leucos/ansible-tuto",
+        "stars": 1916
+    },
+    {
+        "description": "Interactive Ansible tutorials with dead simple setup via Docker",
+        "url": "https://github.com/turkenh/ansible-interactive-tutorial",
+        "stars": 1336
+    },
+    {
+        "description": "👽 Open source API development ecosystem https://hoppscotch.io",
+        "url": "https://github.com/hoppscotch/hoppscotch",
+        "stars": 30583
+    },
+    {
+        "description": "A SQL linter and auto-formatter for Humans",
+        "url": "https://github.com/sqlfluff/sqlfluff",
+        "stars": 1884
+    },
+    {
+        "description": "An SQL linter",
+        "url": "https://github.com/joereynolds/sql-lint",
+        "stars": 297
+    },
+    {
+        "description": "🛡️ A private certificate authority (X.509 & SSH) & ACME server for secure automated certificate management, so you can use TLS everywhere & SSO for SSH.",
+        "url": "https://github.com/smallstep/certificates",
+        "stars": 3292
+    },
+    {
+        "description": "CFSSL: Cloudflare's PKI and TLS toolkit",
+        "url": "https://github.com/cloudflare/cfssl",
+        "stars": 6305
+    },
+    {
+        "description": "minica is a small, simple CA intended for use in situations where the CA operator also operates each host where a certificate will be used.",
+        "url": "https://github.com/jsha/minica",
+        "stars": 2009
+    },
+    {
+        "description": "☄🌌️  The minimal, blazing-fast, and infinitely customizable prompt for any shell!",
+        "url": "https://github.com/starship/starship",
+        "stars": 18196
+    },
+    {
+        "description": "Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, & more",
+        "url": "https://github.com/ryanoasis/nerd-fonts",
+        "stars": 29435
+    },
+    {
+        "description": "The user-friendly command line shell.",
+        "url": "https://github.com/fish-shell/fish-shell",
+        "stars": 17235
+    },
+    {
+        "description": "OpenXPKI Code",
+        "url": "https://github.com/openxpki/openxpki",
+        "stars": 336
+    },
+    {
+        "description": "The Dogtag Certificate System is an enterprise-class Certificate Authority (CA) which supports all aspects of certificate lifecycle management, including key archival, OCSP and smartcard management.",
+        "url": "https://github.com/dogtagpki/pki",
+        "stars": 117
+    },
+    {
+        "description": "An ACME-based certificate authority, written in Go. ",
+        "url": "https://github.com/letsencrypt/boulder",
+        "stars": 3960
+    },
+    {
+        "description": "PostgreSQL Monitoring, Metrics Collection and Alerting Resources from Crunchy Data",
+        "url": "https://github.com/CrunchyData/pgmonitor",
+        "stars": 257
+    },
+    {
+        "description": "How to improve NGINX performance, security, and other important things.",
+        "url": "https://github.com/trimstray/nginx-admins-handbook",
+        "stars": 12298
+    },
+    {
+        "description": "📖 A collection of pure bash alternatives to external processes.",
+        "url": "https://github.com/dylanaraps/pure-bash-bible",
+        "stars": 27526
+    },
+    {
+        "description": "Mirror of https://gitlab.com/Remmina/Remmina The GTK+ Remmina Remote Desktop Client",
+        "url": "https://github.com/FreeRDP/Remmina",
+        "stars": 1657
+    },
+    {
+        "description": "Performance monitoring tools for Linux",
+        "url": "https://github.com/sysstat/sysstat",
+        "stars": 1950
+    },
+    {
+        "description": "Scalable datastore for metrics, events, and real-time analytics",
+        "url": "https://github.com/influxdata/influxdb",
+        "stars": 21946
+    },
+    {
+        "description": "A Node.js style checker and lint tool for Markdown/CommonMark files.",
+        "url": "https://github.com/DavidAnson/markdownlint",
+        "stars": 2646
+    },
+    {
+        "description": "git mirror of upstream bzr at http://launchpad.net/byobu",
+        "url": "https://github.com/dustinkirkland/byobu",
+        "stars": 736
+    },
+    {
+        "description": "Sysbench scripts to generate a tpcc-like workload for MySQL and PostgreSQL",
+        "url": "https://github.com/Percona-Lab/sysbench-tpcc",
+        "stars": 152
+    },
+    {
+        "description": "Scriptable database and system performance benchmark",
+        "url": "https://github.com/akopytov/sysbench",
+        "stars": 4040
+    },
+    {
+        "description": "The OpenCA's Online Certificate Status Protocol Daemon",
+        "url": "https://github.com/openca/openca-ocspd",
+        "stars": 77
+    },
+    {
+        "description": "A list of bugs found by SQLancer",
+        "url": "https://github.com/sqlancer/bugs",
+        "stars": 10
+    },
+    {
+        "description": "Daemon to ban hosts that cause multiple authentication errors",
+        "url": "https://github.com/fail2ban/fail2ban",
+        "stars": 6307
+    },
+    {
+        "description": "The uncompromising Python code formatter",
+        "url": "https://github.com/psf/black",
+        "stars": 22015
+    },
+    {
+        "description": "Crypto 101, the introductory book on cryptography.",
+        "url": "https://github.com/crypto101/book",
+        "stars": 2612
+    },
+    {
+        "description": "Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON",
+        "url": "https://github.com/johnkerl/miller",
+        "stars": 2871
+    },
+    {
+        "description": "Universal markup converter",
+        "url": "https://github.com/jgm/pandoc",
+        "stars": 23231
+    },
+    {
+        "description": "A platform for community discussion. Free, open, simple.",
+        "url": "https://github.com/discourse/discourse",
+        "stars": 33846
+    },
+    {
+        "description": "A boilerplate for the freeCodeCamp curriculum.",
+        "url": "https://github.com/freeCodeCamp/boilerplate-infosec",
+        "stars": 75
+    },
+    {
+        "description": "Writeups on exploits covering a variety of topics: stack canaries, ROP gadgets, ret2libc, etc",
+        "url": "https://github.com/jo-makar/exploit-writeups",
+        "stars": 1
+    },
+    {
+        "description": "FUSE filesystem over Google Drive",
+        "url": "https://github.com/astrada/google-drive-ocamlfuse",
+        "stars": 4297
+    },
+    {
+        "description": "KeePassXC is a cross-platform community-driven port of the Windows application “Keepass Password Safe”.",
+        "url": "https://github.com/keepassxreboot/keepassxc",
+        "stars": 10879
+    },
+    {
+        "description": "Specification of the Cypher property graph query language",
+        "url": "https://github.com/opencypher/openCypher",
+        "stars": 569
+    },
+    {
+        "description": "A graph database extension for PostgreSQL",
+        "url": "https://github.com/bitnine-oss/AgensGraph-Extension",
+        "stars": 180
+    },
+    {
+        "description": "Curated list of design and UI resources from stock photos, web templates, CSS frameworks, UI libraries, tools and much more",
+        "url": "https://github.com/bradtraversy/design-resources-for-developers",
+        "stars": 31519
+    },
+    {
+        "description": "The Python programming language",
+        "url": "https://github.com/python/cpython",
+        "stars": 39650
+    },
+    {
+        "description": "Generator Tricks for Systems Programmers (Tutorial)",
+        "url": "https://github.com/dabeaz/generators",
+        "stars": 292
+    },
+    {
+        "description": "Practical Python Programming (course by @dabeaz)",
+        "url": "https://github.com/dabeaz-course/practical-python",
+        "stars": 7441
+    },
+    {
+        "description": "The Zen of Python by Example",
+        "url": "https://github.com/hblanks/zen-of-python-by-example",
+        "stars": 60
+    },
+    {
+        "description": "The Python micro framework for building web applications.",
+        "url": "https://github.com/pallets/flask",
+        "stars": 56349
+    },
+    {
+        "description": "Algorithms and data structures for preparing programming competitions: basic and advanced",
+        "url": "https://github.com/jilljenn/tryalgo",
+        "stars": 303
+    },
+    {
+        "description": "In this article I try to explain why Haskell keeps being such an important language by presenting some of its most important and distinguishing features and detailing them with working code examples.  The presentation aims to be self-contained and does not require any previous knowledge of the language. ",
+        "url": "https://github.com/thma/WhyHaskellMatters",
+        "stars": 421
+    },
+    {
+        "description": "CodiMD - Realtime collaborative markdown notes on all platforms.",
+        "url": "https://github.com/hackmdio/codimd",
+        "stars": 7283
+    },
+    {
+        "description": "🌩 A tiny (185 bytes) event-based Redux-like state manager for React, Preact, Angular, Vue, and Svelte",
+        "url": "https://github.com/storeon/storeon",
+        "stars": 1721
+    },
+    {
+        "description": "An open source SQL database designed to process time series data, faster",
+        "url": "https://github.com/questdb/questdb",
+        "stars": 4409
+    },
+    {
+        "description": "slugifies even utf-8 chars!",
+        "url": "https://github.com/Trott/slug",
+        "stars": 155
+    },
+    {
+        "description": "Simple HTML5 Charts using the <canvas> tag",
+        "url": "https://github.com/chartjs/Chart.js",
+        "stars": 54525
+    },
+    {
+        "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
+        "url": "https://github.com/donnemartin/system-design-primer",
+        "stars": 141591
+    },
+    {
+        "description": "A simple middleware-style router for isomorphic JavaScript web apps",
+        "url": "https://github.com/kriasoft/universal-router",
+        "stars": 1576
+    },
+    {
+        "description": "\"The mother of all demo apps\" — Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more 🏅",
+        "url": "https://github.com/gothinkster/realworld",
+        "stars": 59680
+    },
+    {
+        "description": "A tiny JavaScript debugging utility modelled after Node.js core's debugging technique. Works in Node.js and web browsers",
+        "url": "https://github.com/visionmedia/debug",
+        "stars": 9714
+    },
+    {
+        "description": "⚛️ Fast 3kB React alternative with the same modern API. Components & Virtual DOM.",
+        "url": "https://github.com/preactjs/preact",
+        "stars": 29678
+    },
+    {
+        "description": "Modern CSS framework based on Flexbox",
+        "url": "https://github.com/jgthms/bulma",
+        "stars": 44086
+    },
+    {
+        "description": "Open Web Components: guides, tools and libraries for developing web components.",
+        "url": "https://github.com/open-wc/open-wc",
+        "stars": 1567
+    },
+    {
+        "description": "Lit is a simple library for building fast, lightweight web components.",
+        "url": "https://github.com/lit/lit",
+        "stars": 8644
+    },
+    {
+        "description": "LEGACY REPO. This repository is for maintenance of the legacy LitElement library. The LitElement base class is now part of the Lit library, which is developed in the lit monorepo.",
+        "url": "https://github.com/lit/lit-element",
+        "stars": 4458
+    },
+    {
+        "description": "Keep multiple browsers & devices in sync when building websites. http://browsersync.io",
+        "url": "https://github.com/BrowserSync/browser-sync",
+        "stars": 11522
+    },
+    {
+        "description": "Collection of custom elements that appear hand drawn. Great for wireframes or a fun look.",
+        "url": "https://github.com/rough-stuff/wired-elements",
+        "stars": 8690
+    },
+    {
+        "description": "A query builder for PostgreSQL, MySQL, SQL Server, SQLite3 and Oracle, designed to be flexible, portable, and fun to use.",
+        "url": "https://github.com/knex/knex",
+        "stars": 14560
+    },
+    {
+        "description": "Fast, easy and reliable testing for anything that runs in a browser.",
+        "url": "https://github.com/cypress-io/cypress",
+        "stars": 32702
+    },
+    {
+        "description": "Headless Chrome Node.js API",
+        "url": "https://github.com/puppeteer/puppeteer",
+        "stars": 72779
+    },
+    {
+        "description": "📓 The UI component explorer. Develop, document, & test React, Vue, Angular, Web Components, Ember, Svelte & more!",
+        "url": "https://github.com/storybookjs/storybook",
+        "stars": 64113
+    },
+    {
+        "description": "High-quality web components with a small footprint",
+        "url": "https://github.com/andreasbm/weightless",
+        "stars": 315
+    },
+    {
+        "description": ":flags: Best UI/UX Design Resources For Developer & Designer Ever :)",
+        "url": "https://github.com/Dogfalo/awesome-design",
+        "stars": 159
+    },
+    {
+        "description": "The OWASP ZAP core project",
+        "url": "https://github.com/zaproxy/zaproxy",
+        "stars": 8735
+    },
+    {
+        "description": "generate massive amounts of realistic fake data in Node.js and the browser",
+        "url": "https://github.com/Marak/faker.js",
+        "stars": 33211
+    },
+    {
+        "description": null,
+        "url": "https://github.com/Slashgear/cloud-client-eval",
+        "stars": 1
+    },
+    {
+        "description": "Watches files and records, or triggers actions, when they change. ",
+        "url": "https://github.com/facebook/watchman",
+        "stars": 10249
+    },
+    {
+        "description": "The CSS design system that powers GitHub",
+        "url": "https://github.com/primer/css",
+        "stars": 10384
+    },
+    {
+        "description": "The OpenAPI Specification Repository",
+        "url": "https://github.com/OAI/OpenAPI-Specification",
+        "stars": 21817
+    },
+    {
+        "description": "Create HTTP Errors",
+        "url": "https://github.com/jshttp/http-errors",
+        "stars": 1117
+    },
+    {
+        "description": "🕷 Super-agent driven library for testing node.js HTTP servers using a fluent API.",
+        "url": "https://github.com/visionmedia/supertest",
+        "stars": 11403
+    },
+    {
+        "description": "Newman is a command-line collection runner for Postman",
+        "url": "https://github.com/postmanlabs/newman",
+        "stars": 5376
+    },
+    {
+        "description": "Graceful shutdown and Kubernetes readiness / liveness checks for any Node.js HTTP applications",
+        "url": "https://github.com/godaddy/terminus",
+        "stars": 1393
+    },
+    {
+        "description": "Beautiful and accessible math in all browsers",
+        "url": "https://github.com/mathjax/MathJax",
+        "stars": 8362
+    },
+    {
+        "description": "A free, fast, and reliable Open Source CDN for npm, GitHub, Javascript and ESM",
+        "url": "https://github.com/jsdelivr/jsdelivr",
+        "stars": 3889
+    },
+    {
+        "description": "Principles of Writing Consistent, Idiomatic JavaScript",
+        "url": "https://github.com/rwaldron/idiomatic.js",
+        "stars": 18601
+    },
+    {
+        "description": "An easy-to-read, quick reference for JS best practices, accepted coding standards, and links around the Web",
+        "url": "https://github.com/braziljs/js-the-right-way",
+        "stars": 7785
+    },
+    {
+        "description": "List of awesome CSS frameworks",
+        "url": "https://github.com/troxler/awesome-css-frameworks",
+        "stars": 4169
+    },
+    {
+        "description": "CSS Refresher!",
+        "url": "https://github.com/vasanthk/css-refresher-notes",
+        "stars": 1444
+    },
+    {
+        "description": "For writing maintainable and scalable HTML documents",
+        "url": "https://github.com/hail2u/html-best-practices",
+        "stars": 2562
+    },
+    {
+        "description": "Best practices for modern web development",
+        "url": "https://github.com/google/WebFundamentals",
+        "stars": 12162
+    },
+    {
+        "description": "🗂 The perfect Front-End Checklist for modern websites and meticulous developers",
+        "url": "https://github.com/thedaviddias/Front-End-Checklist",
+        "stars": 55551
+    },
+    {
+        "description": "A curated list of awesome Python frameworks, libraries, software and resources",
+        "url": "https://github.com/vinta/awesome-python",
+        "stars": 101841
+    },
+    {
+        "description": "Coq is a formal proof management system. It provides a formal language to write mathematical definitions, executable algorithms and theorems together with an environment for semi-interactive development of machine-checked proofs. ",
+        "url": "https://github.com/coq/coq",
+        "stars": 3420
+    },
+    {
+        "description": "The open source BIMserver platform",
+        "url": "https://github.com/opensourceBIM/BIMserver",
+        "stars": 1095
+    },
+    {
+        "description": "Fast, unopinionated, minimalist web framework for node.",
+        "url": "https://github.com/expressjs/express",
+        "stars": 54075
+    },
+    {
+        "description": "Pure bash script to test and wait on the availability of a TCP host and port",
+        "url": "https://github.com/vishnubob/wait-for-it",
+        "stars": 6829
+    },
+    {
+        "description": "Useful resources for creating apps with Electron",
+        "url": "https://github.com/sindresorhus/awesome-electron",
+        "stars": 21845
+    },
+    {
+        "description": ":zap: Delightful Node.js packages and resources",
+        "url": "https://github.com/sindresorhus/awesome-nodejs",
+        "stars": 42071
+    },
+    {
+        "description": "how to write node programs with streams",
+        "url": "https://github.com/substack/stream-handbook",
+        "stars": 13710
+    },
+    {
+        "description": "What the f*ck Python? 😱",
+        "url": "https://github.com/satwikkansal/wtfpython",
+        "stars": 27117
+    },
+    {
+        "description": "A collection of design patterns/idioms in Python",
+        "url": "https://github.com/faif/python-patterns",
+        "stars": 29019
+    },
+    {
+        "description": "Minimal examples of data structures and algorithms in Python",
+        "url": "https://github.com/keon/algorithms",
+        "stars": 19570
+    },
+    {
+        "description": "All Algorithms implemented in Python",
+        "url": "https://github.com/TheAlgorithms/Python",
+        "stars": 114308
+    },
+    {
+        "description": "The C++ Core Guidelines are a set of tried-and-true guidelines, rules, and best practices about coding in C++",
+        "url": "https://github.com/isocpp/CppCoreGuidelines",
+        "stars": 31548
+    },
+    {
+        "description": "IfcPlusPlus is an open source C++ class model, as well as a reader and writer for IFC files in STEP format. Features: Easy and efficient memory management using smart pointers. Parallel reader for very fast parsing on multi-core CPU's. Additionally, there's a simple IFC viewer application, using Qt and OpenSceneGraph. It can be used as starting point for all kinds of applications around the open building model standard IFC.",
+        "url": "https://github.com/ifcquery/ifcplusplus",
+        "stars": 365
+    },
+    {
+        "description": "Open source IFC library and geometry engine",
+        "url": "https://github.com/IfcOpenShell/IfcOpenShell",
+        "stars": 775
+    },
+    {
+        "description": "A benchmarking library. As used on jsPerf.com.",
+        "url": "https://github.com/bestiejs/benchmark.js",
+        "stars": 4963
+    },
+    {
+        "description": "Language-agnostic HTTP API Testing Tool",
+        "url": "https://github.com/apiaryio/dredd",
+        "stars": 3700
+    },
+    {
+        "description": "PostgreSQL interface for Node.js",
+        "url": "https://github.com/vitaly-t/pg-promise",
+        "stars": 2978
+    },
+    {
+        "description": "Visualization of all roads within any city",
+        "url": "https://github.com/anvaka/city-roads",
+        "stars": 3932
+    },
+    {
+        "description": ":bathtub: Clean Code concepts adapted for JavaScript",
+        "url": "https://github.com/ryanmcdermott/clean-code-javascript",
+        "stars": 55623
+    },
+    {
+        "description": "OBDA-specific benchmark based on the Norwegian Petroleum Directorate FactPages (NPD FactPages) data.",
+        "url": "https://github.com/ontop/npd-benchmark",
+        "stars": 7
+    },
+    {
+        "description": "A collection of awesome penetration testing resources, tools and other shiny things",
+        "url": "https://github.com/enaqx/awesome-pentest",
+        "stars": 14621
+    },
+    {
+        "description": "A consistent code style guide for SQL to ensure legible and maintainable projects",
+        "url": "https://github.com/treffynnon/sqlstyle.guide",
+        "stars": 1040
+    },
+    {
+        "description": "Inspired by @veltman's command-line mystery, use SQL to research clues and find out whodunit!",
+        "url": "https://github.com/NUKnightLab/sql-mysteries",
+        "stars": 967
+    },
+    {
+        "description": "Native GraphQL Database with graph backend",
+        "url": "https://github.com/dgraph-io/dgraph",
+        "stars": 16491
+    },
+    {
+        "description": "Ontop is a platform to query relational databases as Virtual RDF Knowledge Graphs using SPARQL",
+        "url": "https://github.com/ontop/ontop",
+        "stars": 441
+    },
+    {
+        "description": "examples for blog post about Row Level Security",
+        "url": "https://github.com/2ndQuadrant/rls-examples",
+        "stars": 32
+    },
+    {
+        "description": "REST API for any Postgres database",
+        "url": "https://github.com/PostgREST/postgrest",
+        "stars": 17442
+    },
+    {
+        "description": "Exchange Calendar, Tasks, Contacts provider for Mozilla Thunderbird",
+        "url": "https://github.com/ExchangeCalendar/exchangecalendar",
+        "stars": 683
+    },
+    {
+        "description": "SecLists is the security tester's companion. It's a collection of multiple types of lists used during security assessments, collected in one place. List types include usernames, passwords, URLs, sensitive data patterns, fuzzing payloads, web shells, and many more.",
+        "url": "https://github.com/danielmiessler/SecLists",
+        "stars": 32998
+    },
+    {
+        "description": "Apereo CAS - Enterprise Single Sign On for all earthlings and beyond.",
+        "url": "https://github.com/apereo/cas",
+        "stars": 8854
+    },
+    {
+        "description": "Fairly full featured Ansible role for Postgresql.",
+        "url": "https://github.com/ANXS/postgresql",
+        "stars": 706
+    },
+    {
+        "description": "Conditionally add a middleware to express with some common patterns",
+        "url": "https://github.com/jfromaniello/express-unless",
+        "stars": 149
+    },
+    {
+        "description": ":vertical_traffic_light: Express middleware for JWT permissions",
+        "url": "https://github.com/MichielDeMey/express-jwt-permissions",
+        "stars": 467
+    },
+    {
+        "description": "A virtual DOM library with focus on simplicity, modularity, powerful features and performance.",
+        "url": "https://github.com/snabbdom/snabbdom",
+        "stars": 9371
+    },
+    {
+        "description": "eXist Native XML Database and Application Platform",
+        "url": "https://github.com/eXist-db/exist",
+        "stars": 313
+    },
+    {
+        "description": "BaseX Main Repository.",
+        "url": "https://github.com/BaseXdb/basex",
+        "stars": 534
+    },
+    {
+        "description": "A professional front-end template for building fast, robust, and adaptable web apps or sites.",
+        "url": "https://github.com/h5bp/html5-boilerplate",
+        "stars": 51189
+    },
+    {
+        "description": "📝 Algorithms and data structures implemented in JavaScript with explanations and links to further readings",
+        "url": "https://github.com/trekhleb/javascript-algorithms",
+        "stars": 117513
+    },
+    {
+        "description": "Cybernetically enhanced web apps",
+        "url": "https://github.com/sveltejs/svelte",
+        "stars": 49534
+    },
+    {
+        "description": "😎 Awesome lists about all kinds of interesting topics",
+        "url": "https://github.com/sindresorhus/awesome",
+        "stars": 167253
+    },
+    {
+        "description": "Universal \"JSON Web Almost Everything\" - JWA, JWS, JWE, JWT, JWK with no dependencies",
+        "url": "https://github.com/panva/jose",
+        "stars": 1338
+    },
+    {
+        "description": "OpenID Certified™ Relying Party (OpenID Connect/OAuth 2.0 Client) implementation for Node.js.",
+        "url": "https://github.com/panva/node-openid-client",
+        "stars": 1004
+    },
+    {
+        "description": "OpenID Certified™ OAuth 2.0 Authorization Server implementation for Node.js",
+        "url": "https://github.com/panva/node-oidc-provider",
+        "stars": 1806
+    },
+    {
+        "description": "A list of useful payloads and bypass for Web Application Security and Pentest/CTF",
+        "url": "https://github.com/swisskyrepo/PayloadsAllTheThings",
+        "stars": 28847
+    },
+    {
+        "description": null,
+        "url": "https://github.com/juliengossa/DataESR",
+        "stars": 10
+    },
+    {
+        "description": "Promotion de PostgreSQL au sein de la communauté francophone",
+        "url": "https://github.com/postgresqlfr/pgfr_materials",
+        "stars": 8
+    },
+    {
+        "description": "pg_activity is a top like application for PostgreSQL server activity monitoring.",
+        "url": "https://github.com/dalibo/pg_activity",
+        "stars": 1323
+    },
+    {
+        "description": "Queries to mesure statistical bloat in indexes and tables for PostgreSQL",
+        "url": "https://github.com/ioguix/pgsql-bloat-estimation",
+        "stars": 303
+    },
+    {
+        "description": "Postgres CLI with autocompletion and syntax highlighting",
+        "url": "https://github.com/dbcli/pgcli",
+        "stars": 9747
+    },
+    {
+        "description": "PostgreSQL client for node.js.",
+        "url": "https://github.com/brianc/node-postgres",
+        "stars": 9810
+    },
+    {
+        "description": "Cheatsheet for the JavaScript knowledge you will frequently encounter in modern projects.",
+        "url": "https://github.com/mbeaudru/modern-js-cheatsheet",
+        "stars": 21493
+    },
+    {
+        "description": "Command-line admin tool for observing and troubleshooting Postgres.",
+        "url": "https://github.com/lesovsky/pgcenter",
+        "stars": 1301
+    },
+    {
+        "description": "Google Chrome, Firefox, and Thunderbird extension that lets you write email in Markdown and render it before sending.",
+        "url": "https://github.com/adam-p/markdown-here",
+        "stars": 52780
+    },
+    {
+        "description": "Unix pager (with very rich functionality) designed for work with tables. Designed for PostgreSQL, but MySQL is supported too. Works well with pgcli too. Can be used as CSV or TSV viewer too. It supports searching, selecting rows, columns, or block and export selected area to clipboard. ",
+        "url": "https://github.com/okbob/pspg",
+        "stars": 1620
+    },
+    {
+        "description": "Damn Vulnerable Web Application (DVWA)",
+        "url": "https://github.com/digininja/DVWA",
+        "stars": 5436
+    },
+    {
+        "description": "A command-line based markdown presentation tool.",
+        "url": "https://github.com/visit1985/mdp",
+        "stars": 4097
+    },
+    {
+        "description": "The OWASP Cheat Sheet Series was created to provide a concise collection of high value information on specific application security topics.",
+        "url": "https://github.com/OWASP/CheatSheetSeries",
+        "stars": 18050
+    },
+    {
+        "description": "A collection of important graph embedding, classification and representation learning papers with implementations.",
+        "url": "https://github.com/benedekrozemberczki/awesome-graph-classification",
+        "stars": 4239
+    },
+    {
+        "description": "A fast PostgreSQL Log Analyzer",
+        "url": "https://github.com/darold/pgbadger",
+        "stars": 2415
+    },
+    {
+        "description": "PostgreSQL Languages AST and statements prettifier: master branch covers PG10, v2 branch covers PG12, v3 covers PG13",
+        "url": "https://github.com/lelit/pglast",
+        "stars": 154
+    },
+    {
+        "description": "Hypothetical Indexes for PostgreSQL",
+        "url": "https://github.com/HypoPG/hypopg",
+        "stars": 632
+    },
+    {
+        "description": "Blazegraph High Performance Graph Database",
+        "url": "https://github.com/blazegraph/database",
+        "stars": 615
+    },
+    {
+        "description": "Bash Academy - The Bash Guide",
+        "url": "https://github.com/lhunath/guide.bash.academy",
+        "stars": 685
+    },
+    {
+        "description": "Simple script to analyse your PostgreSQL database configuration, and give tuning advice",
+        "url": "https://github.com/jfcoz/postgresqltuner",
+        "stars": 2122
+    },
+    {
+        "description": "PostgreSQL metrics monitor/dashboard",
+        "url": "https://github.com/cybertec-postgresql/pgwatch2",
+        "stars": 1059
+    },
+    {
+        "description": "An open-source time-series SQL database optimized for fast ingest and complex queries.  Packaged as a PostgreSQL extension.",
+        "url": "https://github.com/timescale/timescaledb",
+        "stars": 11550
+    },
+    {
+        "description": "A PostgreSQL client with strict types, detailed logging and assertions.",
+        "url": "https://github.com/gajus/slonik",
+        "stars": 2684
+    },
+    {
+        "description": "A framework for anonymizing RDF datasets to ensure safety for publishing in the Linked Open Data cloud.",
+        "url": "https://github.com/RdNetwork/safe-lod-anonymizer",
+        "stars": 1
+    },
+    {
+        "description": "A community Bash framework.",
+        "url": "https://github.com/Bash-it/bash-it",
+        "stars": 12428
+    },
+    {
+        "description": "Master the command line, in one page",
+        "url": "https://github.com/jlevy/the-art-of-command-line",
+        "stars": 93745
+    },
+    {
+        "description": "A curated list of awesome PostgreSQL software, libraries, tools and resources, inspired by awesome-mysql",
+        "url": "https://github.com/dhamaniasad/awesome-postgres",
+        "stars": 7199
+    },
+    {
+        "description": "Collect and display information and stats from a running PostgreSQL server",
+        "url": "https://github.com/rapidloop/pgmetrics",
+        "stars": 652
+    },
+    {
+        "description": "Mirror of the official PostgreSQL GIT repository. Note that this is just a *mirror* - we don't work with pull requests on github. To contribute, please see https://wiki.postgresql.org/wiki/Submitting_a_Patch",
+        "url": "https://github.com/postgres/postgres",
+        "stars": 8764
+    },
+    {
+        "description": "Exploration des données DVF",
+        "url": "https://github.com/etalab/DVF-app",
+        "stars": 346
+    },
+    {
+        "description": "Data Science at the Command Line",
+        "url": "https://github.com/jeroenjanssens/data-science-at-the-command-line",
+        "stars": 3084
+    },
+    {
+        "description": "AgensGraph, a transactional graph database based on PostgreSQL",
+        "url": "https://github.com/bitnine-oss/agensgraph",
+        "stars": 1086
+    },
+    {
+        "description": "Making Postgres and Elasticsearch work together like it's 2021",
+        "url": "https://github.com/zombodb/zombodb",
+        "stars": 3643
+    },
+    {
+        "description": "SPARQL to SQL translation engine for multiple backends, such as DB2, PostgreSQL and Apache Spark",
+        "url": "https://github.com/Quetzal-RDF/quetzal",
+        "stars": 69
+    },
+    {
+        "description": "Execute one command (or mount one Node.js middleware) and get an instant high-performance GraphQL API for your PostgreSQL database!",
+        "url": "https://github.com/graphile/postgraphile",
+        "stars": 10573
+    },
+    {
+        "description": "GraphQL is a query language and execution engine tied to any backend service.",
+        "url": "https://github.com/graphql/graphql-spec",
+        "stars": 13436
+    },
+    {
+        "description": "Simple to use, blazing fast and thoroughly tested WebSocket client and server for Node.js",
+        "url": "https://github.com/websockets/ws",
+        "stars": 16856
+    },
+    {
+        "description": "A book series on JavaScript. @YDKJS on twitter.",
+        "url": "https://github.com/getify/You-Dont-Know-JS",
+        "stars": 143074
+    },
+    {
+        "description": "A curated list of awesome lit-html resources.",
+        "url": "https://github.com/web-padawan/awesome-lit",
+        "stars": 728
+    },
+    {
+        "description": "Making RDF easy enough for most developers",
+        "url": "https://github.com/w3c/EasierRDF",
+        "stars": 158
+    },
+    {
+        "description": "The HTML Presentation Framework",
+        "url": "https://github.com/hakimel/reveal.js",
+        "stars": 56985
+    },
+    {
+        "description": "Roadmap to becoming a web developer in 2021",
+        "url": "https://github.com/kamranahmedse/developer-roadmap",
+        "stars": 168798
+    },
+    {
+        "description": "Demo application that shows how to add Swagger UI Spec to existing Node.js/Express.js project",
+        "url": "https://github.com/GenFirst/swagger-to-existing-nodejs-project",
+        "stars": 93
+    },
+    {
+        "description": ":white_check_mark:  The Node.js best practices list (August 2021)",
+        "url": "https://github.com/goldbergyoni/nodebestpractices",
+        "stars": 69839
+    },
+    {
+        "description": "A Flock of Functions: Combinators, Lambda Calculus, & Church Encodings in JS",
+        "url": "https://github.com/glebec/lambda-talk",
+        "stars": 345
+    },
+    {
+        "description": "Modern JavaScript Tutorial ",
+        "url": "https://github.com/javascript-tutorial/en.javascript.info",
+        "stars": 14753
+    },
+    {
+        "description": "Python prototypal implementation and experimental data for a simple declarative approach to anonymize Linked Open Data graphs (as RDF triple stores).",
+        "url": "https://github.com/RdNetwork/Declarative-LOD-Anonymizer",
+        "stars": 2
+    },
+    {
+        "description": "A JavaScript propositional logic and resolution library",
+        "url": "https://github.com/RyanMarcus/vulcan",
+        "stars": 54
+    },
+    {
+        "description": "Regex derivatives in Coq",
+        "url": "https://github.com/tchajed/regex-derivative",
+        "stars": 5
+    },
+    {
+        "description": "Regular Expression",
+        "url": "https://github.com/coq-contribs/regexp",
+        "stars": 8
+    },
+    {
+        "description": "WebGoat is a deliberately insecure application",
+        "url": "https://github.com/WebGoat/WebGoat",
+        "stars": 4064
+    },
+    {
+        "description": "Examples of data analysis in Haskell",
+        "url": "https://github.com/DataHaskell/data-haskell-examples",
+        "stars": 18
+    },
+    {
+        "description": "Awesome Procedures On Cypher for Neo4j - codenamed \"apoc\"                     If you like it, please ★ above ⇧            ",
+        "url": "https://github.com/neo4j-contrib/neo4j-apoc-procedures",
+        "stars": 1352
+    },
+    {
+        "description": "PEG.js: Parser generator for JavaScript",
+        "url": "https://github.com/pegjs/pegjs",
+        "stars": 4060
+    },
+    {
+        "description": "OpenRefine is a free, open source power tool for working with messy data and improving it",
+        "url": "https://github.com/OpenRefine/OpenRefine",
+        "stars": 8311
+    },
+    {
+        "description": "Résultats du premier tour des présidentielles de 2012 dans les bureaux de vote de Lyon",
+        "url": "https://github.com/juba/presid2012-bureaux-lyon",
+        "stars": 2
+    },
+    {
+        "description": "Benchmarking the Chase",
+        "url": "https://github.com/dbunibas/chasebench",
+        "stars": 6
+    },
+    {
+        "description": "JavaScript Style Guide",
+        "url": "https://github.com/airbnb/javascript",
+        "stars": 113160
+    },
+    {
+        "description": "The sources for the Eloquent JavaScript book",
+        "url": "https://github.com/marijnh/Eloquent-JavaScript",
+        "stars": 2595
+    }
+]

@@ -1,0 +1,26 @@
+form.form-example {
+    display: table;
+}
+
+div.form-example {
+    display: table-row;
+}
+
+label, input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+.cow {
+    pointer-events: none;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    position: absolute;
+    /* background-color: #bbb; */
+    /* border-radius: 50%; */
+}

@@ -1,0 +1,129 @@
+[
+  {
+    "guid": "H9pXOzx5a7oO",
+    "title": "Guides",
+    "index": 0,
+    "dateAdded": 1616456559317000,
+    "lastModified": 1623722902051000,
+    "id": 1044,
+    "typeCode": 2,
+    "type": "text/x-moz-place-container",
+    "children": [
+      {
+        "guid": "4hoJc_3HyyUX",
+        "title": "Algorithmique — Algorithmique",
+        "index": 0,
+        "dateAdded": 1608034634559000,
+        "lastModified": 1616456568546000,
+        "id": 400,
+        "typeCode": 1,
+        "type": "text/x-moz-place",
+        "uri": "https://perso.liris.cnrs.fr/pierre-antoine.champin/enseignement/algo/cours/index.html#"
+      },
+      {
+        "guid": "SfFQxmoZeJHT",
+        "title": "Cours de Python",
+        "index": 1,
+        "dateAdded": 1613285460038000,
+        "lastModified": 1616456575586000,
+        "id": 407,
+        "typeCode": 1,
+        "iconuri": "https://python.sdv.univ-paris-diderot.fr/assets/images/favicon.png",
+        "type": "text/x-moz-place",
+        "uri": "https://python.sdv.univ-paris-diderot.fr/"
+      }
+    ]
+  },
+  {
+    "guid": "s88yEfInflbB",
+    "title": "Libraries",
+    "index": 1,
+    "dateAdded": 1616456441529000,
+    "lastModified": 1628036363128000,
+    "id": 1041,
+    "typeCode": 2,
+    "type": "text/x-moz-place-container",
+    "children": [
+      {
+        "guid": "AeVLVKcxOKk0",
+        "title": "Data Science",
+        "index": 0,
+        "dateAdded": 1616456398060000,
+        "lastModified": 1624936875908000,
+        "id": 1039,
+        "typeCode": 2,
+        "type": "text/x-moz-place-container",
+        "children": [
+          {
+            "guid": "JfB54A3XQvGB",
+            "title": "A Comprehensive Guide to Understand and Implement Text Classification in Python",
+            "index": 0,
+            "dateAdded": 1615360316137000,
+            "lastModified": 1616457813590000,
+            "id": 966,
+            "typeCode": 1,
+            "iconuri": "https://www.analyticsvidhya.com/wp-content/uploads/2015/02/logo_square_v2.jpg",
+            "type": "text/x-moz-place",
+            "uri": "https://www.analyticsvidhya.com/blog/2018/04/a-comprehensive-guide-to-understand-and-implement-text-classification-in-python/"
+          },
+          {
+            "guid": "eYcha_X8qxzG",
+            "title": "PyTorch",
+            "index": 1,
+            "dateAdded": 1615613067064000,
+            "lastModified": 1616457824152000,
+            "id": 979,
+            "typeCode": 1,
+            "iconuri": "https://pytorch.org/favicon.ico?",
+            "type": "text/x-moz-place",
+            "uri": "https://pytorch.org/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "guid": "8jdjN7YCzaNX",
+    "title": "",
+    "index": 4,
+    "dateAdded": 1616458695160000,
+    "lastModified": 1616458699696000,
+    "id": 1055,
+    "typeCode": 3,
+    "type": "text/x-moz-place-separator"
+  },
+  {
+    "guid": "2meBNoSJ6XdY",
+    "title": "From Python to Numpy",
+    "index": 25,
+    "dateAdded": 1622414395087000,
+    "lastModified": 1623722791997000,
+    "id": 1241,
+    "typeCode": 1,
+    "charset": "windows-1252",
+    "type": "text/x-moz-place",
+    "uri": "https://www.labri.fr/perso/nrougier/from-python-to-numpy/"
+  },
+  {
+    "guid": "123mAm1ieMEEjV_",
+    "title": "This website do not exists",
+    "index": 26,
+    "dateAdded": 1608565174571000,
+    "lastModified": 1623707963000000,
+    "id": 13241,
+    "typeCode": 1,
+    "type": "text/x-moz-place",
+    "uri": "https://the-site-that-do-no-exists/"
+  },
+  {
+    "guid": "123mAccm1ieMEEjV_",
+    "title": "The website that answers 404",
+    "index": 27,
+    "dateAdded": 1608565174571000,
+    "lastModified": 1623707963000000,
+    "id": 13242,
+    "typeCode": 1,
+    "type": "text/x-moz-place",
+    "uri": "https://httpbin.org/status/404"
+  }
+]

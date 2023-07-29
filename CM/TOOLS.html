@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Romuald THION">
+  <title>Développement Web</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/solarized.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Développement Web</h1>
+  <p class="author">Romuald THION</p>
+  <p class="date">Semestre pair 2022 UNC</p>
+</section>
+
+<section>
+<section id="environnement-de-développement-et-bases-de-git" class="title-slide slide level1">
+<h1>Environnement de développement et bases de Git</h1>
+
+</section>
+<section id="environnement-de-développement-javascript" class="title-slide slide level2">
+<h2>Environnement de développement JavaScript</h2>
+
+</section>
+<section id="vscode" class="slide level3">
+<h3>VSCode</h3>
+<p>Actuellement l’éditeur le plus populaire parmi les développeurs, sur le survey StackOverflow de 2021</p>
+<ul>
+<li><a href="https://insights.stackoverflow.com/survey/2021#integrated-development-environment">IDE</a></li>
+<li><a href="https://insights.stackoverflow.com/survey/2021#other-tools">Other tools</a></li>
+<li><a href="https://insights.stackoverflow.com/survey/2021#collaboration-tools">Collaboration tools</a></li>
+</ul>
+<p>FLOSS, deux distributions existent :</p>
+<ul>
+<li><a href="https://code.visualstudio.com/" class="uri">https://code.visualstudio.com/</a> distribué par MS</li>
+<li><a href="https://vscodium.com/" class="uri">https://vscodium.com/</a> 100% libre
+<ul>
+<li>mais n’a pas le même <em>marketplace</em> d’extensions</li>
+</ul></li>
+</ul>
+</section>
+<section id="outillage-js" class="slide level3">
+<h3>Outillage JS</h3>
+<h4 id="les-incontournables">Les incontournables</h4>
+<ul>
+<li><a href="https://eslint.org/" class="uri">https://eslint.org/</a> (<a href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">extension VSCode</a>)
+<ul>
+<li><em>linter</em> JavaScript avec de nombreux ensemble de règles.</li>
+<li>équivalent Python : <em>Pylint</em></li>
+</ul></li>
+<li><a href="https://prettier.io/" class="uri">https://prettier.io/</a> (<a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">extension VSCode</a>)
+<ul>
+<li>mise en forme automatique du code</li>
+<li>fonctionne pour <em>de nombreux langages</em> (dont MD, Python, HTML, CSS)</li>
+<li>équivalent Python : <em>black</em></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level3">
+
+<h4 id="les-incontournables-contd">Les incontournables (cont’d)</h4>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a>
+<ul>
+<li>ouvre un serveur web minimaliste et injecte du code JS pour rafraîchir <strong>automatiquement</strong> le navigateur quand la page change</li>
+</ul></li>
+<li><a href="https://jsdoc.app/" class="uri">https://jsdoc.app/</a> (<a href="https://marketplace.visualstudio.com/items?itemName=stevencl.addDocComments">extension VSCode</a>)
+<ul>
+<li>gestion de commentaires et génération de doc</li>
+<li>équivalent Python : <em>pydoc</em></li>
+</ul></li>
+<li><a href="https://jestjs.io/" class="uri">https://jestjs.io/</a>
+<ul>
+<li>automatisation des tests</li>
+<li>équivalent Python : <em>pytest</em></li>
+</ul></li>
+</ul>
+<p>D’autres incontournables pour le déploiement comme <a href="https://webpack.js.org/" class="uri">https://webpack.js.org/</a>, <a href="https://babeljs.io/" class="uri">https://babeljs.io/</a> etc. mais qu’on utilisera pas dans ce cours.</p>
+</section>
+
+<section id="gitgithub" class="title-slide slide level2">
+<h2>Git/GitHub</h2>
+<p>Git <a href="https://git-scm.com/" class="uri">https://git-scm.com/</a> : <strong>contrôle de version distribué</strong>, créé par Linus Torvald</p>
+<figure>
+<img data-src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" alt="Logo GIT" /><figcaption aria-hidden="true">Logo GIT</figcaption>
+</figure>
+</section>
+<section class="slide level3">
+
+<p>GitHub <a href="https://github.com/" class="uri">https://github.com/</a> : principale <strong>forge de développpement</strong> logiciel, basée sur Git avec :</p>
+<ul>
+<li><em>fork</em> (son clone personnel d’un projet) et <em>pull requests</em> (pour reverser ses modifs au projet d’origine)</li>
+<li><em>issues</em> : pour les évolutions et les corrections de bug</li>
+<li><em>GitHub Pages</em> : génération de pages web avec <a href="https://jekyllrb.com/" class="uri">https://jekyllrb.com/</a></li>
+<li><em>Continuous Integration/Continuous Delivery</em> (CI/CD)
+<ul>
+<li>via GitHub Actions pour exécuter automatiquement des tests, du packaging, du déploiement etc.</li>
+</ul></li>
+<li><em>wiki</em>, gestion de gros fichiers (GFS), gestion de projets etc.</li>
+</ul>
+</section>
+<section id="bases-de-git" class="slide level3">
+<h3>Bases de Git</h3>
+<figure>
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Fonctionnement_git.jpg" alt="Fonctionnement de Git (Wikipedia)" /><figcaption aria-hidden="true">Fonctionnement de Git (Wikipedia)</figcaption>
+</figure>
+</section>
+<section class="slide level3">
+
+<h4 id="cheatsheets"><em>cheatsheets</em></h4>
+<ul>
+<li><a href="https://training.github.com/">GitHub</a> (imprimable)</li>
+<li><a href="https://ndpsoftware.com/git-cheatsheet.html">interactive</a>, par <em>NDP Software</em></li>
+</ul>
+<h4 id="conventions-des-commits">Conventions des <em>commits</em></h4>
+<ul>
+<li><a href="https://www.conventionalcommits.org/en/v1.0.0/"><em>Conventional Commits</em></a>
+<ul>
+<li><em>A specification for adding human and machine readable meaning to commit messages</em></li>
+</ul></li>
+<li><a href="https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716"><em>Semantic Commit Messages</em></a></li>
+</ul>
+<p>A relier à <a href="ttps://semver.org/">Semantic Versioning 2.0.0</a></p>
+</section>
+
+<section id="todo" class="title-slide slide level2">
+<h2>TODO</h2>
+
+</section>
+<section id="pour-le-lundi-180722" class="slide level3">
+<h3>Pour le lundi 18/07/22</h3>
+<ol type="1">
+<li>Créer un compte <a href="https://github.com/" class="uri">https://github.com/</a></li>
+<li>S’enregistrer sur Classroom via <a href="https://classroom.github.com/a/upWFPCfK" class="uri">https://classroom.github.com/a/upWFPCfK</a></li>
+</ol>
+</section>
+<section id="pour-le-jeudi-210722" class="slide level3">
+<h3>Pour le jeudi 21/07/22</h3>
+<ol type="1">
+<li>Sur <a href="https://learngitbranching.js.org/?locale=fr_FR" class="uri">https://learngitbranching.js.org/?locale=fr_FR</a>, faire <em>a minima</em> : <em>Main : Introduction Sequence</em>, <em>Main : Ramping Up</em> et <em>Remote : Push &amp; Pull – Git Remotes!</em></li>
+<li>Appliquer sur votre dépôt <a href="https://github.com/unc-informatique/git-github-fundamentals-LOGIN" class="uri">https://github.com/unc-informatique/git-github-fundamentals-LOGIN</a> : pousser une modification du <code>README.md</code> sur le <em>remote</em> <strong>depuis l’interface Web</strong> puis <strong>depuis un clone sur votre machine</strong> .</li>
+</ol>
+</section>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+      
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+        height: 960,
+        // Factor of the display size that should remain empty around the content
+        margin: 0.02,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.5,
+        maxScale: 1.0,
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

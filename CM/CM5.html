@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Romuald THION">
+  <title>Développement Web</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/solarized.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Développement Web</h1>
+  <p class="subtitle">Programmation serveur avec Express</p>
+  <p class="author">Romuald THION</p>
+  <p class="date">Semestre pair 2022 UNC</p>
+</section>
+
+<section>
+<section id="le-framework-express" class="title-slide slide level2">
+<h2>Le framework Express</h2>
+<figure>
+<img data-src="img/expressjs.png" alt="Express" /><figcaption aria-hidden="true"><a href="https://expressjs.com/">Express</a></figcaption>
+</figure>
+</section>
+<section id="références" class="slide level3">
+<h3>Références</h3>
+<ul>
+<li><a href="https://nodejs.org/api/">API Node.js</a></li>
+<li><a href="https://github.com/goldbergyoni/nodebestpractices">Node.js Best Practices</a> <strong>excellent</strong></li>
+<li><a href="http://expressjs.com/" class="uri">http://expressjs.com/</a>, dont :
+<ul>
+<li><a href="http://expressjs.com/en/4x/api.html">API officielle</a></li>
+<li>les guides : <a href="https://expressjs.com/en/guide/routing.html">routing</a>, <a href="https://expressjs.com/en/guide/using-middleware.html">using middlewares</a></li>
+</ul></li>
+<li>des exemples <a href="https://github.com/expressjs/express/tree/master/examples">sur leur GitHub</a></li>
+<li>tutoriel <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs">programmation serveur sur MDN</a></li>
+</ul>
+<p>Express a des successeurs plus modernes comme <a href="https://www.fastify.io/" class="uri">https://www.fastify.io/</a> ou <a href="https://koajs.com/" class="uri">https://koajs.com/</a> mais reste <em>une référence</em> avec une <em>très bonne documentation</em>.</p>
+</section>
+<section id="exemple-une-application-express-de-base" class="slide level3">
+<h3>Exemple : une application Express de base</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> express <span class="op">=</span> <span class="pp">require</span>(<span class="st">&quot;express&quot;</span>)<span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> app <span class="op">=</span> <span class="fu">express</span>()<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> port <span class="op">=</span> <span class="dv">5000</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">get</span>(<span class="st">&quot;/&quot;</span><span class="op">,</span> (req<span class="op">,</span> res) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  res<span class="op">.</span><span class="fu">send</span>(<span class="st">&quot;Hello World!&quot;</span>)<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">listen</span>(port<span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`Listening at http://localhost:</span><span class="sc">${</span>port<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<p>En Express, comme dans la majorité des <em>frameworks</em> web, on va définir les étapes du traitement des requêtes et de production de réponses <em>par des callbacks</em> passés en paramètres.</p>
+</section></section>
+<section>
+<section id="mvc---model-view-controler" class="title-slide slide level2">
+<h2>MVC - Model View Controler</h2>
+<p>Le patron de conception (<em>design pattern</em>) <strong>Modèle-Vue-Contrôleur</strong> (MVC) est un modèle d’architecture logicielle :</p>
+<ul>
+<li>une solution générale permettant de résoudre un problème classique</li>
+<li>simplifie la maintenance et l’évolution du logiciel</li>
+</ul>
+<p>Dans le domaine du génie logiciel, le livre fondateurs des <em>design patterns</em> est le <a href="https://en.wikipedia.org/wiki/Design_Patterns">Gang Of Four</a>. Le MVC est <em>un pattern</em>, qui en compose en fait plusieurs.</p>
+</section>
+<section id="principe-général-du-mvc-séparer" class="slide level3">
+<h3>Principe général du MVC : séparer</h3>
+<ul>
+<li>l’accès aux données : <strong>le modèle</strong>,
+<ul>
+<li>typiquement, via un drivers de BD ou un ORM</li>
+</ul></li>
+<li>l’interface : <strong>la vue</strong>,
+<ul>
+<li>typiquement, via un moteur de template</li>
+</ul></li>
+<li>traitements : <strong>le contrôleur</strong>
+<ul>
+<li>la logique de contrôle, en Express : <em>les middlewares et routeurs</em></li>
+</ul></li>
+</ul>
+<p>Mise en œuvre un peu particulière dans le cas des pages web : c’est le navigateur qui est responsable du rendu, de l’affichage</p>
+<!-- ![MVC François Lasselin](http://blog.nalis.fr/public/images/design_pattern_mvc.jpg) -->
+</section>
+<section id="le-mvc-dans-express" class="slide level3">
+<h3>Le MVC dans Express</h3>
+<figure>
+<img data-src="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes/mvc_express.png" alt="MDN" /><figcaption aria-hidden="true"><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes">MDN</a></figcaption>
+</figure>
+</section>
+<section id="les-middlewares" class="slide level3">
+<h3>Les <em>middlewares</em></h3>
+<p>Permettent <strong>d’enchainer les traitements</strong> des requêtes HTTP via des <em>calllbacks</em> de la forme <code>function(request, response, next)</code>.</p>
+<figure>
+<img data-src="img/Expressjs_middleware.png" alt="Source Writing middlewares" /><figcaption aria-hidden="true">Source <a href="https://expressjs.com/en/guide/writing-middleware.html">Writing middlewares</a></figcaption>
+</figure>
+</section>
+<section class="slide level3">
+
+<p>Un <em>middleware</em> peut :</p>
+<ul>
+<li><strong>exécuter</strong> du code arbitraire <em>synchrone</em> <strong>ou</strong> <em>asynchrone</em>
+<ul>
+<li>e.g. <code>const promise = readFile(fileName);</code></li>
+</ul></li>
+<li><strong>modifier</strong> les objets requêtes et réponses HTTP
+<ul>
+<li>e.g., <code>response.setHeader("X-Api-Version", "2.0.1");</code></li>
+<li>e.g., <code>response.locals.user = request.user</code></li>
+</ul></li>
+<li><strong>terminer</strong> le cycle requête-réponse
+<ul>
+<li>e.g., <code>response.json({ code: "OK" }</code></li>
+<li>e.g., <code>response.status(403).end()</code></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level3">
+
+<p>Un <em>middleware</em> peut passer la main au prochain <em>middleware</em>, trois façons :</p>
+<ul>
+<li><code>next()</code> : le prochain dans la liste courante de <em>middlewares</em></li>
+<li><code>next("route")</code> : on sort de la liste courante et on continue</li>
+<li><code>next(error)</code> : le prochain <em>middleware</em> <strong>d’erreur</strong>
+<ul>
+<li>un <em>middleware</em> d’erreur prend <strong>quatre</strong> paramètres
+<ul>
+<li><code>function(error, request, response, next)</code></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>En Express, <strong>tout est middleware</strong>, voir <a href="https://expressjs.com/en/guide/using-middleware.html">using middlewares</a></p>
+</section>
+<section class="slide level3">
+
+<h4 id="types-de-middleware">Types de middleware</h4>
+<ul>
+<li><a href="https://expressjs.com/en/guide/using-middleware.html#middleware.application"><strong>Application-level</strong></a> middleware
+<ul>
+<li>prend généralement <em>tous</em> les verbes HTTP, <em>toutes</em> les routes</li>
+<li>utilisé avec <code>app.use()</code></li>
+</ul></li>
+<li><a href="https://expressjs.com/en/guide/using-middleware.html#middleware.router"><strong>Router-level</strong></a> middleware
+<ul>
+<li>défini tun ensemble de routes et de verbes associés</li>
+<li>on le branche sur un prefixe de route, comme <code>/api</code> ou <code>/users</code></li>
+<li><strong>ce que l’on fait le plus souvent</strong></li>
+</ul></li>
+<li><a href="https://expressjs.com/en/guide/using-middleware.html#middleware.error-handling"><strong>Error-handling</strong></a> middleware
+<ul>
+<li>fonction <code>function (err, req, res, next)</code></li>
+<li>défini généralement <em>en fin de la chaine de traitements</em></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level3">
+
+<ul>
+<li><a href="https://expressjs.com/en/guide/using-middleware.html#middleware.built-in"><strong>Built-in</strong></a> middleware, souvent niveau application
+<ul>
+<li><em>décodage du body</em> <a href="http://expressjs.com/en/4x/api.html#express.json"><code>express.json()</code></a></li>
+<li><em>cookies</em> <a href="http://expressjs.com/en/resources/middleware/cookie-session.html"><code>cookie-session</code></a>,</li>
+<li><em>fichiers statiques</em> <a href="http://expressjs.com/en/4x/api.html#express.static"><code>express.static()</code></a></li>
+</ul></li>
+<li><a href="https://expressjs.com/en/resources/middleware.html"><strong>Third-party</strong></a> middleware (à installer séparement)
+<ul>
+<li><em>sécurité</em> : <a href="https://github.com/helmetjs/helmet">Helmet</a>, <a href="https://expressjs.com/resources/middleware/csurf.html">csurf</a>, <a href="http://expressjs.com/en/resources/middleware/cors.html">cors</a>, <a href="https://github.com/jaredhanson/passport">Passport</a></li>
+<li><em>logging</em> : <a href="https://expressjs.com/resources/middleware/morgan.html">Morgan</a>, <a href="https://github.com/pimterry/loglevel">LogLevel</a>, <a href="https://github.com/winstonjs/winston">Winston</a>, <a href="https://getpino.io/">Pino</a></li>
+<li><em>validation</em> : <a href="https://express-validator.github.io/docs/">express-validator</a></li>
+</ul></li>
+</ul>
+<p>Besoin d’une fonctionnalité ?</p>
+<p><strong>Chercher un (bon) <em>middleware</em> qui l’implémente !</strong></p>
+</section>
+<section id="un-exemple-de-middleware" class="slide level3">
+<h3>Un exemple de middleware</h3>
+<p>Middleware function <code>requestTime</code>.</p>
+<p>Ajoute un champs à l’objet <a href="https://expressjs.com/en/4x/api.html#res">Response</a> et <strong>passe au middleware suivant via <code>next()</code></strong>. Si <code>next()</code> est oublié : pas de réponse pour le client !</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">requestTime</span>(request<span class="op">,</span> response<span class="op">,</span> next) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  response<span class="op">.</span><span class="at">locals</span><span class="op">.</span><span class="at">requestTime</span> <span class="op">=</span> <span class="bu">Date</span><span class="op">.</span><span class="fu">now</span>()<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">next</span>()<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">use</span>(requestTime)<span class="op">;</span></span></code></pre></div>
+</section>
+<section id="un-middleware-async" class="slide level3">
+<h3>Un middleware async</h3>
+<p>Attend et passe au middleware suivant via <code>next()</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> setTimeout <span class="im">as</span> wait <span class="im">from</span> <span class="st">&quot;timers/promises&quot;</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">use</span>(<span class="kw">async</span> <span class="kw">function</span> <span class="fu">waiter</span>(request<span class="op">,</span> response<span class="op">,</span> next) {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">wait</span>(<span class="dv">1000</span>)<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">next</span>()<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+</section>
+<section id="middleware-configurable" class="slide level3">
+<h3>Middleware configurable</h3>
+<p>Pour avoir un <em>middleware</em> configurable, il faut créer une <em>Higher-Order Function</em> (HOF) type <em>décorateur</em></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> setHeaders <span class="op">=</span> <span class="kw">function</span> (headers) {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">function</span> (request<span class="op">,</span> response<span class="op">,</span> next) {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    response<span class="op">.</span><span class="fu">set</span>(headers)<span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">next</span>()<span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">use</span>(<span class="fu">setHeaders</span>({ <span class="st">&quot;Warning&quot;</span><span class="op">:</span> <span class="st">&quot;this is sloppy&quot;</span><span class="op">,</span> <span class="st">&quot;X-API-KEY&quot;</span><span class="op">:</span> <span class="st">&quot;deadbeef00&quot;</span> }))<span class="op">;</span></span></code></pre></div>
+</section>
+<section id="la-chaîne-dévaluation" class="slide level3">
+<h3>La chaîne d’évaluation</h3>
+<p>En enregistrant un <em>middleware</em>, on ajoute <strong>une étape à <em>une liste</em> de traitements</strong>. Pour chaque étape il y a :</p>
+<ul>
+<li>une <strong>route</strong> sur laquelle elle s’applique, définie par une <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a></li>
+<li>un ou plusieurs <strong>handlers</strong>, qui peuvent être eux-mêmes des <em>middlewares</em>
+<ul>
+<li>un <em>middleware</em> définit <em>à son tour une liste de traitements</em>
+<ul>
+<li>c’est donc une <em>liste de listes</em> (de listes, de listes etc.)</li>
+<li><strong>l’ordre compte</strong></li>
+</ul></li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> indexRouter <span class="im">from</span> <span class="st">&quot;./routes/index&quot;</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> usersRouter <span class="im">from</span> <span class="st">&quot;./routes/users&quot;</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> errorsRouter <span class="im">from</span> <span class="st">&quot;./routes/errors&quot;</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">use</span>(<span class="st">&quot;/&quot;</span><span class="op">,</span> indexRouter)<span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">use</span>(<span class="st">&quot;/users&quot;</span><span class="op">,</span> usersRouter)<span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">use</span>(<span class="st">&quot;/errors&quot;</span><span class="op">,</span> errorsRouter)<span class="op">;</span></span></code></pre></div>
+</section>
+<section class="slide level3">
+
+<p>Une requête <em>traverse les étapes à partir du début</em> et <strong>dans l’ordre</strong> :</p>
+<ul>
+<li><code>next()</code>, <code>next(error)</code> et <code>next("route")</code> permettent de passer aux étapes suivantes</li>
+<li><code>resp.send()</code> permet d’envoyer la réponse <strong>attention à la suite</strong>
+<ul>
+<li>essayer d’émettre une deuxième fois une réponse provoque une exception !
+<ul>
+<li><code>[ERR_HTTP_HEADERS_SENT]:</code>Cannot set headers after they are sent to the client`</li>
+</ul></li>
+<li>même si <code>resp.send()</code> est async, souvent on fait <code>return resp.send()</code> pour être sûr de casser le flot de traitement</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level3">
+
+<p>Exemple de <em>stack</em> pour une application de démonstration (la liste peut avoir une vingtaine d’éléments et certains, à leur tours des dizaines de handlers) :</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>[</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">...</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  Layer {</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">handle</span><span class="op">:</span> [<span class="dt">Function</span><span class="op">:</span> bound dispatch]<span class="op">,</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">route</span><span class="op">:</span> Route { <span class="dt">path</span><span class="op">:</span> <span class="st">&#39;/&#39;</span><span class="op">,</span> <span class="dt">stack</span><span class="op">:</span> [<span class="bu">Array</span>]<span class="op">,</span> <span class="dt">methods</span><span class="op">:</span> [<span class="bu">Object</span>] }</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  Layer {</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">handle</span><span class="op">:</span> [<span class="dt">Function</span><span class="op">:</span> bound dispatch]<span class="op">,</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">route</span><span class="op">:</span> Route { <span class="dt">path</span><span class="op">:</span> <span class="st">&#39;/:code&#39;</span><span class="op">,</span> <span class="dt">stack</span><span class="op">:</span> [<span class="bu">Array</span>]<span class="op">,</span> <span class="dt">methods</span><span class="op">:</span> [<span class="bu">Object</span>] }</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  Layer {</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">handle</span><span class="op">:</span> [<span class="bu">Function</span> (anonymous)]<span class="op">,</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">route</span><span class="op">:</span> <span class="kw">undefined</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div>
+</section>
+<section id="cas-derreur-dans-la-chaine-dévaluation" class="slide level3">
+<h3>Cas d’erreur dans la chaine d’évaluation</h3>
+<p>Selon le cas :</p>
+<ul>
+<li><em>synchrone</em> : si vous levez une exception, Express la récupère
+<ul>
+<li>e.g., <code>throw new Error("KO");</code></li>
+</ul></li>
+<li><em>asynchrone</em> : il <strong>faut</strong> passer l’erreur à <code>next(erreur)</code>
+<ul>
+<li>sinon l’erreur ne sera pas attrapée et c’est le crash avec <code>unhandledRejection</code></li>
+<li>e.g. <code>Promise.reject(new Error("async throw")).catch(next);</code></li>
+</ul></li>
+</ul>
+<p>Voir <a href="https://expressjs.com/en/guide/error-handling.html" class="uri">https://expressjs.com/en/guide/error-handling.html</a></p>
+</section></section>
+<section>
+<section id="les-vues" class="title-slide slide level2">
+<h2>Les vues</h2>
+<p>On va déléguer la production de HTML à un moteur de <em>templates</em>, qui sont des équivalents à <a href="https://jinja.palletsprojects.com/">Jinja</a> mais dans l’écosystème JavaScript :</p>
+<ul>
+<li><a href="https://mustache.github.io/" class="uri">https://mustache.github.io/</a></li>
+<li><a href="https://ejs.co/" class="uri">https://ejs.co/</a>,</li>
+<li><a href="https://pugjs.org" class="uri">https://pugjs.org</a> (anciennement Jade)</li>
+</ul>
+<p>Express permet de <a href="https://expressjs.com/en/guide/using-template-engines.html">choisir et configurer</a> le moteur</p>
+</section>
+<section id="exemple-ejs" class="slide level3">
+<h3>Exemple EJS</h3>
+<p>Intégration des principaux moteurs <em>template</em> à Express</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html</span> <span class="er">lang</span><span class="ot">=</span><span class="st">&quot;en&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;head&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;title&gt;</span>Document<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/head&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;body&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h1&gt;</span><span class="er">&lt;</span>%= title %&gt;<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;ul&gt;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      <span class="er">&lt;</span>% for(const user of users){ %&gt;</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;li&gt;</span><span class="er">&lt;</span>%= user %&gt;<span class="kw">&lt;/li&gt;</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      <span class="er">&lt;</span>% }; %&gt;</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/ul&gt;</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/body&gt;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> app <span class="op">=</span> <span class="fu">express</span>()<span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">set</span>(<span class="st">&quot;view engine&quot;</span><span class="op">,</span> <span class="st">&quot;ejs&quot;</span>)<span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">get</span>(<span class="st">&quot;/&quot;</span><span class="op">,</span> <span class="kw">async</span> (request<span class="op">,</span> response<span class="op">,</span> next) <span class="kw">=&gt;</span> {</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> users <span class="op">=</span> <span class="cf">await</span> database<span class="op">.</span><span class="fu">getUsers</span>()<span class="op">;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  response<span class="op">.</span><span class="fu">render</span>(<span class="st">&quot;home&quot;</span><span class="op">,</span> { <span class="dt">title</span><span class="op">:</span> <span class="st">&quot;Welcome Home!&quot;</span><span class="op">,</span> users })<span class="op">;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<!-- ---
+
+Utilisation manuelle
+
+```js
+import ejs from "ejs";
+const people = ["geddy", "neil", "alex"];
+const html = ejs.render('<p><%= people.join(", "); %></p>', { people });
+console.log(html);
+``` -->
+</section></section>
+<section>
+<section id="le-modèle" class="title-slide slide level2">
+<h2>Le modèle</h2>
+
+</section>
+<section id="accès-bd" class="slide level3">
+<h3>Accès BD</h3>
+<p>Expressjs n’intègre <strong>rien</strong> pour l’accès aux données. Il faut prendre un <em>driver</em>, un <em>ORM</em> ou un <em>query builder</em></p>
+<h4 id="driver-natif">Driver natif</h4>
+<ul>
+<li><em>tout est à votre charge</em>,</li>
+<li>accès au maximum de fonctionnalités du SGBD,</li>
+<li>performant,</li>
+<li><em>exemple</em> : <a href="https://www.npmjs.com/package/sqlite3">sqlite3</a> et <a href="https://www.npmjs.com/package/sqlite">sqlite</a>, <a href="https://expressjs.com/en/guide/database-integration.html">la liste recommandée</a> par Express</li>
+</ul>
+</section>
+<section class="slide level3">
+
+<h4 id="orm-object-relational-mapper">ORM (<em>Object-Relational Mapper</em>)</h4>
+<ul>
+<li>gère la persistence à travers des objets JS pour vous,</li>
+<li>marche <em>out of the box</em>, toute l’interface BD est cachée,</li>
+<li>peu d’accès aux fonctionnalités spécifiques SGBD,</li>
+<li>risque de produire des requêtes pathologiques,</li>
+<li><em>exemple</em> : <a href="https://sequelize.org/" class="uri">https://sequelize.org/</a></li>
+</ul>
+<h4 id="query-builder-une-solution-intermédiaire">Query builder (une solution intermédiaire)</h4>
+<ul>
+<li>une construction JavaScript des requêtes et du schéma,</li>
+<li>permet de s’affranchir de SQL,</li>
+<li>pas de persistance des objets,</li>
+<li><em>exemple</em> : <a href="https://knexjs.org/" class="uri">https://knexjs.org/</a>, voir <a href="CM5_exemples/demo-knex.mjs"><code>demo-knex.mjs</code></a></li>
+</ul>
+</section>
+<section id="exemple" class="slide level3">
+<h3>Exemple</h3>
+<p>Extrait d’un fichier <code>database.mjs</code></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3 <span class="im">from</span> <span class="st">&quot;sqlite3&quot;</span><span class="op">;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { open } <span class="im">from</span> <span class="st">&quot;sqlite&quot;</span><span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> databaseFile <span class="op">=</span> <span class="bu">process</span><span class="op">.</span><span class="at">env</span><span class="op">.</span><span class="at">DB_FILE</span><span class="op">;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> conn <span class="op">=</span> <span class="cf">await</span> <span class="fu">open</span>({</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">filename</span><span class="op">:</span> databaseFile<span class="op">,</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">driver</span><span class="op">:</span> sqlite3<span class="op">.</span><span class="at">Database</span><span class="op">,</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">getAllLinks</span>() {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> conn<span class="op">.</span><span class="fu">all</span>(<span class="st">&quot;SELECT * FROM link;&quot;</span>)<span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">postLink</span>(short<span class="op">,</span> long) {</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> conn<span class="op">.</span><span class="fu">get</span>(<span class="st">&quot;INSERT INTO link(short, long) VALUES($short, $long) RETURNING *;&quot;</span><span class="op">,</span> {</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">$long</span><span class="op">:</span> long<span class="op">,</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">$short</span><span class="op">:</span> short<span class="op">,</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> {getAllLinks<span class="op">,</span>  postLink<span class="op">,</span> <span class="op">...</span> }<span class="op">;</span></span></code></pre></div>
+</section></section>
+<section>
+<section id="démonstrationtodo" class="title-slide slide level2">
+<h2>Démonstration/TODO</h2>
+
+</section>
+<section id="exemple-démo-avec-le-premier-serveur-web" class="slide level3">
+<h3>Exemple démo avec le premier serveur Web</h3>
+<p>On donne l’exemple d’un serveur Express :</p>
+<ul>
+<li>application <a href="CM5_exemples/demo-base.mjs"><code>demo-base.mjs</code></a></li>
+<li>routeur <a href="CM5_exemples/demo-router.mjs"><code>demo-routeur.mjs</code></a></li>
+</ul>
+<p>Et un exemple avec <a href="https://knexjs.org/" class="uri">https://knexjs.org/</a></p>
+<ul>
+<li>application <a href="CM5_exemples/knex.mjs"><code>demo-knex.mjs</code></a></li>
+</ul>
+</section>
+<section class="slide level3">
+
+<h4 id="middleware-application-utlilisés"><em>middleware</em> application utlilisés</h4>
+<div class="sourceCode" id="cb11"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>express<span class="op">.</span><span class="fu">static</span>(<span class="st">&quot;public&quot;</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>requestTime</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setHeaders</span>({ <span class="st">&quot;Warning&quot;</span><span class="op">:</span> <span class="st">&quot;this is sloppy&quot;</span><span class="op">,</span> <span class="st">&quot;X-API-KEY&quot;</span><span class="op">:</span> <span class="st">&quot;deadbeef00&quot;</span> })</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>debugMiddleware</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>appErrorHandler</span></code></pre></div>
+</section>
+<section class="slide level3">
+
+<h4 id="routes-implémentées">Routes implémentées</h4>
+<table>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>URI</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GET</td>
+<td><a href="http://localhost:5000/" class="uri">http://localhost:5000/</a></td>
+</tr>
+<tr class="even">
+<td>GET</td>
+<td><a href="http://localhost:5000/error/:code" class="uri">http://localhost:5000/error/:code</a></td>
+</tr>
+<tr class="odd">
+<td>GET</td>
+<td><a href="http://localhost:5000/api" class="uri">http://localhost:5000/api</a></td>
+</tr>
+<tr class="even">
+<td>GET</td>
+<td><a href="http://localhost:5000/api/bogus" class="uri">http://localhost:5000/api/bogus</a></td>
+</tr>
+<tr class="odd">
+<td>GET</td>
+<td><a href="http://localhost:5000/api/sync-throw" class="uri">http://localhost:5000/api/sync-throw</a></td>
+</tr>
+<tr class="even">
+<td>GET</td>
+<td><a href="http://localhost:5000/api/async-throw" class="uri">http://localhost:5000/api/async-throw</a></td>
+</tr>
+<tr class="odd">
+<td>GET</td>
+<td><a href="http://localhost:5000/api/await/:duration" class="uri">http://localhost:5000/api/await/:duration</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tp5" class="slide level3">
+<h3>TP5</h3>
+<p>Faire la partie 2 du <a href="https://romulusfr.github.io/unc-s4-devweb/TP/TP5/">TP5</a></p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+      
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+        height: 960,
+        // Factor of the display size that should remain empty around the content
+        margin: 0.02,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.5,
+        maxScale: 1.0,
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

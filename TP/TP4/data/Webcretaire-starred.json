@@ -1,0 +1,202 @@
+[
+    {
+        "description": "Hollow Knight Modding API",
+        "url": "https://github.com/hk-modding/api",
+        "stars": 65
+    },
+    {
+        "description": "My attempt at creating a new version of Multiworld which works with rando 3.0 features",
+        "url": "https://github.com/Shadudev/HollowKnight.RandomizerMod",
+        "stars": 1
+    },
+    {
+        "description": "API Mod Installer for HK",
+        "url": "https://github.com/ricardosouzag/ModInstaller",
+        "stars": 24
+    },
+    {
+        "description": "The future of programming.",
+        "url": "https://github.com/elucent/scheme2d",
+        "stars": 60
+    },
+    {
+        "description": "A meta-JavaScript adventure game by Alex Nisnevich and Greg Shuflin.",
+        "url": "https://github.com/AlexNisnevich/untrusted",
+        "stars": 4163
+    },
+    {
+        "description": "A Zsh theme",
+        "url": "https://github.com/romkatv/powerlevel10k",
+        "stars": 19901
+    },
+    {
+        "description": "Hollow Knight mod that tracks how much grass you've cut.",
+        "url": "https://github.com/itsjohncs/GrassyKnight",
+        "stars": 2
+    },
+    {
+        "description": "Git Source Code Mirror - This is a publish-only repository and all pull requests are ignored. Please follow Documentation/SubmittingPatches procedure for any of your improvements.",
+        "url": "https://github.com/git/git",
+        "stars": 38992
+    },
+    {
+        "description": "🙃   A delightful community-driven (with 1800+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, OSX, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool so that makes it easy to keep up with the latest updates from the community.",
+        "url": "https://github.com/ohmyzsh/ohmyzsh",
+        "stars": 131830
+    },
+    {
+        "description": "Unison file synchronizer",
+        "url": "https://github.com/bcpierce00/unison",
+        "stars": 2065
+    },
+    {
+        "description": "HTML5 Tetris Game for jQuery",
+        "url": "https://github.com/Aerolab/blockrain.js",
+        "stars": 873
+    },
+    {
+        "description": "Exemples de notre cours \"Écriture de drivers pour Linux\"",
+        "url": "https://github.com/Logilin/ild",
+        "stars": 2
+    },
+    {
+        "description": "Fish shell like syntax highlighting for Zsh.",
+        "url": "https://github.com/zsh-users/zsh-syntax-highlighting",
+        "stars": 12431
+    },
+    {
+        "description": "Fish-like autosuggestions for zsh",
+        "url": "https://github.com/zsh-users/zsh-autosuggestions",
+        "stars": 18220
+    },
+    {
+        "description": "🖖 Vue.js is a progressive, incrementally-adoptable JavaScript framework for building UI on the web.",
+        "url": "https://github.com/vuejs/vue",
+        "stars": 187029
+    },
+    {
+        "description": "Promises/A implementation for PHP.",
+        "url": "https://github.com/reactphp/promise",
+        "stars": 2026
+    },
+    {
+        "description": "Event-driven, non-blocking I/O with PHP.",
+        "url": "https://github.com/reactphp/reactphp",
+        "stars": 8085
+    },
+    {
+        "description": "Event-driven, streaming HTTP client and server implementation for ReactPHP.",
+        "url": "https://github.com/reactphp/http",
+        "stars": 562
+    },
+    {
+        "description": "An API to interact with the popular messaging app Discord",
+        "url": "https://github.com/discord-php/DiscordPHP",
+        "stars": 486
+    },
+    {
+        "description": "📚 Collaborative cheatsheets for console commands",
+        "url": "https://github.com/tldr-pages/tldr",
+        "stars": 34010
+    },
+    {
+        "description": "Small C++ code which creates dependencies graphs using ldd and Graphviz",
+        "url": "https://github.com/bbenoist/lddgraph",
+        "stars": 3
+    },
+    {
+        "description": "Bose Firmware / Software - ced (AE2, Frames, Noise Cancelling Headphones 700, OE, On-Ear Wireless, QuietComfort 35 II / QC35 / QC35II, QuietControl 30 / QC30, SoundLink Color II, Micro, SL Mini Special Edition, Mini II, Revolve, SoundSport Free, Pulse, Wireless, SoundWear Companion, connect)",
+        "url": "https://github.com/bosefirmware/ced",
+        "stars": 348
+    },
+    {
+        "description": "The IEEETran in OrgMode, just type make.",
+        "url": "https://github.com/schnorr/ieeeorg",
+        "stars": 16
+    },
+    {
+        "description": "Photoshop 1.0 Source Code",
+        "url": "https://github.com/amix/photoshop",
+        "stars": 138
+    },
+    {
+        "description": "software version control visualization",
+        "url": "https://github.com/acaudwell/Gource",
+        "stars": 8644
+    },
+    {
+        "description": "tmux source code",
+        "url": "https://github.com/tmux/tmux",
+        "stars": 22206
+    },
+    {
+        "description": "Universal select/multiselect/tagging component for Vue.js",
+        "url": "https://github.com/shentao/vue-multiselect",
+        "stars": 5851
+    },
+    {
+        "description": "A secure JavaScript and TypeScript runtime",
+        "url": "https://github.com/denoland/deno",
+        "stars": 77325
+    },
+    {
+        "description": "Linux/OSX/FreeBSD resource monitor",
+        "url": "https://github.com/aristocratos/bashtop",
+        "stars": 8987
+    },
+    {
+        "description": "Vue.js lightbox inspired by fancybox.",
+        "url": "https://github.com/lucaspulliese/vue-cool-lightbox",
+        "stars": 246
+    },
+    {
+        "description": "Modified install script to install the abandoned Koken app",
+        "url": "https://github.com/nickian/koken-installer",
+        "stars": 25
+    },
+    {
+        "description": "Git with a cup of tea, painless self-hosted git service",
+        "url": "https://github.com/go-gitea/gitea",
+        "stars": 25772
+    },
+    {
+        "description": "Vue 2.x directive for binding hotkeys to components.",
+        "url": "https://github.com/Dafrok/v-hotkey",
+        "stars": 641
+    },
+    {
+        "description": "The Symfony PHP framework",
+        "url": "https://github.com/symfony/symfony",
+        "stars": 25654
+    },
+    {
+        "description": "A web interface for MySQL and MariaDB",
+        "url": "https://github.com/phpmyadmin/phpmyadmin",
+        "stars": 5580
+    },
+    {
+        "description": "🇫🇷 Oh my tmux! My self-contained, pretty & versatile tmux configuration made with ❤️",
+        "url": "https://github.com/gpakosz/.tmux",
+        "stars": 14736
+    },
+    {
+        "description": "Unofficial Firebase Admin SDK for PHP",
+        "url": "https://github.com/kreait/firebase-php",
+        "stars": 1575
+    },
+    {
+        "description": "Tooltip, popover, dropdown, and menu library",
+        "url": "https://github.com/atomiks/tippyjs",
+        "stars": 9022
+    },
+    {
+        "description": "PHP Image Manipulation",
+        "url": "https://github.com/Intervention/image",
+        "stars": 12071
+    },
+    {
+        "description": "Real-time performance monitoring, done right! https://www.netdata.cloud",
+        "url": "https://github.com/netdata/netdata",
+        "stars": 55615
+    }
+]

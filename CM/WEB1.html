@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Romuald THION">
+  <title>Développement Web</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/solarized.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Développement Web</h1>
+  <p class="subtitle">Introduction au Web</p>
+  <p class="author">Romuald THION</p>
+  <p class="date">Semestre pair 2022 UNC</p>
+</section>
+
+<section class="slide level3">
+
+<!-- markdownlint-disable MD033 MD001 MD045 MD041 -->
+</section>
+<section>
+<section id="http-serveur-web-et-client-web" class="title-slide slide level1">
+<h1>HTTP, serveur Web et client Web</h1>
+
+</section>
+<section class="slide level3">
+
+<figure>
+<img data-src="img/html-css-js.png" height="300" alt="Le tryptique du Web" /><figcaption aria-hidden="true">Le tryptique du Web</figcaption>
+</figure>
+<ul>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/HTML">HTML5</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/CSS">CSS3</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript">JavaScript</a></li>
+<li>…et <a href="https://developer.mozilla.org/fr/docs/Web/HTTP">HTTP</a></li>
+</ul>
+</section>
+<section class="slide level3">
+
+</section>
+<section id="lécosystème-du-web" class="title-slide slide level2">
+<h2>L’écosystème du web</h2>
+<p>Variété des métiers du Web : front, back, devops</p>
+<p><a href="https://roadmap.sh/" class="uri">https://roadmap.sh/</a></p>
+</section>
+<section class="slide level3">
+
+</section>
+
+<section id="architecture-classique" class="title-slide slide level2">
+<h2>Architecture classique</h2>
+<figure>
+<img data-src="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview/web_application_with_html_and_steps.png" alt="Client et serveur d’application (source)" /><figcaption aria-hidden="true">Client et serveur d’application (<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">source</a>)</figcaption>
+</figure>
+</section>
+<section class="slide level3">
+
+</section>
+
+<section id="le-protocole-http" class="title-slide slide level2">
+<h2>Le protocole HTTP</h2>
+<figure>
+<img data-src="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/http-layers.png" height="400" alt="Pile réseau du web (source)" /><figcaption aria-hidden="true">Pile réseau du web (<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">source</a>)</figcaption>
+</figure>
+</section>
+<section class="slide level3">
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#basic_aspects_of_http" class="uri">https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#basic_aspects_of_http</a></p>
+<ul>
+<li>HTTP is simple</li>
+<li>HTTP is extensible</li>
+<li>HTTP is stateless, but not sessionless</li>
+</ul>
+</section>
+<section id="les-verbes-http" class="slide level3">
+<h3>les verbes HTTP</h3>
+<ul>
+<li><code>GET</code> : Get a specific resource</li>
+<li><code>POST</code>: Create a new resource</li>
+<li><code>PUT</code>: Update an existing resource (or create).</li>
+<li><code>DELETE</code>: Delete the specified resource.</li>
+<li><code>HEAD</code>: Get the metadata information</li>
+<li><code>TRACE</code>, <code>OPTIONS</code>, <code>CONNECT</code>, <code>PATCH</code>: avancé</li>
+</ul>
+<p>Create / Read / Update / Delete (CRUD)</p>
+<p><span class="math inline">\(\equiv\)</span></p>
+<p>Post / Get / Put / Delete</p>
+</section>
+<section id="les-réponses-http" class="slide level3">
+<h3>les réponses HTTP</h3>
+<ul>
+<li>Informational responses (100–199)</li>
+<li>Successful responses (200–299)
+<ul>
+<li>200 OK / 201 Created / 204 No Content</li>
+</ul></li>
+<li>Redirects (300–399)
+<ul>
+<li>301 Moved Permanently / 304 Not Modified / 307 Temporary Redirect / 308 Permanent Redirect</li>
+</ul></li>
+<li>Client errors (400–499)
+<ul>
+<li>400 Bad Request / 401 Unauthorized / 403 Forbidden / 404 Not Found / 405 Not Allowed</li>
+</ul></li>
+<li>Server errors (500–599)
+<ul>
+<li>500 Internal Server Error / 501 Not Implemented</li>
+</ul></li>
+</ul>
+</section>
+<section id="pourquoi-http-est-important" class="slide level3">
+<h3>Pourquoi HTTP est important ?</h3>
+<ol type="1">
+<li>c’est ce qui fait que ça marche</li>
+<li>en programmant une application web (<em>backend</em>) vous <strong>devrez</strong> choisir :
+<ul>
+<li>les chemins (<em>urls</em>)</li>
+<li>les verbes possibles sur ces chemains</li>
+<li>les retours d’erreurs (<em>status code</em>)</li>
+<li>les formats des réponses (HTML, json, images)</li>
+</ul></li>
+</ol>
+</section>
+<section id="demonstration-wireshark-et-outils-du-développeur" class="slide level3">
+<h3>Demonstration Wireshark et outils du développeur</h3>
+<ul>
+<li><a href="https://www.wireshark.org/" class="uri">https://www.wireshark.org/</a> très <em>réseau</em></li>
+<li><a href="https://firefox-source-docs.mozilla.org/devtools-user/" class="uri">https://firefox-source-docs.mozilla.org/devtools-user/</a> pour Firefox</li>
+<li><a href="https://developer.chrome.com/docs/devtools/" class="uri">https://developer.chrome.com/docs/devtools/</a> pour Chrome</li>
+</ul>
+<h4 id="conseils-généraux">Conseils généraux</h4>
+<ul>
+<li>éviter les navigateurs Microsoft</li>
+<li>travaillez <em>systématiquement</em> en <strong>navigation privée</strong></li>
+</ul>
+</section>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+      
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+        height: 960,
+        // Factor of the display size that should remain empty around the content
+        margin: 0.02,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.5,
+        maxScale: 1.0,
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>
