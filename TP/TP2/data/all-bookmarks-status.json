@@ -1,0 +1,652 @@
+[
+    {
+        "uri": "https://perso.liris.cnrs.fr/pierre-antoine.champin/enseignement/algo/cours/index.html#",
+        "title": "Algorithmique — Algorithmique",
+        "status": 200
+    },
+    {
+        "uri": "https://python.sdv.univ-paris-diderot.fr/",
+        "title": "Cours de Python",
+        "status": 200
+    },
+    {
+        "uri": "https://openclassrooms.com/en/courses/235344-apprenez-a-programmer-en-python",
+        "title": "Apprenez à programmer en Python - OpenClassrooms",
+        "status": 200
+    },
+    {
+        "uri": "https://python.swaroopch.com/",
+        "title": "A Byte of Python",
+        "status": 200
+    },
+    {
+        "uri": "https://rgilliotte.gitbook.io/byte-of-python/",
+        "title": "Introduction - A Byte of Python (fr)",
+        "status": 200
+    },
+    {
+        "uri": "https://diveintopython3.problemsolving.io/",
+        "title": "Dive Into Python 3",
+        "status": 200
+    },
+    {
+        "uri": "https://python-textbok.readthedocs.io/en/1.0/",
+        "title": "Object-Oriented Programming in Python — Object-Oriented Programming in Python 1 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://runestone.academy/runestone/books/published/pythonds/index.html",
+        "title": "Problem Solving with Algorithms and Data Structures using Python — Problem Solving with Algorithms and Data Structures",
+        "status": 200
+    },
+    {
+        "uri": "https://book.pythontips.com/en/latest/",
+        "title": "Intermediate Python — Python Tips 0.1 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://ipython-books.github.io/",
+        "title": "IPython Cookbook - IPython Cookbook, Second Edition (2018)",
+        "status": 200
+    },
+    {
+        "uri": "https://jakevdp.github.io/PythonDataScienceHandbook/",
+        "title": "Python Data Science Handbook | Python Data Science Handbook",
+        "status": 200
+    },
+    {
+        "uri": "https://python-3-for-scientists.readthedocs.io/en/latest/",
+        "title": "Python 3 for Scientists — Python 3 guide for scientists documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://greenteapress.com/wp/think-python-2e/",
+        "title": "Think Python 2e – Green Tea Press",
+        "status": 200
+    },
+    {
+        "uri": "https://github.com/filiplajszczak/awesome-zen-of-python",
+        "title": "filiplajszczak/awesome-zen-of-python: awesome list of so called python philosophy resources",
+        "status": 200
+    },
+    {
+        "uri": "https://gto76.github.io/python-cheatsheet/",
+        "title": "Comprehensive Python Cheatsheet",
+        "status": 200
+    },
+    {
+        "uri": "https://ehmatthes.github.io/pcc_2e/cheat_sheets/cheat_sheets/",
+        "title": "Cheat Sheets - Python Crash Course, 2nd Edition",
+        "status": 200
+    },
+    {
+        "uri": "https://www.pythoncheatsheet.org/",
+        "title": "Python Cheatsheet - Python Cheatsheet",
+        "status": 200
+    },
+    {
+        "uri": "https://stackoverflow.com/questions/509211/understanding-slice-notation",
+        "title": "python - Understanding slice notation - Stack Overflow",
+        "status": 200
+    },
+    {
+        "uri": "https://realpython.com/",
+        "title": "Python Tutorials – Real Python",
+        "status": 200
+    },
+    {
+        "uri": "https://realpython.com/cpython-source-code-guide/",
+        "title": "Your Guide to the CPython Source Code – Real Python",
+        "status": 200
+    },
+    {
+        "uri": "https://www.python.org/dev/peps/pep-0617/",
+        "title": "PEP 617 -- New PEG parser for CPython | Python.org",
+        "status": 200
+    },
+    {
+        "uri": "https://medium.com/@gvanrossum_83706/peg-parsing-series-de5d41b2ed60",
+        "title": "PEG Parsing Series by Guido van Rossum",
+        "status": 200
+    },
+    {
+        "uri": "http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/",
+        "title": "Frequentism and Bayesianism: A Practical Introduction | Pythonic Perambulations",
+        "status": 200
+    },
+    {
+        "uri": "https://realpython.com/python-concurrency/",
+        "title": "Speed Up Your Python Program With Concurrency – Real Python",
+        "status": 200
+    },
+    {
+        "uri": "https://stackoverflow.com/questions/47493369/differences-between-futures-in-python3-and-promises-in-es6",
+        "title": "Differences between Futures in Python3 and Promises in ES6 - Stack Overflow",
+        "status": 200
+    },
+    {
+        "uri": "http://scott3142.uk/python-programming/",
+        "title": "Python Programming",
+        "status": 200
+    },
+    {
+        "uri": "https://www.analyticsvidhya.com/blog/2018/04/a-comprehensive-guide-to-understand-and-implement-text-classification-in-python/",
+        "title": "A Comprehensive Guide to Understand and Implement Text Classification in Python",
+        "status": 200
+    },
+    {
+        "uri": "https://pytorch.org/",
+        "title": "PyTorch",
+        "status": 200
+    },
+    {
+        "uri": "http://scipy-lectures.org/index.html",
+        "title": "Scipy Lecture Notes — Scipy lecture notes",
+        "status": 200
+    },
+    {
+        "uri": "https://pbpython.com/",
+        "title": "Practical Business Python -",
+        "status": 200
+    },
+    {
+        "uri": "https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html#sphx-glr-auto-examples-cluster-plot-cluster-comparison-py",
+        "title": "Comparing different clustering algorithms on toy datasets — scikit-learn 0.24.1 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://towardsdatascience.com/how-to-create-representations-of-entities-in-a-knowledge-graph-using-pyrdf2vec-82e44dad1a0",
+        "title": "How to Create Representations of Entities in a Knowledge Graph using pyRDF2Vec | by Gilles Vandewiele | Towards Data Science",
+        "status": 200
+    },
+    {
+        "uri": "https://github.com/IBCNServices/pyRDF2Vec",
+        "title": "IBCNServices/pyRDF2Vec: 🐍 Python Implementation and Extension of RDF2Vec",
+        "status": 200
+    },
+    {
+        "uri": "http://rdf2vec.org/",
+        "title": "RDF2vec.org",
+        "status": 200
+    },
+    {
+        "uri": "https://www.tensorflow.org/",
+        "title": "TensorFlow",
+        "status": 200
+    },
+    {
+        "uri": "https://scikit-learn.org/stable/tutorial/machine_learning_map/index.html",
+        "title": "Choosing the right estimator — scikit-learn 0.24.1 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://scikit-learn.org/stable/modules/grid_search.html",
+        "title": "3.2. Tuning the hyper-parameters of an estimator — scikit-learn 0.24.1 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://scikit-learn.org/stable/auto_examples/cluster/plot_inductive_clustering.html#sphx-glr-auto-examples-cluster-plot-inductive-clustering-py",
+        "title": "Inductive Clustering — scikit-learn 0.24.1 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://python-louvain.readthedocs.io/en/latest/index.html",
+        "title": "Community detection for NetworkX’s documentation — Community detection for NetworkX 2 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://graph-tool.skewed.de/",
+        "title": "graph-tool: Efficent network analysis with python",
+        "status": 200
+    },
+    {
+        "uri": "https://networkit.github.io/",
+        "title": "NetworKit",
+        "status": 200
+    },
+    {
+        "uri": "https://networkx.org/",
+        "title": "NetworkX — NetworkX documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://igraph.org/redirect.html",
+        "title": "Welcome to igraph's new home",
+        "status": 200
+    },
+    {
+        "uri": "http://snap.stanford.edu/index.html",
+        "title": "SNAP: Stanford Network Analysis Project",
+        "status": 200
+    },
+    {
+        "uri": "https://www.timlrx.com/blog/benchmark-of-popular-graph-network-packages-v2",
+        "title": "Benchmark of popular graph/network packages v2 – Quasilinear Musings",
+        "status": 200
+    },
+    {
+        "uri": "https://rdflib.readthedocs.io/en/stable/",
+        "title": "rdflib 5.0.0 — rdflib 5.0.0 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://graphviz.readthedocs.io/en/stable/index.html",
+        "title": "Graphviz — graphviz 0.16 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://stackoverflow.com/questions/43541376/how-to-draw-communities-with-networkx",
+        "title": "python - how to draw communities with networkx - Stack Overflow",
+        "status": 200
+    },
+    {
+        "uri": "https://pygraphviz.github.io/",
+        "title": "PyGraphviz — PyGraphviz documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login",
+        "title": "How To Add Authentication to Your App with Flask-Login | DigitalOcean",
+        "status": 200
+    },
+    {
+        "uri": "http://exploreflask.com/en/latest/",
+        "title": "Explore Flask — Explore Flask 1.0 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://www.fullstackpython.com/",
+        "title": "Full Stack Python",
+        "status": 200
+    },
+    {
+        "uri": "https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world",
+        "title": "The Flask Mega-Tutorial Part I: Hello, World! - miguelgrinberg.com",
+        "status": 200
+    },
+    {
+        "uri": "https://flask.palletsprojects.com/en/1.1.x/",
+        "title": "Welcome to Flask — Flask Documentation (1.1.x)",
+        "status": 200
+    },
+    {
+        "uri": "https://www.pygame.org/",
+        "title": "https://www.pygame.org/",
+        "status": 200
+    },
+    {
+        "uri": "https://cython.org/",
+        "title": "Cython: C-Extensions for Python",
+        "status": 200
+    },
+    {
+        "uri": "http://www.labri.fr/perso/nrougier/python-opengl/",
+        "title": "Python & OpenGL for Scientific Visualization",
+        "status": 200
+    },
+    {
+        "uri": "https://pillow.readthedocs.io/en/stable/",
+        "title": "Pillow — Pillow (PIL Fork) (image library)",
+        "status": 200
+    },
+    {
+        "uri": "https://more-itertools.readthedocs.io/en/stable/",
+        "title": "More Itertools — more-itertools 8.6.0 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://martinheinz.dev/blog/16",
+        "title": "Martin Heinz - Tour of Python Itertools",
+        "status": 200
+    },
+    {
+        "uri": "https://github.com/pallets/click",
+        "title": "pallets/click: Python composable command line interface toolkit",
+        "status": 200
+    },
+    {
+        "uri": "https://matplotlib.org/",
+        "title": "Matplotlib: Python plotting — Matplotlib 3.3.4 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://seaborn.pydata.org/",
+        "title": "seaborn: statistical data visualization — seaborn 0.11.1 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://pandas.pydata.org/pandas-docs/stable/index.html",
+        "title": "pandas documentation — pandas 1.2.3 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://docs.bokeh.org/en/latest/index.html",
+        "title": "Bokeh Documentation (interactive viz)",
+        "status": 200
+    },
+    {
+        "uri": "https://docs.python.org/3/library/string.html#formatstrings",
+        "title": "string — Common string operations — Python 3.9.2 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://dash.plotly.com/",
+        "title": "Dash Documentation & User Guide | Plotly",
+        "status": 200
+    },
+    {
+        "uri": "https://joblib.readthedocs.io/en/latest/",
+        "title": "Joblib: running Python functions as pipeline jobs — joblib 1.1.0.dev0 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://altair-viz.github.io/",
+        "title": "Altair: Declarative Visualization in Python — Altair 4.1.0 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://vega.github.io/vega-lite/",
+        "title": "A High-Level Grammar of Interactive Graphics | Vega-Lite",
+        "status": 200
+    },
+    {
+        "uri": "https://vega.github.io/vega/",
+        "title": "A Visualization Grammar | Vega",
+        "status": 200
+    },
+    {
+        "uri": "https://vega.github.io/vega-datasets/",
+        "title": "Vega Datasets | vega-datasets",
+        "status": 200
+    },
+    {
+        "uri": "https://www.python-graph-gallery.com/",
+        "title": "Python Graph Gallery",
+        "status": 200
+    },
+    {
+        "uri": "https://bokeh.org/",
+        "title": "Bokeh",
+        "status": 200
+    },
+    {
+        "uri": "https://pyrdf2vec.readthedocs.io/en/latest/",
+        "title": "Preview — pyrdf2vec documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://docs.scipy.org/doc/scipy/reference/index.html",
+        "title": "SciPy — SciPy v1.6.2 Reference Guide",
+        "status": 200
+    },
+    {
+        "uri": "https://realpython.com/nltk-nlp-python/",
+        "title": "Natural Language Processing With Python's NLTK Package – Real Python",
+        "status": 200
+    },
+    {
+        "uri": "https://medium.com/analytics-vidhya/popular-python-libraries-in-nlp-dealing-with-language-detection-translation-beyond-7b8e7cb2928e",
+        "title": "Popular Python Libraries in NLP: Dealing with Language Detection, Translation & Beyond! | by Pallavi Ahuja | Analytics Vidhya | Medium",
+        "status": 200
+    },
+    {
+        "uri": "https://www.infoworld.com/article/3519413/8-great-python-libraries-for-natural-language-processing.html",
+        "title": "8 great Python libraries for natural language processing | InfoWorld",
+        "status": 200
+    },
+    {
+        "uri": "https://spacy.io/",
+        "title": "spaCy · Industrial-strength Natural Language Processing in Python",
+        "status": 200
+    },
+    {
+        "uri": "https://www.tutorialspoint.com/python/python_gui_programming.htm",
+        "title": "Python - GUI Programming (Tkinter) - Tutorialspoint",
+        "status": 200
+    },
+    {
+        "uri": "https://www.pythontutorial.net/tkinter/",
+        "title": "Tkinter Tutorial",
+        "status": 200
+    },
+    {
+        "uri": "https://tkdocs.com/tutorial/index.html",
+        "title": "TkDocs Tutorial",
+        "status": 200
+    },
+    {
+        "uri": "https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/index.html",
+        "title": "Tkinter 8.5 reference: a GUI for Python",
+        "status": 200
+    },
+    {
+        "uri": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
+        "title": "Beautiful Soup Documentation — Beautiful Soup 4.9.0 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://docs.python-requests.org/projects/requests-html/en/latest/",
+        "title": "requests-HTML v0.3.4 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://aiopg.readthedocs.io/en/stable/",
+        "title": "Welcome to AIOPG — Welcome to AIOPG",
+        "status": 200
+    },
+    {
+        "uri": "https://magicstack.github.io/asyncpg/current/",
+        "title": "asyncpg — asyncpg Documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://github.com/dunovank/jupyter-themes",
+        "title": "dunovank/jupyter-themes: Custom Jupyter Notebook Themes",
+        "status": 200
+    },
+    {
+        "uri": "https://jupyter-notebook.readthedocs.io/en/stable/index.html",
+        "title": "The Jupyter Notebook — Jupyter Notebook 6.2.0 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://jupyterlab.readthedocs.io/en/stable/",
+        "title": "JupyterLab Documentation — JupyterLab 3.0.12 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://ipython.readthedocs.io/en/stable/",
+        "title": "IPython Documentation — IPython 7.22.0 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://ipython.org/documentation.html",
+        "title": "Documentation — IPython",
+        "status": 200
+    },
+    {
+        "uri": "https://ipython.readthedocs.io/en/stable/index.html",
+        "title": "IPython Documentation — IPython 7.22.0 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://nbviewer.jupyter.org/",
+        "title": "nbviewer",
+        "status": 200
+    },
+    {
+        "uri": "https://www.python.org/dev/peps/pep-0008/",
+        "title": "PEP 8 -- Style Guide for Python Code | Python.org",
+        "status": 200
+    },
+    {
+        "uri": "https://www.pylint.org/",
+        "title": "Pylint - code analysis for Python | www.pylint.org",
+        "status": 200
+    },
+    {
+        "uri": "https://docs.python.org/3/library/doctest.html",
+        "title": "doctest — Test interactive Python examples — Python 3.9.2 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://google.github.io/styleguide/pyguide.html",
+        "title": "styleguide | Style guides for Google-originated open-source projects",
+        "status": 200
+    },
+    {
+        "uri": "https://black.readthedocs.io/en/stable/index.html",
+        "title": "The uncompromising code formatter — Black 20.8b2.dev1 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://docs.python.org/3/library/typing.html",
+        "title": "typing — Support for type hints — Python 3.9.2 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://mypy.readthedocs.io/en/stable/",
+        "title": "Welcome to Mypy documentation! — Mypy 0.812 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://docs.pytest.org/en/stable/",
+        "title": "pytest: helps you write better programs — pytest documentation",
+        "status": 200
+    },
+    {
+        "uri": "http://pylint.pycqa.org/en/latest/",
+        "title": "Pylint User Manual — Pylint 2.8.0-dev1 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://numpydoc.readthedocs.io/en/latest/",
+        "title": "numpydoc – Numpy’s Sphinx extensions — numpydoc v1.2.dev0 Manual",
+        "status": 200
+    },
+    {
+        "uri": "https://www.sphinx-doc.org/en/master/index.html",
+        "title": "Overview — Sphinx documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://stackoverflow.com/questions/10080157/is-it-possible-to-only-test-specific-functions-with-doctest-in-a-module",
+        "title": "python - Is it possible to only test specific functions with doctest in a module? - Stack Overflow",
+        "status": 200
+    },
+    {
+        "uri": "https://docs.python.org/3/",
+        "title": "Python 3.x Documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://docs.python-guide.org/",
+        "title": "The Hitchhiker’s Guide to Python! — The Hitchhiker's Guide to Python",
+        "status": 200
+    },
+    {
+        "uri": "https://devguide.python.org/",
+        "title": "Python Developer’s Guide — Python Developer's Guide",
+        "status": 200
+    },
+    {
+        "uri": "http://pythontutor.com/",
+        "title": "Python Tutor - Visualize Python",
+        "status": 200
+    },
+    {
+        "uri": "https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa",
+        "title": "New Python Versions : “deadsnakes” team",
+        "status": 200
+    },
+    {
+        "uri": "https://wiki.qt.io/Qt_for_Python",
+        "title": "Qt for Python - Qt Wiki",
+        "status": 200
+    },
+    {
+        "uri": "https://glade.gnome.org/",
+        "title": "Glade - A User Interface Designer",
+        "status": 200
+    },
+    {
+        "uri": "https://pysimplegui.readthedocs.io/en/latest/",
+        "title": "PySimpleGUI",
+        "status": 200
+    },
+    {
+        "uri": "https://kivy.org/#home",
+        "title": "Kivy: Cross-platform Python Framework for NUI Development",
+        "status": 200
+    },
+    {
+        "uri": "https://github.com/hoffstadt/DearPyGui/wiki",
+        "title": "Home · hoffstadt/DearPyGui Wiki",
+        "status": 200
+    },
+    {
+        "uri": "https://www.jetbrains.com/lp/python-developers-survey-2020/",
+        "title": "Python Developers Survey 2020 Results | JetBrains: Developer Tools for Professionals and Teams",
+        "status": 200
+    },
+    {
+        "uri": "https://pypi.org/project/Pillow/",
+        "title": "Pillow · PyPI",
+        "status": 200
+    },
+    {
+        "uri": "https://www.blog.pythonlibrary.org/2016/05/24/python-101-an-intro-to-benchmarking-your-code/",
+        "title": "Python 101: An Intro to Benchmarking your code - Mouse Vs Python",
+        "status": 200
+    },
+    {
+        "uri": "https://www.nltk.org/book/",
+        "title": "NLTK Book",
+        "status": 200
+    },
+    {
+        "uri": "https://www.nltk.org/",
+        "title": "Natural Language Toolkit — NLTK 3.6 documentation",
+        "status": 200
+    },
+    {
+        "uri": "https://basthon.fr/",
+        "title": "Basthon",
+        "status": 200
+    },
+    {
+        "uri": "https://docs.python.org/3/tutorial/",
+        "title": "The Python Tutorial — Python 3.x",
+        "status": 200
+    },
+    {
+        "uri": "https://realpython.com/team/ashaw/",
+        "title": "About Anthony Shaw – Real Python",
+        "status": 200
+    },
+    {
+        "uri": "https://docs.python.org/3/faq/index.html",
+        "title": "Python Frequently Asked Questions — Python 3.9.1 documentation",
+        "status": 200
+    },
+    {
+        "uri": "http://www.pythontutor.com/",
+        "title": "Python Tutor - Visualize Python, Java, C, C++, JavaScript, TypeScript, and Ruby code execution",
+        "status": 200
+    },
+    {
+        "uri": "https://www.labri.fr/perso/nrougier/from-python-to-numpy/",
+        "title": "From Python to Numpy",
+        "status": 200
+    },
+    {
+        "uri": "https://the-site-that-do-no-exists/",
+        "title": "This website do not exists",
+        "status": -1
+    },
+    {
+        "uri": "https://httpbin.org/status/404",
+        "title": "The website that answers 404",
+        "status": 404
+    }
+]

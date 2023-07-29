@@ -1,0 +1,31 @@
+{
+    "env": {
+        "browser": false,
+        "es2022": true,
+        "node": true
+    },
+    "plugins": [
+        "unicorn",
+        "security"
+    ],
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:node/recommended",
+        "plugin:security/recommended",
+        "plugin:import/recommended",
+        "plugin:unicorn/recommended",
+        "plugin:promise/recommended",
+        "prettier"
+    ],
+    "rules": {
+        "no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^_"
+            }
+        ]
+    }
+}

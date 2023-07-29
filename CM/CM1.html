@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Romuald THION">
+  <title>Développement Web</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/solarized.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Développement Web</h1>
+  <p class="subtitle">Programmation fonctionnelle en JavaScript</p>
+  <p class="author">Romuald THION</p>
+  <p class="date">Semestre pair 2022 UNC</p>
+</section>
+
+<section>
+<section id="introduction" class="title-slide slide level2">
+<h2>Introduction</h2>
+<blockquote>
+<p>JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods. […] JavaScript also supports functional programming — because they are objects, functions may be stored in variables and passed around like any other object.</p>
+</blockquote>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript">MDN</a></p>
+</section>
+<section id="attention-concepts-nouveaux" class="slide level3">
+<h3>Attention concepts nouveaux</h3>
+<figure>
+<img data-src="img/e_of_javascript.jpeg" alt="Le E de JavaScript" /><figcaption aria-hidden="true">Le E de JavaScript</figcaption>
+</figure>
+</section>
+<section id="la-programmation-fonctionnelle-aujourdhui" class="slide level3">
+<h3>La programmation fonctionnelle aujourd’hui</h3>
+<ul>
+<li><a href="https://twitter.com/faheem_khan_dev/status/1546787674635337728">@faheem_khan_dev</a>
+<ul>
+<li><em>What much JavaScript should you learn before moving to React?</em></li>
+<li>#5, #6 et #7 (sur 9) : <strong>programmation fonctionnelle</strong></li>
+</ul></li>
+</ul>
+<!-- [@paul_snively](https://twitter.com/paul_snively/status/1546423891597447173)
+> Alt-history, but where UNIX and C weren't written, Wirth's languages (Modula-2, Oberon...) took over early industry, and Standard ML/OCaml/Haskell dominated by 1995 because programmer productivity is at least one order of magnitude more important than CPU/bare-metal efficiency. -->
+<ul>
+<li><p><a href="https://insights.stackoverflow.com/survey/2021#technology-top-paying-technologies">2021 Developer Survey Stack Overflow</a> <em>Top paying technologies</em></p>
+<ul>
+<li>le top 4 <strong>uniquement des langages fonctionnels</strong></li>
+</ul></li>
+<li><p><a href="https://github.com/readme/featured/functional-programming">Functional programming is finally going mainstream</a></p>
+<ul>
+<li><em>“Once functional programming really clicked in my brain, I was like ‘why do it any other way?’”</em></li>
+<li><em>“React encourages people to think in a more functional way, even if it isn’t purely functional.”</em></li>
+</ul></li>
+</ul>
+</section>
+<section id="les-concepts-de-la-programmation-fonctionnelle" class="slide level3">
+<h3>Les concepts de la programmation fonctionnelle</h3>
+<!-- ## Concepts de la programmation fonctionnelle -->
+<p><a href="https://auth0.com/blog/glossary-of-modern-javascript-concepts/"><em>Glossary of Modern JavaScript Concepts</em></a> (2017)</p>
+<ul>
+<li>Purity: (Im)Pure Functions, Side Effects</li>
+<li>State: Stateful and Stateless</li>
+<li>Immutability and Mutability</li>
+<li>Imperative and Declarative Programming</li>
+<li>Higher-order Functions</li>
+<li>Functional Programming</li>
+<li>…</li>
+</ul>
+<p>La programmation fonctionnelle (<em>functional</em>) c’est <em>un peu tout ça</em></p>
+</section>
+<section id="les-fonctions-citoyennes-de-premier-ordre" class="slide level3">
+<h3>Les fonctions citoyennes de premier ordre</h3>
+<p>Qu’est ce qui fait (en partie) le caractère “<em>fonctionnel</em>” ?</p>
+<ul>
+<li><strong>affecter</strong> des fonctions à des variables</li>
+<li>passer des fonctions en <strong>paramètre</strong> d’autres fonctions</li>
+<li><strong>renvoyer</strong> des fonctions comme résultat
+<ul>
+<li>et donc les créer dynamiquement</li>
+<li>éventuellement avec des <span class="math inline">\(\lambda\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level3">
+
+<figure>
+<img data-src="img/pass_a_function.png" alt="Pass a function to a function" /><figcaption aria-hidden="true">Pass a function to a function</figcaption>
+</figure>
+</section>
+<section id="slogan" class="slide level3">
+<h3>Slogan</h3>
+<p>En JavaScript (et en Python) les fonctions <strong>sont des objets comme les autres</strong>.</p>
+<p>Les fonctions sont essentiellement des objets avec une <em>méthode particulière</em> <code>call</code> (<code>__call__</code> en Python)</p>
+</section>
+<section class="slide level3">
+
+</section></section>
+<section>
+<section id="créer-des-fonctions-en-js" class="title-slide slide level2">
+<h2>Créer des fonctions en JS</h2>
+
+</section>
+<section id="déclaration" class="slide level3">
+<h3>Déclaration</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">funct</span>(arg1<span class="op">,</span> arg2<span class="op">,</span> <span class="op">...,</span> argN) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// instructions</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> expression<span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> res <span class="op">=</span> <span class="fu">funct</span>(p1<span class="op">,</span> p2<span class="op">,</span> <span class="op">...,</span> pN)<span class="op">;</span></span></code></pre></div>
+<p>Ici, on crée (<em>déclare</em>) une fonction avec une <em>instruction</em> (<em>statement</em> en anglais, qui n’a pas de valeur de retour). <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_declarations">MDN</a></p>
+</section>
+<section id="expression-fonctionnelle" class="slide level3">
+<h3>Expression fonctionnelle</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> funct <span class="op">=</span> <span class="kw">function</span> (arg1<span class="op">,</span> arg2<span class="op">,</span> <span class="op">...,</span> argN) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// instructions</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> expression<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> res <span class="op">=</span> <span class="fu">funct</span>(p1<span class="op">,</span> p2<span class="op">,</span> <span class="op">...,</span> pN)<span class="op">;</span></span></code></pre></div>
+<p>Ici, on crée une fonction comme une <em>expression</em> que l’on <em>affecte</em> à une variable, on appelle cette expression une <a href="https://javascript.info/function-object">Named Function Expression</a> (NFE). <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_expressions">MDN</a></p>
+</section>
+<section id="expression-fonctionnelle-fléchée" class="slide level3">
+<h3>Expression fonctionnelle fléchée</h3>
+<p>Dite aussi : <em>arrow function expression</em>, <em>fat arrows</em>, <em>lambda</em> ou <span class="math inline">\(\lambda\)</span>. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#arrow_functions">MDN</a></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> funct <span class="op">=</span> (arg1<span class="op">,</span> arg2<span class="op">,</span> <span class="op">...,</span> argN)  <span class="kw">=&gt;</span> expression<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> res <span class="op">=</span> <span class="fu">funct</span>(p1<span class="op">,</span> p2<span class="op">,</span> <span class="op">...,</span> pN)<span class="op">;</span></span></code></pre></div>
+<p>Quasi-équivalente à la NFE suivante :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> funct <span class="op">=</span> <span class="kw">function</span>(arg1<span class="op">,</span> arg2<span class="op">,</span> <span class="op">...,</span> argN) {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> expression<span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+</section>
+<section id="la-notation-fléchée-suite" class="slide level3">
+<h3>La notation fléchée, suite</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> sum <span class="op">=</span> (a<span class="op">,</span> b) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// accolade pour avoir plusieurs lignes</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> result <span class="op">=</span> a <span class="op">+</span> b<span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// avec les accolades, l&#39;instruction return est OBLIGATOIRE</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> result<span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="fu">sum</span>(<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span>))<span class="op">;</span></span></code></pre></div>
+<p>Variante multi-lignes, <strong>attention au <code>return</code> final</strong>.</p>
+</section>
+<section id="la-notation-fléchée-danger" class="slide level3">
+<h3>La notation fléchée, danger</h3>
+<p><strong>Attention</strong> : une <em>arrow</em> n’a pas de <code>this</code> propre, voir <a href="https://javascript.info/arrow-functions-basics">Arrow functions, the basics</a> et <a href="https://javascript.info/arrow-functions">Arrow functions revisited</a>.</p>
+<p><strong>Vous aurez le problème avec les <em>arrows</em> si vous utilisez <code>this</code> dans un <em>handler</em></strong>.</p>
+<p><em>(il n’y a pas non plus de variable <code>arguments</code> et on ne peut pas instancier avec <code>new</code>, mais de toute façon, les deux sont à éviter.)</em></p>
+</section>
+<section id="exemple-créer-des-fonctions-dynamiquement" class="slide level3">
+<h3>Exemple, créer des fonctions dynamiquement</h3>
+<p>On reprend l’exercice 2 <em>affichage d’images</em> du TP JS2 mais avec une variante :</p>
+<ul>
+<li>Modifier la page pour qu’à chaque clic sur un lien <em>on ajoute</em> (et pas <em>remplace</em>) l’image correspondante dans l’élément <code>&lt;div id="image-container"&gt;</code>.</li>
+<li>Chaque image doit avoir en plus <strong>un bouton pour la supprimer</strong>.</li>
+</ul>
+<p><a href="CM1_exemples/demo-handler.html">HTML</a>, <a href="CM1_exemples/demo-handler.css">CSS</a> et <a href="CM1_exemples/demo-handler.js">JS</a></p>
+</section>
+<section class="slide level3">
+
+</section></section>
+<section>
+<section id="les-fermetures-closure" class="title-slide slide level2">
+<h2>Les fermetures (closure)</h2>
+<p>Créer des fonctions avec d’autres fonctions, valable pour les trois types de créations (<em>instruction</em>, <em>expression</em>, <em>arrow</em>)</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> creerFonction <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> nom <span class="op">=</span> <span class="st">&quot;Mozilla&quot;</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">function</span> () {</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(nom)<span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> maFonction <span class="op">=</span> <span class="fu">creerFonction</span>()<span class="op">;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="fu">maFonction</span>())<span class="op">;</span></span></code></pre></div>
+</section>
+<section class="slide level3">
+
+<p>Que fait le code précédent ?</p>
+<ol type="1">
+<li>Une erreur de référence sur la variable <code>nom</code></li>
+<li>Une autre erreur</li>
+<li>Il affiche <code>"Mozilla"</code></li>
+<li>Autre chose</li>
+</ol>
+</section>
+<section class="slide level3">
+
+<p>Éléments <strong>remarquables</strong> de <code>creerFonction()</code></p>
+<ul>
+<li><code>creerFonction()</code> renvoie <em>une fonction</em></li>
+<li>la fonction renvoyée est <em>anonyme</em></li>
+<li>la fonction renvoyée <em>lie la variable</em> <code>nom</code></li>
+</ul>
+<p>On dit que <code>maFonction()</code> est une <strong>fermeture</strong> (<em>closure</em>)</p>
+</section>
+<section id="exemple-de-fermeture-avec-passage-de-paramètre" class="slide level3">
+<h3>Exemple de fermeture avec passage de paramètre</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">sayHello</span>(person) {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">function</span> (str) {</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;Hi &quot;</span> <span class="op">+</span> person <span class="op">+</span> <span class="st">&quot;, &quot;</span> <span class="op">+</span> str)<span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> helloBuddy <span class="op">=</span> <span class="fu">sayHello</span>(<span class="st">&quot;Buddy&quot;</span>)<span class="op">;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> helloGuys <span class="op">=</span> <span class="fu">sayHello</span>(<span class="st">&quot;Guys&quot;</span>)<span class="op">;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="fu">helloBuddy</span>(<span class="st">&quot;c&#39;mon&quot;</span>)<span class="op">;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">helloGuys</span>(<span class="st">&quot;how do you do?&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<p>La variable <code>person</code> a une valeur dans <code>helloBuddy</code> et <em>une autre</em> dans <code>helloGuys</code> : l’environnement lexical a été <em>capturé</em>.</p>
+</section>
+<section id="exemple-commun-en-dom" class="slide level3">
+<h3>Exemple commun en DOM</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fabriqueRedimensionneur</span>(taille) {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">function</span> () {</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">fontSize</span> <span class="op">=</span> taille <span class="op">+</span> <span class="st">&quot;px&quot;</span><span class="op">;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> taille12 <span class="op">=</span> <span class="fu">fabriqueRedimensionneur</span>(<span class="dv">12</span>)<span class="op">;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> taille14 <span class="op">=</span> <span class="fu">fabriqueRedimensionneur</span>(<span class="dv">14</span>)<span class="op">;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;t-12&quot;</span>)<span class="op">.</span><span class="at">onclick</span> <span class="op">=</span> taille12<span class="op">;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;t-14&quot;</span>)<span class="op">.</span><span class="at">onclick</span> <span class="op">=</span> taille14<span class="op">;</span></span></code></pre></div>
+</section>
+<section id="la-portée-lexicale-des-variables" class="slide level3">
+<h3>La portée lexicale des variables</h3>
+<h4 id="la-portée-des-variables-en-js">La portée des variables en JS</h4>
+<p>Pour les déclarations <code>let</code> et <code>const</code> on <em>une portée bloc</em> délimitée par des accolades <code>{...}</code> :</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> message <span class="op">=</span> <span class="st">&quot;Hello&quot;</span><span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(message)<span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// pas d&#39;erreur, chaque variable dans son bloc</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> message <span class="op">=</span> <span class="st">&quot;Goodbye&quot;</span><span class="op">;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(message)<span class="op">;</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Pour <code>var</code> c’est faux, mais de toute façon <a href="https://github.com/goldbergyoni/nodebestpractices#-37-prefer-const-over-let-ditch-the-var"><code>var</code> c’est terminé</a>.</p>
+</section>
+<section class="slide level3">
+
+<h4 id="la-portée-des-variables-en-js-suite">La portée des variables en JS, suite</h4>
+<div class="sourceCode" id="cb10"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">3</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(i)<span class="op">;</span> <span class="co">// 0, then 1, then 2</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(i)<span class="op">;</span> <span class="co">// Error, no such variable</span></span></code></pre></div>
+<p>La portée de <code>i</code> est <em>limitée</em> à la boucle <code>for</code> car déclarée avec <code>let</code> (est <strong>faux</strong> avec <code>var</code> !)</p>
+</section>
+<section class="slide level3">
+
+<h4 id="lenvironnement-lexical">L’environnement lexical</h4>
+<div class="sourceCode" id="cb11"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">makeCounter</span>() {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> count <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">function</span> () {</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(count)<span class="op">;</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    count <span class="op">+=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> counter_1 <span class="op">=</span> <span class="fu">makeCounter</span>()<span class="op">;</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> counter_2 <span class="op">=</span> <span class="fu">makeCounter</span>()<span class="op">;</span></span></code></pre></div>
+</section>
+<section class="slide level3">
+
+<p><strong>Question</strong> qu’est ce qui s’affiche ?</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>counter_1<span class="op">;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">counter_1</span>()<span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">counter_1</span>()<span class="op">;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>counter_2<span class="op">;</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">counter_2</span>()<span class="op">;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">counter_2</span>()<span class="op">;</span></span></code></pre></div>
+</section>
+<section class="slide level3">
+
+<h4 id="a-retenir">A retenir</h4>
+<p><strong>A closure is a function that remembers its outer variables and can access them</strong> <a href="https://javascript.info/closure">javascript.info</a>.</p>
+<ul>
+<li>un exemple <em>anondin</em>, car vous avez pu l’écrire vous-mêmes sans vous en rendre compte,</li>
+<li>un exemple <em>profond</em>, car il illustre le mécanisme de fermeture :
+<ul>
+<li>ici, <code>count</code> est dans l’environnement <em>extérieur</em> de la fonction <code>counter_1</code></li>
+<li>chaque fonction créée <code>counter_1</code> et <code>counter_2</code> <strong>a son propre environnement</strong></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level3">
+
+<h4 id="accès-à-la-fermeture-en-python">Accès à la fermeture en Python</h4>
+<p>Un exemple similaire en Python, en utilisant le module d’introspection <code>inspect</code></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> inspect <span class="im">import</span> getclosurevars</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> makeCounter():</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> out():</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">nonlocal</span> count <span class="co"># spécifique à Python</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(count)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        count <span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> out</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>counter <span class="op">=</span> makeCounter()</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>getclosurevars(makeCounter)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>getclosurevars(counter)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>counter()</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>getclosurevars(counter)</span></code></pre></div>
+</section>
+<section id="cas-dusage-les-iife" class="slide level3">
+<h3>Cas d’usage, les IIFE</h3>
+<p><em>An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined</em> <a href="https://developer.mozilla.org/en-US/docs/Glossary/IIFE">MDN</a>.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>(<span class="kw">function</span> () {</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">/* … */</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>})()<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">/* … */</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>})()<span class="op">;</span></span></code></pre></div>
+<p><strong>Pourquoi faire ceci ?</strong></p>
+</section>
+<section id="exercice" class="slide level3">
+<h3>Exercice</h3>
+<p>Ensuite, faire les 6 premiers exercices (jusqu’à <a href="https://javascript.info/closure#sum-with-closures"><em>sum with closure</em></a>) de <a href="https://javascript.info/closure">javascript.info</a>.</p>
+</section>
+<section id="exercice-suite" class="slide level3">
+<h3>Exercice, suite</h3>
+<ul>
+<li>écrire une fonction <code>counter</code> qui renvoie une fonction, disons <code>f</code>, qui renvoie son paramètre <em>n</em> élevé au carré mais en comptant et affichant le nombre d’appels fait à <code>f</code> à chaque utilisation.</li>
+<li>écrire ensuite une variante où le compteur est commun à <em>toutes</em> les fonctions générées par <code>counter</code>.</li>
+</ul>
+<p><strong>Remarque</strong> <em>les globaux sont interdits</em> (dans cet exercice, et en général).</p>
+<p><strong>Remarque</strong> faites avec/sans fermeture</p>
+</section></section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+        height: 960,
+        // Factor of the display size that should remain empty around the content
+        margin: 0.02,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.5,
+        maxScale: 1.0,
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

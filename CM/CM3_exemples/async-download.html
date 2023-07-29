@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Chargements asynchrones</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <script defer src="async-download.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <h1>Exemples de chargement asynchrone</h1>
+
+    <h2>Charger un fichier JSON</h2>
+    <p>
+      Voir <a href="data" target="_blank">la liste des fichiers sur le serveur</a>. Attention, pensez à
+      <strong>lancer un serveur pour accéder à cette page</strong>, sinon les requêtes <code>fetch</code> ne
+      fonctionneront pas.
+    </p>
+
+    <input type="text" id="input" value="ex2.json" />
+    <button id="fetch-promise-btn">Fetch (promise)</button>
+    <button id="fetch-await-btn">Fetch (async/await)</button>
+    <button id="reset-btn">Reset</button>
+
+    <pre id="content"></pre>
+  </body>
+</html>
+

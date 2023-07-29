@@ -1,0 +1,48 @@
+/* CSS - Cascading Style Sheet */
+/* Palette color codes */
+/* Palette URL: http://paletton.com/#uid=7080s0kllllaFw0g0qFqFg0w0aF */
+
+header, menu, footer {
+	padding: 1px 0;
+}
+
+header {
+	background-color: #AA4C39;
+	text-align: center;
+	border-radius: 1em 1em 0 0;
+}
+
+footer {
+	background-color: #4D9A6A;
+	text-align: center;
+	clear: both;
+	border-radius: 0 0 1em 1em;
+}
+
+nav  {
+	padding-left: 2em;
+	display: table-cell;
+	width: 12em;
+	background-color: #AA7239;
+}
+
+main {
+	display: table;
+	margin: auto;
+  width: 100%;
+  background-color: #265B6A;
+}
+
+section {
+	padding-left: 4em;
+	padding-right: 4em;
+}
+
+aside {
+  width: 30%;
+  padding-left: .5rem;
+  margin-left: .5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #AA7239;
+  font-style: italic;
+}

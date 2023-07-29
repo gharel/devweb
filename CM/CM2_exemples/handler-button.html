@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Un document d'exemple</h1>
+    <input type="text" id="input" value="10" />
+    <button id="eval">Calculer</button>
+    <code id="output"><br/></code>
+
+    <script>
+      const $output = document.getElementById("output");
+      const $input = document.getElementById("input");
+      const $eval = document.getElementById("eval");
+      function work() {
+        $output.innerHTML += `${$input.value ** 2 + 1}<br/>`;
+      }
+      $eval.addEventListener("click", work);
+    </script>
+  </body>
+</html>
+

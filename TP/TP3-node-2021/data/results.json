@@ -1,0 +1,12 @@
+[
+    {
+        "uri": "https://the-site-that-do-no-exists/",
+        "title": "This website do not exists",
+        "status": -1
+    },
+    {
+        "uri": "https://httpbin.org/status/404",
+        "title": "The website that answers 404",
+        "status": 404
+    }
+]

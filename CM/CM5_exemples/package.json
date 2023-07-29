@@ -1,0 +1,40 @@
+{
+  "name": "cm5_exemples",
+  "version": "1.0.0",
+  "description": "Une application Express de base",
+  "scripts": {
+    "base": "cross-env DEBUG=app:* NODE_ENV=development nodemon demo-base.mjs",
+    "knex": "cross-env DEBUG=app:* NODE_ENV=development nodemon demo-knex.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "http-errors": "^2.0.0",
+    "knex": "^2.2.0",
+    "slugify": "^1.6.5",
+    "sqlite": "^4.1.2",
+    "sqlite3": "^5.0.11",
+    "supports-color": "^9.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.8.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-security": "^1.5.0",
+    "eslint-plugin-unicorn": "^43.0.2",
+    "express-routes-catalogue": "^1.1.0",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1"
+  }
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <script type="module" src="correction/bookmarks-verify-client.js"></script>
+    <!-- <script type="module" src="correction/bookmarks-verify-client.js"></script> -->
+    <!-- <script src="bookmarks-verify-client.js" defer></script> -->
+    <title>Async checker</title>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Welcome to the Async Checker</h1>
+        <p class="subtitle">Click below to <strong>launch async checker</strong>!</p>
+
+        <div class="columns is-vcentered">
+          <div class="column">
+            <div class="select is-primary">
+              <select id="file-selector">
+                <option value="TheBody983-starred.json" selected>TheBody983-starred.json</option>
+                <option value="Webcretaire-starred.json">Webcretaire-starred.json</option>
+                <option value="romulusFR-starred.json">romulusFR-starred.json</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="column is-three-fifths">
+            <label class="label" for="progress">Progress: <span id="progress-number">0 / *</span></label>
+            <progress class="progress" id="progress-bar" max="100"></progress>
+          </div>
+
+          <div class="column has-text-right">
+            <button id="go-button" class="button is-primary">Go!</button>
+          </div>
+        </div>
+
+        <article class="message is-dark content is-small">
+          <div class="message-header">Output</div>
+
+          <pre class="message-body" id="output"></pre>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>
+

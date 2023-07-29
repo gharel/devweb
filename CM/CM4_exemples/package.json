@@ -1,0 +1,29 @@
+{
+  "name": "cm4_exemples",
+  "version": "1.0.0",
+  "description": "Un exemple de serveur HTTP de base",
+  "main": "server.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env DEBUG=app PORT=3000 nodemon server.mjs"
+  },
+  "keywords": [],
+  "author": "THION Romuald",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "debug": "^4.3.4",
+    "slugify": "^1.6.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-security": "^1.5.0",
+    "eslint-plugin-unicorn": "^43.0.2",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1"
+  }
+}

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Romuald THION">
+  <title>Développement Web</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/solarized.css" id="theme">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Développement Web</h1>
+  <p class="subtitle">La programmation asynchrone moderne en JavaScript</p>
+  <p class="author">Romuald THION</p>
+  <p class="date">Semestre pair 2022 UNC</p>
+</section>
+
+<section class="slide level3">
+
+<!-- markdownlint-disable MD033 MD001 MD045 MD041 -->
+</section>
+<section>
+<section id="rappels" class="title-slide slide level1">
+<h1>Rappels</h1>
+
+</section>
+<section id="programmation-asynchrone-approx" class="title-slide slide level2">
+<h2>Programmation asynchrone <span class="math inline">\(\approx\)</span></h2>
+<ul>
+<li>exécution de la fonction <strong>dans le futur</strong>
+<ul>
+<li>ajout à la <em>queue</em> sur déclenchement d’un <em>event</em></li>
+<li>puis traitement par l’<em>event loop</em></li>
+</ul></li>
+<li><code>return</code> ne permet <strong>pas</strong> de renvoyer de valeur
+<ul>
+<li>seulement d’<strong>interrompre</strong> le flux d’exécution</li>
+<li>comme un <code>throw</code> dans un cas de succès</li>
+</ul></li>
+<li>on doit passer “la suite” <em>en paramètre</em>
+<ul>
+<li>paramètre appellé <em>callback</em></li>
+<li>principe du <em>Continuation Passing Style</em> (CPS)</li>
+</ul></li>
+</ul>
+</section>
+
+<section id="exemple-de-décorateur-avec-settimeout" class="title-slide slide level2">
+<h2>Exemple de décorateur avec <code>setTimeout</code></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">throttle</span>(funct<span class="op">,</span> delay) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> waiting <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">function</span> (<span class="op">...</span>args) {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="op">!</span>waiting) {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>      waiting <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>      <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        waiting <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span> delay)<span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="fu">funct</span>(<span class="op">...</span>args)<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Le décorateur <a href="http://demo.nimius.net/debounce_throttle/"><em>throttle</em></a>, une variante de <code>memo</code> avec remise à zéro par une alarme.</p>
+</section>
+</section>
+<section>
+<section id="la-programmation-asynchrone-avec-les-promesses" class="title-slide slide level1">
+<h1>La programmation asynchrone avec les promesses</h1>
+<p>Ou comment éviter la <em>pyramid of doom</em></p>
+</section>
+<section id="pyramid-of-doom" class="title-slide slide level2">
+<h2>Pyramid of doom</h2>
+<!-- ![[To Survive the Pyramid of Doom...](https://medium.com/@bmlf72/to-survive-the-pyramid-of-doom-4e8ce4fb5d6b)](img/pyramid-of-doom.png) -->
+<figure>
+<img data-src="img/pyramid-of-doom-2.png" alt="Javascript Callback hell or Pyramid of doom" /><figcaption aria-hidden="true"><a href="https://medium.com/dsc-srm/javascript-callback-hell-or-pyramid-of-doom-4f786d14b997">Javascript Callback hell or Pyramid of doom</a></figcaption>
+</figure>
+</section>
+
+<section id="les-promesses" class="title-slide slide level2">
+<h2>Les promesses</h2>
+<p><em>L’interface <code>Promise</code> représente un intermédiaire (proxy) vers une valeur qui n’est <strong>pas nécessairement connue au moment de sa création</strong>. Ainsi, <strong>des méthodes asynchrones renvoient des valeurs comme les méthodes synchrones</strong>, la seule différence est que la valeur retournée par la méthode asynchrone est une <strong>promesse</strong> (d’avoir une valeur plus tard).</em></p>
+<p><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">MDN</a></p>
+<p>Ce qui change : au lieu de passer le <em>callback</em> en <strong>paramètre de la fonction</strong> asynchrone, on va passer le <em>callback</em> <strong>à l’objet <code>Promise</code> renvoyé</strong> par la fonction.</p>
+</section>
+<section id="états-des-promesses" class="slide level3">
+<h3>États des promesses</h3>
+<p><img data-src="img/promises_states_simple.jpg" height="250" /></p>
+<ul>
+<li><em>pending</em> (en attente) : ni remplie, ni rompue ;</li>
+<li><em>fulfilled</em> (tenue) : l’opération a réussi ;</li>
+<li><em>rejected</em> (rompue) : l’opération a échoué.</li>
+</ul>
+</section>
+<section class="slide level3">
+
+<h4 id="construction-de-promise">Construction de <code>Promise</code></h4>
+<p>Pour créer un <code>Promise</code>, on doit passer une fonction d’ordre supérieure qui elle-même prend deux fonctions en paramètre, nommées par convention :</p>
+<ul>
+<li><code>resolve</code> qui va résoudre en succès (<em>fulfilled</em>)</li>
+<li><code>reject</code> qui va résoudre en échec (<em>rejected</em>)</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> promise <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>(<span class="kw">function</span> (resolve<span class="op">,</span> reject) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (condition) {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">resolve</span>(value)<span class="op">;</span> <span class="co">// succès</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">reject</span>(reason)<span class="op">;</span> <span class="co">// échec</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+</section>
+<section class="slide level3">
+
+<p><strong>Attention</strong> <em>l’environnement</em> fixe <code>resolve</code> et <code>reject</code> (code natif) et appelle l’exécuteur <strong>immédiatement</strong> (<a href="CM3_exemples/async-promise-executor.js">exemple</a>)</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;A&quot;</span>)<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> promise <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>(<span class="kw">function</span> (resolve<span class="op">,</span> reject) {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">info</span>(<span class="vs">`resolve = </span><span class="sc">${</span>resolve<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">resolve</span>(<span class="dv">42</span>)<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;B&quot;</span>)<span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>promise<span class="op">.</span><span class="fu">then</span>(<span class="bu">console</span><span class="op">.</span><span class="fu">log</span>)<span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;C&quot;</span>)<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">// A</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">// resolve = function () { [native code] }</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">// B</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">// C</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">// 42</span></span></code></pre></div>
+</section>
+<section id="enchainer-les-promesses" class="slide level3">
+<h3>Enchainer les promesses</h3>
+<p><img data-src="img/promises.png" height="320" /></p>
+<p>Les méthodes <code>then(callback)</code> et <code>catch(callback)</code> <strong>renvoient des promesses</strong> qui peuvent être <em>chaînées à leurs tours</em>.</p>
+<p>Le chainage donne un <em>style linéaire</em> qui évite une <em>imbrication</em> des traitements (la <em>pyramid of doom</em>)</p>
+</section>
+<section id="enchaînement-de-promesses" class="slide level3">
+<h3>Enchaînement de promesses</h3>
+<p><img data-src="./img/promises_thenable.jpg" height="150" /></p>
+<p><code>Promise.prototype.then(fn)</code> renvoie une promesse :</p>
+<ul>
+<li>soit <code>fn</code> retourne <strong>une promesse</strong> <code>R</code> dont le résultat sera utilisé quand elle sera résolu ,</li>
+<li>soit <code>fn</code> retourne <strong>une valeur</strong> <code>R</code> qui sera <em>transformée automatiquement</em> en une promesse immédiatement résolue.</li>
+</ul>
+</section>
+<section class="slide level3">
+
+<h4 id="consommation-de-promise">Consommation de <code>Promise</code></h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>promise</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>((value) <span class="kw">=&gt;</span> {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* fulfillment */</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* enchainé par un appel à `resolve` dans l&#39;exécuteur */</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">catch</span>((error) <span class="kw">=&gt;</span> {</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* rejection */</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* enchainé par un appel à `reject` dans l&#39;exécuteur */</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">finally</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">/* dans tous les cas  : pas de paramètre*/</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span></code></pre></div>
+</section>
+<section class="slide level3">
+
+<h4 id="consommation-de-promise-un-exemple">Consommation de <code>Promise</code> : un exemple</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">info</span>(<span class="st">&quot;Start&quot;</span>)<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">Promise</span><span class="op">.</span><span class="fu">resolve</span>(<span class="dv">1</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(inc)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>((_) <span class="kw">=&gt;</span> <span class="bu">Promise</span><span class="op">.</span><span class="fu">reject</span>(<span class="kw">new</span> <span class="bu">Error</span>(<span class="st">&quot;Broken&quot;</span>)))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(inc) <span class="co">// /!\ sauté /!\</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">catch</span>((err) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(err)<span class="op">;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">42</span><span class="op">;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  }) <span class="co">// /!\ attention au retour /!\</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(inc)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">finally</span>(() <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;Done&quot;</span>))<span class="op">;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">info</span>(<span class="st">&quot;End&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<p>Qu’est-ce qui s’affiche ? (<a href="CM3_exemples/async-promise-chaining.js">source</a>)</p>
+</section>
+<section id="remarques-sur-then" class="slide level3">
+<h3>Remarques sur <code>then</code></h3>
+<ul>
+<li><strong>Attention</strong> au cas où <code>fn</code> n’est <strong>pas</strong> une fonction :
+<ul>
+<li>alors c’est <em>la promesse d’origine qui est renvoyée</em>.</li>
+<li><code>Promise.resolve(42).then(1).then(console.log)</code>
+<ul>
+<li>affiche <code>42</code> <strong>et pas</strong> <code>1</code></li>
+</ul></li>
+<li><strong>à éviter !</strong></li>
+</ul></li>
+<li>si la promesse est déjà résolue, on peut encore ajouter un traitement <code>then</code> <strong>qui sera déclenché</strong> au prochain tour
+<ul>
+<li><code>const p = Promise.resolve(42);</code></li>
+<li><code>p.then(() =&gt; p.then(() =&gt; console.log(0)));</code>
+<ul>
+<li>affiche bien <code>0</code></li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="exemple-promisification-de-settimeout-manuelle" class="slide level3">
+<h3>Exemple promisification de <code>setTimeout</code> manuelle</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">timedValue</span>(value<span class="op">,</span> delay) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">executor</span>(resolve<span class="op">,</span> reject) {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> <span class="fu">resolve</span>(value)<span class="op">,</span> delay)<span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">new</span> <span class="bu">Promise</span>(executor)<span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> p <span class="op">=</span> <span class="fu">timedValue</span>(<span class="dv">1000</span><span class="op">,</span> <span class="st">&quot;Success!&quot;</span>)<span class="op">;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">// on enchaine ici 3 callbacks sans imbrication</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>p<span class="op">.</span><span class="fu">then</span>((str) <span class="kw">=&gt;</span> <span class="st">&quot;OK! &quot;</span> <span class="op">+</span> str)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>((str) <span class="kw">=&gt;</span> str <span class="op">+</span> <span class="st">&quot; Done!&quot;</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>((str) <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(str))<span class="op">;</span></span></code></pre></div>
+<p><a href="CM3_exemples/async-promise-settimeout.js">Source</a></p>
+</section>
+<section id="la-promisification-générale" class="slide level3">
+<h3>La <em>promisification</em> générale</h3>
+<p>La <a href="https://javascript.info/promisify"><em>promisification</em></a> consiste à transformer une API par <em>callback</em> en une API qui renvoie une <em>Promise</em>.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">promisify</span>(funct) {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// wrapper (*)</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">function</span> (<span class="op">...</span>args) {</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>      <span class="co">// custom callback/executor (**)</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>      <span class="kw">function</span> <span class="fu">callback</span>(err<span class="op">,</span> result) {</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (err) <span class="fu">reject</span>(err)<span class="op">;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="fu">resolve</span>(result)<span class="op">;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>      args<span class="op">.</span><span class="fu">push</span>(callback)<span class="op">;</span> <span class="co">// append custom callback</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      funct<span class="op">.</span><span class="fu">call</span>(<span class="kw">this</span><span class="op">,</span> <span class="op">...</span>args)<span class="op">;</span> <span class="co">// call the original function</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</section>
+<section class="slide level3">
+
+<div class="sourceCode" id="cb8"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">// avec API callback</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> wait <span class="op">=</span> (delay<span class="op">,</span> value<span class="op">,</span> cb) <span class="kw">=&gt;</span> <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> <span class="fu">cb</span>(<span class="kw">null</span><span class="op">,</span> value)<span class="op">,</span> delay)<span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wait</span>(<span class="dv">1000</span><span class="op">,</span> <span class="dv">42</span><span class="op">,</span> (err<span class="op">,</span> res) <span class="kw">=&gt;</span> (err <span class="op">?</span> <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(err) <span class="op">:</span> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(res)))<span class="op">;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">// avec Promisification</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> waitPromise <span class="op">=</span> <span class="fu">promisify</span>(wait)<span class="op">;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="fu">waitPromise</span>(<span class="dv">1000</span><span class="op">,</span> <span class="dv">42</span>)<span class="op">.</span><span class="fu">then</span>(<span class="bu">console</span><span class="op">.</span><span class="fu">log</span>)<span class="op">.</span><span class="fu">catch</span>(<span class="bu">console</span><span class="op">.</span><span class="fu">error</span>)<span class="op">;</span></span></code></pre></div>
+<p>La bilbiothèque standard Node.js propose les outils <a href="https://nodejs.org/api/util.html#utilpromisifyoriginal"><code>util.promisify</code></a> et <a href="https://nodejs.org/api/util.html#utilcallbackifyoriginal"><code>util.callbackify</code></a>.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">// idem, mais avec lib Node</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> util <span class="op">=</span> <span class="pp">require</span>(<span class="st">&quot;node:util&quot;</span>)<span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> waitPromiseNode <span class="op">=</span> util<span class="op">.</span><span class="fu">promisify</span>(wait)<span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">waitPromiseNode</span>(<span class="dv">1000</span><span class="op">,</span> <span class="dv">42</span>)<span class="op">.</span><span class="fu">then</span>(<span class="bu">console</span><span class="op">.</span><span class="fu">log</span>)<span class="op">.</span><span class="fu">catch</span>(<span class="bu">console</span><span class="op">.</span><span class="fu">error</span>)<span class="op">;</span></span></code></pre></div>
+<p><a href="CM3_exemples/promisify.js">Source</a></p>
+</section>
+<section id="les-méthodes-de-la-classe-promise" class="slide level3">
+<h3>Les méthodes de la classe <code>Promise</code></h3>
+<p>Des méthodes <strong>de classe</strong>, pas <em>d’instances</em></p>
+<blockquote>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all"><code>Promise.all()</code></a> method returns a single <code>Promise</code> that resolves <strong>when all of the promises</strong> in the iterable argument have resolved.</p>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettled"><code>Promise.allSettled()</code></a> method returns a promise that fulfills after all of the given promises have <strong>either fulfilled or rejected</strong>.</p>
+</blockquote>
+</section>
+<section class="slide level3">
+
+<p>Exemple, lancement de trois promesses en parallèle:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Promise</span><span class="op">.</span><span class="fu">all</span>([</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="bu">Promise</span>((resolve) <span class="kw">=&gt;</span> <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> <span class="fu">resolve</span>(<span class="dv">1</span>)<span class="op">,</span> <span class="dv">0</span>))<span class="op">,</span> <span class="co">// 1</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="bu">Promise</span>((resolve) <span class="kw">=&gt;</span> <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> <span class="fu">resolve</span>(<span class="dv">2</span>)<span class="op">,</span> <span class="dv">1000</span>))<span class="op">,</span> <span class="co">// 2</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="bu">Promise</span>((resolve) <span class="kw">=&gt;</span> <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> <span class="fu">resolve</span>(<span class="dv">3</span>)<span class="op">,</span> <span class="dv">500</span>))<span class="op">,</span> <span class="co">// 3</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>])<span class="op">.</span><span class="fu">then</span>(<span class="bu">console</span><span class="op">.</span><span class="fu">info</span>)<span class="op">;</span></span></code></pre></div>
+</section>
+<section class="slide level3">
+
+<blockquote>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/any"><code>Promise.any()</code></a> takes an iterable of Promise objects. It returns a single promise that fulfills <strong>as soon as any of the promises in the iterable fulfills</strong>, with the value of the fulfilled promise.</p>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race"><code>Promise.race()</code></a> method returns a promise that resolves or rejects <strong>as soon as one of the promises</strong> in the iterable <strong>resolves or rejects</strong></p>
+</blockquote>
+</section>
+<section class="slide level3">
+
+<p>Méthodes de classe pour des promesses <strong>immédiatement résolues ou rejetées</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve"><code>Promise.resolve()</code></a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject"><code>Promise.reject()</code></a></li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> fullfilled <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> <span class="fu">resolve</span>(value))<span class="op">;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> rejected <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> <span class="fu">reject</span>(error))<span class="op">;</span></span></code></pre></div>
+</section>
+<section id="synthèse-sur-les-promesses" class="slide level3">
+<h3>Synthèse sur les promesses</h3>
+<ul>
+<li>standardisées</li>
+<li>facilitent l’enregistrement de <em>handlers</em>
+<ul>
+<li>en les passant <strong>aux résultats des fonctions et pas en paramètre des appels</strong></li>
+</ul></li>
+<li>donnent un style linéaire</li>
+<li>disponsent d’API riche</li>
+</ul>
+</section>
+<section id="attention-aux-promesses" class="slide level3">
+<h3>Attention aux promesses</h3>
+<ul>
+<li>cela reste toujours <em>asynchrone</em>
+<ul>
+<li>il faut <em>toujours</em> passer des fonctions en paramètre
+<ul>
+<li>juste <em>différement</em></li>
+</ul></li>
+<li>et donc <em>créer</em> ces fonctions (avec des fermetures)</li>
+</ul></li>
+<li>les promesses ne permettent <strong>qu’un seul appel</strong> à <code>reject</code>/<code>resolve</code> dans l’exécuteur
+<ul>
+<li>plusieurs appels possible en revanche pour les <em>callbacks</em> style Node.js</li>
+</ul></li>
+<li>le comportement avec des constantes n’est pas toujours naturel, attention</li>
+</ul>
+</section>
+</section>
+<section>
+<section id="la-web-api" class="title-slide slide level1">
+<h1>La Web API</h1>
+
+</section>
+<section id="lapi-fetch" class="title-slide slide level2">
+<h2>L’API <code>fetch</code></h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" class="uri">https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API</a></p>
+<blockquote>
+<p>The Fetch API provides an interface for fetching resources (including across the network). It will seem familiar to anyone who has used XMLHttpRequest, but the new API provides a more powerful and flexible</p>
+</blockquote>
+</section>
+<section class="slide level3">
+
+</section>
+
+<section id="les-principaux-objets-de-la-fetch-api" class="title-slide slide level2">
+<h2>Les principaux objets de la <em>Fetch API</em></h2>
+<ul>
+<li>fonction <a href="https://developer.mozilla.org/en-US/docs/Web/API/fetch"><code>fetch</code></a>, le principal point d’entrée</li>
+<li>classe <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request"><code>Request</code></a>, transmises par <code>fetch</code></li>
+<li>classe <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response"><code>Response</code></a>, reçue par <code>fetch</code>
+<ul>
+<li>propriétés <code>ok</code>, <code>headers</code>, <code>status</code>, etc.</li>
+<li>méthodes <strong>asynchrones</strong> <code>json()</code>, <code>text()</code>, <code>arrayBuffer()</code>, <code>formData()</code> etc. pour accéder au corps en différents formats</li>
+</ul></li>
+<li>classe <a href="https://developer.mozilla.org/en-US/docs/Web/API/Headers"><code>Headers</code></a>, dictionnaire</li>
+</ul>
+</section>
+<section class="slide level3">
+
+</section>
+
+<section id="exemple-avec-fetch" class="title-slide slide level2">
+<h2>Exemple avec <code>fetch</code></h2>
+<ul>
+<li><a href="https://javascript.info/fetch" class="uri">https://javascript.info/fetch</a></li>
+<li><a href="https://javascript.info/fetch-api" class="uri">https://javascript.info/fetch-api</a></li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fetch</span>(resource<span class="op">,</span> options)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>((resp) <span class="kw">=&gt;</span> resp<span class="op">.</span><span class="fu">json</span>())</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>((body) <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">info</span>(body<span class="op">.</span><span class="at">length</span>))<span class="op">;</span></span></code></pre></div>
+<ul>
+<li>resource peut être une <code>string</code>, une <code>URL</code> ou une <code>Request</code></li>
+<li>pour une requête <code>POST</code>, <code>PUT</code> ou <code>PATCH</code>, le <em>body</em> est passé dans les options, avec le type de méthode</li>
+</ul>
+<p>Démonstration (<a href="CM3_exemples/async-download.html">HTML</a>, <a href="CM3_exemples/async-download.js">JS</a>)</p>
+</section>
+<section class="slide level3">
+
+</section>
+
+<section id="exercice" class="title-slide slide level2">
+<h2>Exercice</h2>
+<ol type="1">
+<li>Télécharger <a href="CM3_exemples">les fichiers de départ et les données d’exemples</a></li>
+<li>Lancer un serveur web avec <code>python -m http.server</code> ou <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">LiveServer</a> dans le dossier de travail</li>
+<li>Modifier le JavaScript <code>async-download.js</code> pour que <strong>le contenu</strong> du fichier dont le nom est passé dans l’input soit affiché dans la balise <code>code</code></li>
+<li>Traiter le cas des erreurs réseaux pour afficher un message (sans exception <em>uncaught</em>)</li>
+</ol>
+<aside class="notes">
+
+</aside>
+</section>
+</section>
+<section>
+<section id="la-programmation-avec-async-et-await" class="title-slide slide level1">
+<h1>La programmation avec <code>async</code> et <code>await</code></h1>
+
+</section>
+<section class="slide level3">
+
+</section>
+<section id="async-await" class="title-slide slide level2">
+<h2><code>async</code> / <code>await</code></h2>
+<p>Sont là pour faciliter l’utilisation des promesses :</p>
+<ul>
+<li>une fonction <code>async</code> renvoie <strong>toujours</strong> une promesse</li>
+<li><code>await p</code> attend la résolution de la promesse
+<ul>
+<li><del>est utilisable uniquement dans les fonctions <code>async</code></del></li>
+<li>maintenant possible au <em>top-level</em> voir <a href="https://stackoverflow.com/questions/46515764/how-can-i-use-async-await-at-the-top-level">SO</a> et <a href="https://tc39.es/proposal-top-level-await/">TC39</a></li>
+</ul></li>
+<li>la gestion d’erreur se fait <em>comme pour les exceptions synchrones</em>
+<ul>
+<li>avec les <em>blocs</em> <code>try</code>, <code>catch</code> et <code>finally</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="réécriture-async-await-en-promise" class="slide level3">
+<h3>Réécriture <code>async</code> / <code>await</code> en <code>Promise</code></h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">f</span>() {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> r <span class="op">=</span> <span class="cf">await</span> <span class="fu">f</span>()<span class="op">;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(r)<span class="op">;</span></span></code></pre></div>
+<p>Les <code>await</code> sont à peu près équivalents à une ré-écriture de code dans le <code>then</code> des <code>Promise</code></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">f</span>() {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">Promise</span><span class="op">.</span><span class="fu">resolve</span>(<span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">f</span>()<span class="op">.</span><span class="fu">then</span>((r) <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(r))<span class="op">;</span></span></code></pre></div>
+<p>Pour maîtriser <code>async</code> / <code>await</code>, il <strong>faut maîtriser les <code>Promise</code></strong> !</p>
+</section>
+<section id="exemple-avec-settimeout" class="slide level3">
+<h3>Exemple avec <code>setTimeout</code></h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">timeout</span>(ms) {</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve) <span class="kw">=&gt;</span> <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> <span class="fu">resolve</span>(<span class="st">&quot;Get Up!&quot;</span>)<span class="op">,</span> ms))<span class="op">;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">sleep</span>() {</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> r <span class="op">=</span> <span class="cf">await</span> <span class="fu">timeout</span>(<span class="dv">3000</span>)<span class="op">;</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">info</span>(r)<span class="op">;</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> r<span class="op">;</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;Before&quot;</span>)<span class="op">;</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="cf">await</span> <span class="fu">sleep</span>()<span class="op">;</span> <span class="co">// /!\ await SUSPEND l&#39;EXECUTION /!\</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;After&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<p>Attention <strong>à ne pas mettre des <code>await</code> de partout</strong> !</p>
+</section>
+<section id="traduction-async-promise" class="slide level3">
+<h3>Traduction <code>async</code> / <code>Promise</code></h3>
+<p>Exemple <a href="https://developers.google.com/web/fundamentals/primers/async-functions%3E">Google Web Fundamentals</a></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">logFetch</span>(url) {</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">fetch</span>(url)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">then</span>((response) <span class="kw">=&gt;</span> response<span class="op">.</span><span class="fu">text</span>())</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">then</span>((text) <span class="kw">=&gt;</span> {</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(text)<span class="op">;</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">catch</span>((err) <span class="kw">=&gt;</span> {</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">&quot;fetch failed&quot;</span><span class="op">,</span> err)<span class="op">;</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">logFetch</span>(url) {</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">try</span> {</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> response <span class="op">=</span> <span class="cf">await</span> <span class="fu">fetch</span>(url)<span class="op">;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="cf">await</span> response<span class="op">.</span><span class="fu">text</span>())<span class="op">;</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">catch</span> (err) {</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;fetch failed&quot;</span><span class="op">,</span> err)<span class="op">;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</section>
+<section class="slide level3">
+
+</section>
+
+<section id="exercice-suite" class="title-slide slide level2">
+<h2>Exercice (suite)</h2>
+<ol type="1">
+<li>Reprendre le code de <code>async-download.js</code> en utilisant <code>async</code>/<code>await</code></li>
+</ol>
+</section>
+</section>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+      
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1280,
+        height: 960,
+        // Factor of the display size that should remain empty around the content
+        margin: 0.02,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.5,
+        maxScale: 1.0,
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    </body>
+</html>

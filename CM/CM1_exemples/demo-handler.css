@@ -1,0 +1,11 @@
+#image-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+
+#image-container img {
+    padding: 1rem;
+    width: 20rem;
+}

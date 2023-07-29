@@ -1,0 +1,35 @@
+/* https://stackoverflow.com/questions/58906591/aligning-form-labels-in-a-css-grid */
+
+html {
+  width: 90%;
+  margin: auto;
+
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+form button {
+  grid-column: 1 / -1;
+}
+
+form fieldset {
+  grid-column: 2 / -1;
+  display: flex;
+  /* flex-direction: column; */
+}
+
+label {
+  padding-right: 1ex;
+  padding-left: 1ex;
+}
+
+form > *{
+  margin: 1ex;
+}
+
+.offline {
+  text-decoration: line-through;
+}
