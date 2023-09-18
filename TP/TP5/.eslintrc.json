@@ -1,0 +1,37 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true,
+        "es6": true
+    },
+    "plugins": [
+        "unicorn",
+        "security"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:node/recommended",
+        "plugin:security/recommended",
+        "plugin:import/recommended",
+        "plugin:unicorn/recommended",
+        "plugin:promise/recommended",
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 2022,
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-restricted-syntax": [
+            "error",
+            "ForInStatement"
+        ],
+        "no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^_"
+            }
+        ]
+    }
+}
