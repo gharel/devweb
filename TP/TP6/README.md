@@ -9,7 +9,7 @@ Il s'agit d'abord de la réalisation d'une API serveur REST puis d'un client :
 - **Partie 4** : faire un client AJAX qui utilise l'API v2, _tag_ `client-ajax`.
 - **Partie 5** : fonctionnalité de suppression avec authentification, _tag_ `api-v2-delete`.
 
-Un projet de départ d'application est disponible dans la Github Classroom à l'addresse <https://classroom.github.com/a/N63pw_jM>.
+Un projet d'application est disponible sur Github <https://github.com>.
 
 ## Introduction
 
@@ -80,7 +80,7 @@ Le middleware [Swagger UI Express](https://www.npmjs.com/package/swagger-ui-expr
 
 ### Modalités de rendu
 
-Le projet est à rendre sur Github Classroom à l'addresse <https://classroom.github.com/a/N63pw_jM> :
+Le projet est à rendre sur Github <https://github.com> :
 
 - la partie 1 (questionnaire) est à rendre pour le **vendredi 2 septembre 09h59**,
 - les parties 2, 3, 4 et 5 sont à rendre pour le **vendredi 16 septembre 23h59**.

@@ -18,7 +18,7 @@ Une deuxième partie est consacrée à l'API fonctionnelle de la classe `Array`.
 **Pour vendredi 22/07/22 en séance** :
 
 - avoir fait `once`, `maybe` et `memoize`;
-- mettre à jour le fichier `src/decorator.mjs` de la GitHub classroom <https://classroom.github.com/a/Pcj8zdJc>
+- mettre à jour le fichier `src/decorator.mjs`
 - ajouter la réponse au 3ème exercice _modificateur de taille_
 
 ## Les décorateurs
