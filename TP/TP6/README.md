@@ -26,7 +26,7 @@ La route suivante en revanche, ne répond pas de JSON mais **redirige** le navig
 
 ### Installation
 
-Créer votre dépot sur GitHub Classroom puis cloner votre projet.
+Créer votre dépot sur GitHub puis cloner votre projet.
 
 Vous disposez d'un projet de départ fonctionnel où les routes `GET /` et `POST /` de l'API V1 sont **déjà** implémentées.
 Une route `GET /error` qui génère une erreur 500 est aussi créée pour les tests.
