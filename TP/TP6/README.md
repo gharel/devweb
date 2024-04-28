@@ -80,10 +80,7 @@ Le middleware [Swagger UI Express](https://www.npmjs.com/package/swagger-ui-expr
 
 ### Modalités de rendu
 
-Le projet est à rendre sur Github <https://github.com> :
-
-- la partie 1 (questionnaire) est à rendre pour le **vendredi 2 septembre 09h59**,
-- les parties 2, 3, 4 et 5 sont à rendre pour le **vendredi 16 septembre 23h59**.
+Le projet est à rendre sur Github <https://github.com> et sur Render <https://render.com>
 
 À chaque partie complétée, il faut associer un _tag_ GIT.
 Penser également **à compléter le fichier** `README.md` avec votre état d'avancement.

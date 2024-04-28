@@ -20,7 +20,7 @@ const adder = function (url) {
     div.appendChild(img);
     span.appendChild(div);
     div.appendChild(subdiv);
-    
+
 
 
     let bouton_haut = document.createElement("button");
@@ -104,7 +104,7 @@ const adder = function (url) {
 
 ajouter_bouton.onclick = adder;
 
-const JSON_FILE = "https://romulusfr.github.io/unc-s4-devweb/TP/TP_Arnaud/urls.json";
+const JSON_FILE = "https://gharel.github.io/devweb/TP/TP_Arnaud/urls.json";
 fetch(JSON_FILE)
   .then((resp) => {
     if (resp.ok) return resp.json();
