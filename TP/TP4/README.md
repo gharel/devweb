@@ -1,6 +1,6 @@
 # TP programmation async côté client : l'API GitHub
 
-Ce TP est à rendre via [GitHub](https://github.com/) pour **au plus tard** vendredi 12 août à 23:59 (GMT+11).
+Ce TP est à rendre via [GitHub](https://github.com/).
 
 ## Introduction
 
