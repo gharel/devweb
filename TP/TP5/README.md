@@ -18,11 +18,10 @@ Ce tutorial est inspiré de [_How To Create a Web Server in Node.js with the HTT
 Ce tutorial vous fait prendre en main l'environnement Node.js avec un petit projet de serveur web monté pas à pas, utilisant essentiellement les bilbiothèques standards de Node.js. Le framework <http://expressjs.com/> sera introduit ensuite.
 
 - installer Node.js <https://nodejs.org/en/download/> pour votre environnement
-- récupérer le projet depuis GitHub <https://github.com>
-  - on obtient un dossier `tutoriel-http-express-node-LOGIN` qu'on appellera `devweb-tp5` par la suite par commodité
+- créer un dossier `devweb-tp5`
 
-**RENDU** vous devrez remplir le fichier `README.md` avec les questions du sujet et **commiter/pousser sur GitHub Classroom**.
-Les différentes étapes à réaliser seront aussi committées. La date limite de rendu est le **lundi 29 août 2022 23h59**.
+**RENDU** vous devrez remplir le fichier `README.md` avec les questions du sujet et **commiter/pousser sur GitHub**.
+Les différentes étapes à réaliser seront aussi committées.
 
 ## Partie 1 : serveur HTTP natif Node.js
 
