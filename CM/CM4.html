@@ -227,7 +227,7 @@
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">// [1] received 2@+1040</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">// [2] received 3@+968</span></span></code></pre></div>
 </section>
-<section id="performance-des-programmes-io-intensive" class="slide level3">
+<!--section id="performance-des-programmes-io-intensive" class="slide level3">
 <h3>Performance des programmes I/O intensive</h3>
 <h4 id="exemple-sur-le-réducteur-durl-get-tp6">Exemple sur le réducteur d’URL GET (TP6)</h4>
 <pre class="raw"><code>&gt; siege --benchmark --concurrent=100 --time=30s --header=&quot;Accept:application/json&quot; &#39;http://127.0.0.1:8080/api-v1/&#39;
@@ -264,7 +264,8 @@ Successful transactions:  45210
 Failed transactions:          1
 Longest transaction:       0.25
 Shortest transaction:      0.03</code></pre>
-</section></section>
+</section-->
+</section>
 <section>
 <section id="lenvironnement-de-développement" class="title-slide slide level2">
 <h2>L’environnement de développement</h2>
@@ -274,7 +275,7 @@ Shortest transaction:      0.03</code></pre>
 </section>
 <section id="npm" class="slide level3">
 <h3>npm</h3>
-<p><a href="https://docs.npmjs.com/"><code>npm</code></a> est le <em>Node Packet Manager</em>.</p>
+<p><a href="https://docs.npmjs.com/"><code>npm</code></a> est le <em>Node Package Manager</em>.</p>
 <p><em><code>npm</code> est à Node.js ce que <code>pip</code> est à Python</em>, avec en plus un support natif des environnements virtuels à la <a href="https://docs.python.org/3/library/venv.html"><code>venv</code></a> .</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> <span class="at">--version</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 8.16.0</span></span>
@@ -428,7 +429,7 @@ Ok to proceed? (y) y
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-      
+
         // Display a presentation progress bar
         progress: true,
         // Display the page number of the current slide
