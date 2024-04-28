@@ -18,7 +18,7 @@ Le cahier des charges initial <http://unc.epizy.com/js/cc.html> est modifié, il
 Pour la première extension, on donne l'extrait de code suivant de départ:
 
 ```javascript
-const JSON_FILE = "https://romulusfr.github.io/unc-s4-devweb/TP/TP_Arnaud/urls.json";
+const JSON_FILE = "https://gharel.github.io/devweb/TP/TP_Arnaud/urls.json";
 fetch(JSON_FILE)
   .then((resp) => {
     if (resp.ok) return resp.json();
