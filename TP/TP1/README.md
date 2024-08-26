@@ -224,7 +224,7 @@ On souhaite modifier [tp1.html](tp1.html) et [tp1.js](tp1.js) pour créer des bo
 
 Il faut que quand on clique sur le bouton _Ajouter modificateur de taille_ et que le champ de saisi vaut $n$, un nouveau bouton soit ajouté à la page, et que quand on clique à son tour dessus, celui-ci mettra la citation à la taille $n$.
 
-Ci-dessous, un exemple ou trois bouttons ont été ajoutés, pour passer le texte aux tailles 12, 14 ou 18. Là, on a cliqué sur le bouton _Taille 14_ et le texte a grossi.
+Ci-dessous, un exemple ou trois boutons ont été ajoutés, pour passer le texte aux tailles 12, 14 ou 18. Là, on a cliqué sur le bouton _Taille 14_ et le texte a grossi.
 
 ![Exemple](exo-resizer.png)
 
