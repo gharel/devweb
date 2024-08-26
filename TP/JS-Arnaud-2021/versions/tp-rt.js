@@ -7,7 +7,7 @@ const $imageContainer = document.querySelector("#image-container");
 function toggleFirstLastButtons() {
   // pour chaque image du conteneur
   for (const $div of $imageContainer.querySelectorAll("div")) {
-    // on extrait les bouttons ▲ et ▼
+    // on extrait les boutons ▲ et ▼
     const [$upButton, $downButton] = $div.querySelectorAll("button");
     // si premier, on desactive ▲
     $upButton.disabled = $div === $imageContainer.firstElementChild;
@@ -36,7 +36,7 @@ const buttonDefinitions = new Map([
   ["✖", delButtonHandler],
 ]);
 
-// ajout d'une image et de ses trois bouttons ▲, ▼, ✖
+// ajout d'une image et de ses trois boutons ▲, ▼, ✖
 function addImage(href) {
   // vérification de l'URL
   let url;
