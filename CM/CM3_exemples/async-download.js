@@ -11,7 +11,7 @@ const $output = document.getElementById("content");
 function fetchPromise() {
   const url = new URL(`data/${$input.value.trim()}`, window.location);
   // TODO : ici le téléchargement du fichier et l'ajout de son contenu dans $output
-  // TODO : traiter les erreurs réseaux, can le code HTTP est différent de 200-299
+  // TODO : traiter les erreurs réseaux, quand le code HTTP est différent de 200-299
   fetch(url).then((resp) => console.info(resp));
 }
 

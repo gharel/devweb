@@ -5,7 +5,7 @@ Cette API utilise les promesses et proposes différents objets standards comme [
 
 **Important** pour ce TP, vous _devez_ avoir un serveur Web, aussi simple soit-il. Vous pouvez utiliser soit :
 
-- [l'extension Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) poru VSCode
+- [l'extension Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) pour VSCode
 - ouvrir un serveur Python avec [le module `http.server`](https://docs.python.org/3/library/http.server.html), comme avec la ligne de commande suivante `python -m http.server --bind 127.0.0.1 5000` (sur le port 5000, en `localhost` seulement).
 
 On donne une page de départ contenant un formulaire avec trois champs [demo-formulaire.html](demo-formulaire.html) ainsi que les fichiers [demo-formulaire.js](demo-formulaire.js) et [demo-formulaire.css](demo-formulaire.css)
