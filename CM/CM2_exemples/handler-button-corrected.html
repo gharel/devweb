@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Un document d'exemple</h1>
+    <input type="text" id="input" value="10" />
+    <button id="eval">Calculer</button>
+    <button id="alarm">Alarme</button>
+    <code id="output"><br/></code>
+
+    <script>
+      const $output = document.getElementById("output");
+      const $input = document.getElementById("input");
+      const $eval = document.getElementById("eval");
+      const $alarm = document.getElementById("alarm");
+      function work() {
+        $output.innerHTML += `${$input.value ** 2 + 1}<br/>`;
+        setTimeout(function(){
+          $output.innerHTML += 'done! <br/>';
+        }, $input.value * 1000);
+      }
+      function workAlarm() {
+        let n = parseInt($input.value);
+        recursive(function() {
+          n--;
+          $output.innerHTML += `${n} <br/>`;
+        });
+      }
+
+      function recursive(fct, run = 0) {
+        run++;
+        if(run >= parseInt($input.value)) return;
+
+        setTimeout(function() {
+          fct();
+          recursive(fct, run);
+        }, 1000);
+      }
+
+      $eval.addEventListener("click", work);
+      $alarm.addEventListener("click", workAlarm);
+    </script>
+  </body>
+</html>
+
