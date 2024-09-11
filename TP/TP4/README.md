@@ -4,8 +4,8 @@ Ce TP est à rendre via [GitHub](https://github.com/).
 
 ## Introduction
 
-On souhaite réaliser application qui vérifie si une liste de projet GitHub sont toujours actifs ou pas.
-La page HTML contient un bouton, une bare de progression, un `span` pour un compteur et une zone d'affichage.
+On souhaite réaliser une application qui vérifie si une liste de projet GitHub sont toujours actifs ou pas.
+La page HTML contient un bouton, une barre de progression, un `span` pour un compteur et une zone d'affichage.
 La mise en forme utilise la librairie CSS <https://bulma.io/> pour un rendu moderne.
 
 On donne une capture ci-après, dans laquelle on a vérifié les projets listés dans le fichier `TheBody983-starred.json` et où on voit que trois sont toujours OK, mais qu'un est KO (le projet n'est plus disponible sur GitHub). La barre de progression s'est remplie progressivement au fur et à mesure que l'on connaît l'état des projets. On peut le voir sur [la démonstration sur YouTube](https://youtu.be/ya2Ju04_Q5M) (avec une version légèrement plus ancienne de l'interface).
@@ -28,9 +28,9 @@ On donne une capture ci-après, dans laquelle on a vérifié les projets listés
 - précision et granularité des _commits_ sur le dépôt.
   - des pénalités **conséquentes** seront appliquées si les commits modifient trop de code ou sont trop peu nombreux.
 
-## Fonctionnement de la bare de progression
+## Fonctionnement de la barre de progression
 
-La fonction fournie `updateProgress(current, total, text)` permet de mettre à jour la la bare de progression à la valeur `current` sur un total de `total`, le paramètre `text` est optionnel (il produit un affichage sur la page)
+La fonction fournie `updateProgress(current, total, text)` permet de mettre à jour la la barre de progression à la valeur `current` sur un total de `total`, le paramètre `text` est optionnel (il produit un affichage sur la page)
 Exécuter le script suivant **ligne par ligne** pour comprendre le fonctionnement :
 
 ```javascript
@@ -43,7 +43,7 @@ updateProgress(5, 10, "moitié");
 updateProgress(10, 10, "fini !");
 ```
 
-**Exercice** avec `setInterval` écrire une fonction `doProgressTimer` qui incremente la bare de $1/n$ à chaque seconde pendant $n$ secondes.
+**Exercice** avec `setInterval` écrire une fonction `doProgressTimer` qui incremente la barre de $1/n$ à chaque seconde pendant $n$ secondes.
 
 ## Vérification de projets GitHub
 
