@@ -6,7 +6,7 @@ const options = {
   method: "GET",
   headers: {
     "User-Agent": "devweb-gh-crawler",
-    "Authorization": "token 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",
+    "Authorization": "token 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",
   },
 };
 
