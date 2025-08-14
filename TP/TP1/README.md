@@ -15,7 +15,7 @@
 Ce TP a pour but de vous familiariser à la programmation fonctionnelle en écrivant quelques _décorateurs_.
 Une deuxième partie est consacrée à l'API fonctionnelle de la classe `Array`.
 
-**Pour vendredi 22/07/22 en séance** :
+**A faire** :
 
 - avoir fait `once`, `maybe` et `memoize`;
 - mettre à jour le fichier `src/decorator.mjs`
