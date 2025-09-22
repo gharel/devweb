@@ -136,10 +136,10 @@ Ensuite, faire la même chose avec la commande `npm run http-prod`.
 
 **Question 1.7** quelles sont les différences entre les scripts `http-dev` et `http-prod` ?
 
-Les fichiers [`eslint.config.js`](base/eslint.config.js) et [`.prettierrc`](base/.prettierrc) sont fournis dans le dossier `TP5/base`. Exécuter la commande suivante pour installe les dépendances :
+Les fichiers [`eslint.config.mjs`](base/eslint.config.mjs) et [`.prettierrc`](base/.prettierrc) sont fournis dans le dossier `TP5/base`. Exécuter la commande suivante pour installe les dépendances :
 
 ```bash
-npm i -D prettier eslint @eslint/js @eslint/eslintrc eslint-plugin-n eslint-plugin-security eslint-plugin-import eslint-plugin-jest eslint-plugin-node eslint-plugin-unicorn eslint-plugin-promise eslint-config-prettier
+npm i -D prettier eslint @eslint/js @eslint/eslintrc eslint-plugin-n eslint-plugin-import eslint-plugin-jest eslint-plugin-node eslint-plugin-unicorn eslint-plugin-promise eslint-config-prettier globals
 ```
 
 Vérifier que l'autoformattage avec <https://prettier.io> et le linting avec <https://eslint.org/> fonctionnent dans VSCode **et** en ligne de commande avec les commandes suivantes :
