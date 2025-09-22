@@ -136,7 +136,7 @@ Ensuite, faire la même chose avec la commande `npm run http-prod`.
 
 **Question 1.7** quelles sont les différences entre les scripts `http-dev` et `http-prod` ?
 
-Les fichiers [`base/.eslintrc.json`](.eslintrc.json) et [`base/.prettierrc`](.prettierrc) sont fournis dans le dossier `devweb-tp5`. Exécuter la commande suivante pour installe les dépendances :
+Les fichiers [`.eslintrc.json`](base/.eslintrc.json) et [`.prettierrc`](base/.prettierrc) sont fournis dans le dossier `devweb-tp5`. Exécuter la commande suivante pour installe les dépendances :
 
 ```bash
 npm install --save-dev prettier eslint eslint-config-prettier eslint-plugin-import eslint-plugin-jest eslint-plugin-node eslint-plugin-promise eslint-plugin-security eslint-plugin-unicorn
