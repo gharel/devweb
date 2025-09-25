@@ -3,13 +3,11 @@
 Ce projet consiste à réaliser un service simple de [réduction d'URL](https://en.wikipedia.org/wiki/URL_shortening) comme <https://bit.ly/> ou <https://tinyurl.com/>
 Il s'agit d'abord de la réalisation d'une API serveur REST puis d'un client :
 
-- **Partie 1** : prendre en main le projet, _tag_ `reponses`.
+- **Partie 1** : initialiser le projet.
 - **Partie 2** : compléter les fonctionnalités manquantes de l'API v1, _tag_ `api-v1`.
 - **Partie 3** : ajouter un HTML côté serveur et négocier les contenus, _tag_ `api-v2`.
 - **Partie 4** : faire un client AJAX qui utilise l'API v2, _tag_ `client-ajax`.
 - **Partie 5** : fonctionnalité de suppression avec authentification, _tag_ `api-v2-delete`.
-
-Un projet d'application est disponible sur Github <https://github.com>.
 
 ## Introduction
 
@@ -26,11 +24,11 @@ La route suivante en revanche, ne répond pas de JSON mais **redirige** le navig
 
 ### Installation
 
-Créer votre dépot sur GitHub puis cloner votre projet.
+Créer votre dépot sur GitHub.
 
-Vous disposez d'un projet de départ fonctionnel où les routes `GET /` et `POST /` de l'API V1 sont **déjà** implémentées.
-Une route `GET /error` qui génère une erreur 500 est aussi créée pour les tests.
-En revanche, les routes `GET /:url` et `GET /status/:url` ne sont **pas** implémentées et renvoient pour l'instant une [erreur 501](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/501).
+Dans votre projet, il faudra implémenter les routes `GET /` et `POST /` de l'API V1.
+Une route `GET /error` qui génère une erreur 500 devra être créée pour les tests.
+les routes `GET /:url` et `GET /status/:url` ne sont **pas** implémentées et renvoient pour l'instant une [erreur 501](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/501).
 
 Avant de démarrer, **créer un fichier nommé `.env` à la racine du projet** avec le contenu comme suit, à adapter à votre environnement si besoin.
 Ce fichier `.env` est automatiquement chargé par l'application pour définir les variables d'environnement nécessaires à l'exécution de l'application.
@@ -80,7 +78,7 @@ Le middleware [Swagger UI Express](https://www.npmjs.com/package/swagger-ui-expr
 
 ### Modalités de rendu
 
-Le projet est à rendre sur Github <https://github.com> et sur Render <https://render.com>
+Le projet est à rendre sur Github <https://github.com> et sur Render <https://render.com> ou autre service du même style.
 
 À chaque partie complétée, il faut associer un _tag_ GIT.
 Penser également **à compléter le fichier** `README.md` avec votre état d'avancement.
@@ -88,7 +86,7 @@ Penser également **à compléter le fichier** `README.md` avec votre état d'av
 #### critères d'évaluation
 
 - /16 **fonctionnalités réalisées**
-  - voir la liste dans le `README.md` du projet de départ
+  - réduction d'URL, rédirection d'URL
 - /3 **qualité du code**
   - choix des identifiants, mise en forme, respect des conventions
   - gestion des erreurs, notamment `async/await` et codes retours HTTP associés
@@ -96,7 +94,7 @@ Penser également **à compléter le fichier** `README.md` avec votre état d'av
 - /1 **ergonomie et rendu des clients**
   - il faut que ce soit utilisable et sobre
 
-L'évaluation des fonctionnalités sera en partie automatisée, il faut donc respecter **srupuleusement** les schéma des réponses JSON demandés.
+L'évaluation des fonctionnalités sera en partie automatisée, il faut donc respecter **scrupuleusement** les schéma des réponses JSON demandés.
 
 **NOTA BENE** Pour ajouter un _tag_, utiliser [la fonctionnalité de VSCode](https://stackoverflow.com/questions/41438075/tag-commit-in-vscode), l'interface Web de GitHub ou [la commande `git`](https://stackoverflow.com/questions/5195859/how-do-you-push-a-tag-to-a-remote-repository-using-git) comme `git tag mon-tag main` et `git push origin mon-tag`.
 Dans tous les cas **pensez à pousser les tags sur le dépôt GitHub**, les tags ne sont transmis qu'avec un _push_ spécifique.
@@ -105,9 +103,7 @@ Dans tous les cas **pensez à pousser les tags sur le dépôt GitHub**, les tags
 
 Répondre aux questions précédentes dans le fichier `REPONSES.md` de votre dépôt.
 
-- Sur <http://localhost:8080/api-docs>, lister les routes qui sont **déjà** implémentées et celles qui ne le sont pas encore.
 - Donner la commande `httpie` correspondant à la commande `curl` [donnée par la doc](http://localhost:8080/api-docs/#/shortener/post_) pour la route `POST`.
-- Donner le _secret_ de la route qui est implémenté mais qui n'est pas documentée.
 - Démarrer l'application en mode _production_ avec `npm run prod` puis en mode _développement_ avec `npm run dev`. Donner les principales différences entre les deux modes.
 - Donner le script `npm` qui permet de formatter automatiquement tous les fichiers `.mjs`
 - Les réponses HTTP contiennent une en-tête `X-Powered-By`. Donner la configuration Express à modifier pour qu'elle n'apparaisse plus.
@@ -115,28 +111,24 @@ Répondre aux questions précédentes dans le fichier `REPONSES.md` de votre dé
 - Trouver un middleware Express qui permet de répondre aux requêtes `favicon.ico` avec `static/logo_univ_16.png`. Donner le code.
 - Donner les liens vers la documentation du driver SQLite utilisé dans l'application.
 - Indiquer à quels moments la connexion à la base de données est ouverte est quand elle est fermée.
-- Avec un navigateur **en mode privé** visiter une première fois <http://localhost:8080/>, puis une deuxième. Ensuite rechargez avec `Ctrl+Shift+R`. Conlure sur la gestion du cache par Express.
+- Avec un navigateur **en mode privé** visiter une première fois <http://localhost:8080/>, puis une deuxième. Ensuite rechargez avec `Ctrl+Shift+R`. Conclure sur la gestion du cache par Express.
 - Ouvrir deux instances de l'application, une sur le port 8080 avec `npm run dev` et une autre sur le port 8081 avec la commande `cross-env PORT=8081 NODE_ENV=development npx nodemon server.mjs`. Créer un lien sur la première instance <http://localhost:8080/> et ensuite un autre sur la seconde instante <http://localhost:8081/>. Les liens de l'un doivent être visibles avec l'autre. Expliquer pourquoi.
-- Si on enregistre 1000 liens par heure, au bout de combien de temps aura t'on 1% de chance d'avoir une collision, c'est-à-dire deux liens différents avec le même raccourci ? Utiliser pour cela <https://zelark.github.io/nano-id-cc/>
-- Pour chacune des fonctions présentes dans `database/database.mjs`, indiquer quelle fonction l'utilise dans le code du routeur.
-- La route `/error` fait planter le serveur au lieu de provoquer une erreur 500 attendue. Trouver quel est le handler qui fait crasher le serveur et expliquer pourquoi.
-- Corriger le point précédent pour que le comportement soit conforme à la documentation. Donner le code
 
-Pousser le fichier `REPONSES.md` dans votre dépôt pour le **jeudi 1er septembre 23h59**.
+Pousser le fichier `REPONSES.md` dans votre dépôt.
 Mettre le _tag_ `reponses` à la version correspondant dans votre dépôt Git.
 
 ## Partie 2 : compléter l'application
 
-Dans cette partie, il n'y a pas encore de _front-end_, il s'agit **uniquement** d'un _back-end_ qui va recevoir des requêtes HTTP `GET` ou `POST` et répondre des contenus JSON ou rediriger sans aucune CSS ni HTML.
+Dans cette partie, il n'y a pas encore de _front-end_, ni de _back-end_ qui va recevoir des requêtes HTTP `GET` ou `POST` et répondre des contenus JSON ou rediriger sans aucune CSS ni HTML.
 
-- Créer les routes manquantes de l'API v1 qui ne sont pas encore implémentées et répondent actuellement un code HTTP 501.
-  - Pour celà, compléter les fichiers `router/api-v1.mjs` et `database/database.mjs`.
+- Créer les routes manquantes de l'API v1.
+  - Pour celà, créer et compléter les fichiers `router/api-v1.mjs` et `database/database.mjs`.
 - Ajouter la fonctionnalité qui permet de compter le nombre de fois où chaque lien est visité.
   - Pour cela, incrémenter l'attribut `visit` de la base de données à chaque visite sur `GET /:url`.
 - La gestion des variables d'environnement et du niveau de logging est dupliquée entre plusieurs fichiers.
   - La factoriser dans un fichier `config.mjs` qui sera chargé par les autres.
 
-**NOTA BENE** il faut _respecter les spécifications fournies_ pour ces fonctionnalités, dont notamment _la structure des objets JSON des réponses_.
+**NOTA BENE**
 
 Réaliser ces fonctionnalités et les pousser dans le dépôt.
 Mettre le _tag_ `api-v1` à la version correspondant dans votre dépôt Git.
