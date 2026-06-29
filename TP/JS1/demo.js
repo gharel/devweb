@@ -1,4 +1,4 @@
-// Exercice : objet ave cune méthode : l'objet magique `this`
+// Exercice : objet avec une méthode : l'objet magique `this`
 
 o = {
   x: "Romu",
