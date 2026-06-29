@@ -46,7 +46,7 @@ function range(stop, start, step) {
   return res;
 }
 
-/* Exercice 3 : Calculatrice polonaise inverse */
+/* Exercice 4 : Calculatrice polonaise inverse */
 let evaluate = function (expr) {
   console.log("[js] evaluate (" + expr + ")");
   let results = [];
