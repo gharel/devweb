@@ -18,7 +18,6 @@ Une deuxième partie est consacrée à l'API fonctionnelle de la classe `Array`.
 **A faire** :
 
 - avoir fait `once`, `maybe` et `memoize`;
-- mettre à jour le fichier `src/decorator.mjs`
 - ajouter la réponse au 3ème exercice _modificateur de taille_
 
 ## Les décorateurs
@@ -74,7 +73,7 @@ Ecrire les décorateurs suivants. On ne demande **pas** de gérer les exceptions
   - Ce décorateur ressemble assez à `once(fct)`, avec un dictionnaire pour enregistrer plusieurs valeurs au lieu d'une seule. Utiliser [`Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 - `chain(n)(fct)` enchaine la fonction `fct` (supposée unaire) _n_ fois, c'est-à-dire renvoie la fonction _x ↦ fct(fct(...(fct(x))...))_ où _fct_ est appellée _n_ fois. Si l'entier _n_ est nul alors la fonction identité est renvoyée _x ↦ x_. On donnera une version _itérative_ et une version _récursive_ de `chain(n)(fct)`.
 
-Voir [cet exemple](rest_spread.js) pour l'utilisation des _rest parameters_ et de la _spread syntax_.
+Voir le fichier [demo-rest-spread.js](demo-rest-spread.js) pour l'utilisation des _rest parameters_ et de la _spread syntax_.
 
 [^1]: _i.e._ sans rappeler `fct`
 
@@ -122,7 +121,7 @@ La classe `Array` dispose des méthodes suivantes qui prennent toutes une foncti
 
 ### Exemple
 
-Voir le fichier [demo.js](demo.js) pour comparer les approches impératives _classiques_ (avec boucle for explicite et affectation) et _fonctionnelles_ sur un calcul simple.
+Voir le fichier [demo-imperative-funct.js](demo-imperative-funct.js) pour comparer les approches impératives _classiques_ (avec boucle for explicite et affectation) et _fonctionnelles_ sur un calcul simple.
 
 ### Tutoriel
 
