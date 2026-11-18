@@ -6,9 +6,15 @@ const options = {
   method: "GET",
   headers: {
     "User-Agent": "devweb-gh-crawler",
-    "Authorization": "token JETON_SUPPRIME",
   },
 };
+
+// Ne jamais écrire de jeton GitHub dans du code exécuté par le navigateur :
+// il serait lisible par tous. Sans jeton, l'API autorise 60 requêtes/heure.
+// Pour aller au-delà, saisir un jeton personnel (lecture seule) : il reste
+// en mémoire le temps de la page et n'est jamais enregistré.
+const githubToken = window.prompt("Jeton GitHub (optionnel, laisser vide sinon)") ?? "";
+if (githubToken) options.headers.Authorization = `token ${githubToken}`;
 
 // see https://stackoverflow.com/questions/40263803/native-javascript-or-es6-way-to-encode-and-decode-html-entities
 function escapeHTML(string) {
