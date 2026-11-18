@@ -31,6 +31,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Bloquer la publication de fichiers de données (listes, notes d'étudiants)
+        run: |
+          if git ls-files | grep -iE '\.(csv|tsv|ods|xlsx?)$'; then
+            echo "::error::Fichiers de données détectés : publication bloquée. Retirez-les du dépôt."
+            exit 1
+          fi
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

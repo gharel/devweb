@@ -1,2 +1,9 @@
 /.idea
 /node_modules
+
+# Dépôt public : aucune donnée d étudiant (listes, notes, exports Classroom)
+*.csv
+*.tsv
+*.ods
+*.xls
+*.xlsx
