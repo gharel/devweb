@@ -26,7 +26,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment-2.outputs.page_url || steps.deployment-3.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -47,6 +47,24 @@ jobs:
           # Upload entire repository
           name: github-pages
           path: '.'
+      # deploy-pages ne trouve parfois pas l'archive qui vient d'être envoyée (« No artifacts named
+      # "github-pages" were found ») : on retente la publication après 20 s, puis après 60 s.
       - name: Deploy to GitHub Pages
         id: deployment
+        continue-on-error: true
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
+      - name: Patienter avant un deuxième essai
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 20
+      - name: Deploy to GitHub Pages (2e essai)
+        id: deployment-2
+        if: steps.deployment.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
+      - name: Patienter avant un troisième essai
+        if: steps.deployment-2.outcome == 'failure'
+        run: sleep 60
+      - name: Deploy to GitHub Pages (3e essai)
+        id: deployment-3
+        if: steps.deployment-2.outcome == 'failure'
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
